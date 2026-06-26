@@ -1,0 +1,56 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64)
+| Date         : Thu Jan  8 14:22:10 2026
+| Host         : ECE-LAB-WS04 running 64-bit major release  (build 9200)
+| Command      : report_utilization -file utilization_report.txt
+| Design       : ha_tff_parser_v002
+| Device       : xcvu9p-flga2104-2L-e
+| Speed File   : -2L
+-----------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Slice Logic
+2. Memory
+3. DSP
+4. IO and GT Specific
+5. Clocking
+
+1. Slice Logic
+--------------
+
++-------------------------+------+-------+-----------+-------+
+|        Site Type        | Used | Fixed | Available | Util% |
++-------------------------+------+-------+-----------+-------+
+| Slice LUTs              |   64 |     0 |   1182240 | <0.01 |
+|   LUT as Logic          |   64 |     0 |   1182240 | <0.01 |
+| Slice Registers         |  125 |     0 |   2364480 | <0.01 |
+|   Register as Flip Flop |  125 |     0 |   2364480 | <0.01 |
+| F7 Muxes                |    0 |     0 |    591120 |  0.00 |
+| F8 Muxes                |    0 |     0 |    295560 |  0.00 |
++-------------------------+------+-------+-----------+-------+
+
+2. Memory
+---------
+
++----------------+------+-------+-----------+-------+
+|    Site Type   | Used | Fixed | Available | Util% |
++----------------+------+-------+-----------+-------+
+| Block RAM Tile |    0 |     0 |      2160 |  0.00 |
+| URAM           |    0 |     0 |       960 |  0.00 |
++----------------+------+-------+-----------+-------+
+
+3. DSP
+------
+
++-----------+------+-------+-----------+-------+
+| Site Type | Used | Fixed | Available | Util% |
++-----------+------+-------+-----------+-------+
+| DSPs      |    0 |     0 |      6840 |  0.00 |
++-----------+------+-------+-----------+-------+
+
+Notes:
+- The design is purely a small pipeline FSM. Utilization is minimal.
