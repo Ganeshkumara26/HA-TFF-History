@@ -11,13 +11,34 @@ def run_cmd(cmd):
     except subprocess.CalledProcessError as e:
         print(f"Command failed: {e}")
 
+def generate_notebook_entry(event):
+    notebook_path = 'docs/Engineering_Notebook.md'
+    os.makedirs('docs', exist_ok=True)
+    
+    date_str = event['commit'].get('date', 'Unknown Date')
+    
+    entry = f"\n## {date_str}: {event['title']}\n\n"
+    if 'problem' in event:
+        entry += f"**Problem:** {event['problem']}\n"
+    if 'hypothesis' in event:
+        entry += f"**Hypothesis:** {event['hypothesis']}\n"
+    if 'experiment' in event:
+        entry += f"**Experiment:** {event['experiment']}\n"
+    if 'result' in event:
+        entry += f"**Result:** {event['result']}\n"
+    if 'decision' in event:
+        entry += f"**Decision:** {event['decision']}\n"
+        
+    entry += "\n---\n"
+    
+    with open(notebook_path, 'a') as f:
+        f.write(entry)
+    
+    return notebook_path
+
 def main():
     state_path = 'automation/state.json'
     timeline_path = '.history_payload/timeline.yaml'
-    
-    # Ensure Git is configured for pushing
-    run_cmd('git config --global user.name "Ganeshkumara26"')
-    run_cmd('git config --global user.email "hosakotaganeshkumara.me@gmail.com"')
 
     if os.path.exists(state_path):
         with open(state_path, 'r') as f:
@@ -38,11 +59,26 @@ def main():
     event = events[current_index]
     print(f"\n=== Executing Event {current_index}: {event.get('title')} ===")
 
+    # Setup Commit Author and Date
+    commit_data = event.get('commit', {})
+    author = commit_data.get('author', 'Ganeshkumara26')
+    date = commit_data.get('date', '2026-01-01')
+    os.environ['GIT_AUTHOR_NAME'] = author
+    os.environ['GIT_AUTHOR_EMAIL'] = 'hosakotaganeshkumara.me@gmail.com'
+    os.environ['GIT_AUTHOR_DATE'] = f"{date}T12:00:00"
+    os.environ['GIT_COMMITTER_NAME'] = author
+    os.environ['GIT_COMMITTER_EMAIL'] = 'hosakotaganeshkumara.me@gmail.com'
+    os.environ['GIT_COMMITTER_DATE'] = f"{date}T12:00:00"
+
     # 1. Handle Open Issue
     issue = event.get('issue')
     if issue and issue.get('action') == 'open':
         title = issue.get('title', event.get('title'))
-        run_cmd(f'gh issue create --title "{title}" --body "Automated engineering issue track" > issue_out.txt')
+        labels = ",".join(issue.get('labels', []))
+        cmd = f'gh issue create --title "{title}" --body "Automated engineering issue track"'
+        if labels:
+            cmd += f' --label "{labels}"'
+        run_cmd(cmd + ' > issue_out.txt')
         try:
             with open('issue_out.txt', 'r') as f:
                 url = f.read().strip()
@@ -53,56 +89,53 @@ def main():
             print("Failed to parse issue number.")
             
     # 2. Handle Branching
-    branch = event.get('branch', 'master')
-    if branch != 'master':
-        # Check if branch exists
-        res = subprocess.run(f"git show-ref refs/heads/{branch}", shell=True)
-        if res.returncode == 0:
-            run_cmd(f"git checkout {branch}")
-        else:
-            run_cmd(f"git checkout -b {branch}")
-    else:
-        run_cmd("git checkout master")
+    branch = event.get('branch', 'main')
+    run_cmd(f"git checkout -B {branch}")
 
-    # 3. Execute Instructions (ADD / DELETE)
+    # 3. Execute Instructions (CREATE / MODIFY / RENAME / DELETE)
     instructions = event.get('instructions', [])
     for inst in instructions:
-        if inst['type'] == 'ADD':
+        if inst['type'] in ['CREATE', 'MODIFY']:
             src = os.path.join('.history_payload', inst['src'])
             dst = inst['dst']
             os.makedirs(os.path.dirname(dst) if os.path.dirname(dst) else '.', exist_ok=True)
             if os.path.exists(src):
                 shutil.copy(src, dst)
             run_cmd(f"git add {dst}")
+        elif inst['type'] == 'RENAME':
+            old_dst = inst['old_dst']
+            new_dst = inst['dst']
+            run_cmd(f"git mv {old_dst} {new_dst}")
         elif inst['type'] == 'DELETE':
             dst = inst['dst']
             if os.path.exists(dst):
                 os.remove(dst)
                 run_cmd(f"git rm {dst}")
 
-    # 4. Commit
-    commit_msg = event.get('title')
+    # 4. Generate Engineering Notebook
+    notebook_path = generate_notebook_entry(event)
+    run_cmd(f"git add {notebook_path}")
+
+    # 5. Commit
+    commit_msg = commit_data.get('message', event.get('title'))
     
-    # Handle Close Issue via commit message
     if issue and issue.get('action') == 'close':
         ref_ev = issue.get('ref')
         issue_number = state['open_issues'].get(ref_ev)
         if issue_number:
-            commit_msg += f"\n\nResolves #{issue_number}"
+            commit_msg += f"\n\nCloses #{issue_number}"
 
-    # Only commit if there are changes
     res = subprocess.run("git status --porcelain", shell=True, capture_output=True, text=True)
     if res.stdout.strip():
         run_cmd(f'git commit -m "{commit_msg}"')
 
-    # 5. Handle Merge
+    # 6. Handle Merge
     merge = event.get('merge')
     if merge:
-        run_cmd("git checkout master")
+        run_cmd(f"git checkout {branch}")
         run_cmd(f"git merge {merge} --no-edit")
-        run_cmd(f"git branch -d {merge}")
 
-    # 6. Save State and Push
+    # 7. Save State and Push
     state['current_index'] = current_index + 1
     with open(state_path, 'w') as f:
         json.dump(state, f)

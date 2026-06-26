@@ -1,441 +1,529 @@
 events:
 - id: ev00
-  title: Engineering Event 0
+  title: Initial MeghDut Assessment
+  phase: Research
+  problem: Evaluating baseline latency of software networking stacks for HFT
+  decision: Pivot to FPGA
+  branch: main
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-01'
+    message: 'Initial MeghDut Assessment
+
+
+      Problem: Evaluating baseline latency of software networking stacks for HFT
+
+      Decision: Pivot to FPGA'
   instructions:
-  - type: ADD
-    src: blob_store/007f5966c74ded0bb206942a2ea4b2d9_ha_tff_parser_v001.v
-    dst: rtl/ha_tff_parser_v001.v
-  - type: ADD
-    src: blob_store/13628fe6a03410d8f3c0c6c3ecaf3d86_tb_ha_tff_parser_v001.v
-    dst: tb/tb_ha_tff_parser_v001.v
-  - type: ADD
-    src: blob_store/0f939c47282970f7ce049fca343d11e4_ha_tff_parser_sim.vvp
-    dst: sim/ha_tff_parser_sim.vvp
-  - type: ADD
-    src: blob_store/6149628dbed9b2c26d127794d8126c22_simulation_log.txt
-    dst: sim/simulation_log.txt
-  - type: ADD
-    src: blob_store/bf750cfe536859b0742449cc2c2289c4_tb_ha_tff_parser_v001.vcd
-    dst: sim/tb_ha_tff_parser_v001.vcd
-  - type: ADD
-    src: blob_store/0cf68854cfc09b494b2a5dadde495e11_synth.tcl
-    dst: reports/synthesis/synth.tcl
-  - type: ADD
-    src: blob_store/806ba0247df01dddd675cd72bcfd888a_utilization_report.txt
-    dst: reports/synthesis/utilization_report.txt
-  - type: ADD
-    src: blob_store/9a99e4e16d11ec392ac8ba71fe146c7e_Decision_Graph.md
-    dst: docs/Decision_Graph.md
-  - type: ADD
-    src: blob_store/17aae059dffeac863d9d4435dc9b4bf1_REQ-v001.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v001.md
-  - type: ADD
-    src: blob_store/bcf41f77b2116363bee7ce6aadb5dc0e_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v006/architecture.md
-  - type: ADD
-    src: blob_store/812082c60741d64692396f0d25698e5d_ADR-005_Matcher_Pipelining.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-005_Matcher_Pipelining.md
-  - type: ADD
-    src: blob_store/094ecb0579f7bf9d1d71d802ece0322a_commit007.md
-    dst: docs/Engineering_History/14_Commits/commit007.md
-  - type: ADD
+  - type: CREATE
+    src: blob_store/4dd96998246c15f22ef4c2168227d812_Cuckoo_Hashing_Notes.md
+    dst: docs/Vol0_Foundations/Algorithms/Cuckoo_Hashing_Notes.md
+  - type: CREATE
+    src: blob_store/3e45428438ccb666b806e5bddfe549b8_AXI_Stream_Notes.md
+    dst: docs/Vol0_Foundations/Hardware/AXI_Stream_Notes.md
+  - type: CREATE
+    src: blob_store/44f55b172b00cbab1014672d487405a9_System_Architecture.md
+    dst: docs/Vol1_MeghDut_Learning/01_Architecture/System_Architecture.md
+  - type: CREATE
+    src: blob_store/1e25486fb49d4d6071f1780a29459f13_MavlinkBridge_Notes.md
+    dst: docs/Vol1_MeghDut_Learning/02_Code_Reading/MavlinkBridge_Notes.md
+  - type: CREATE
+    src: blob_store/c978ad6b9bf0948e84aa488028823d35_Software_Bottlenecks.md
+    dst: docs/Vol1_MeghDut_Learning/04_Performance_Study/Software_Bottlenecks.md
+  - type: CREATE
     src: blob_store/647c0d6474b46c7bf18c47f214fa3689_Hardware_Software_Partitioning.md
     dst: docs/Vol1_MeghDut_Learning/05_Engineering_Gap/Hardware_Software_Partitioning.md
-- id: ev01
-  title: Engineering Event 1
-  instructions:
-  - type: ADD
-    src: blob_store/baa663d8499666b5fbe6209abb53f086_Engineering_Question_Register.md
-    dst: docs/Engineering_Question_Register.md
-  - type: ADD
-    src: blob_store/6bb1b1448b84efd3ee14a61998e7cecf_REQ-v002.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v002.md
-  - type: ADD
-    src: blob_store/6ca445ab6300e934fe0c56b3ee8db2a1_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v007/architecture.md
-  - type: ADD
-    src: blob_store/dd16ce22fd4f2feb372a8157054fccf7_ADR-006_Firewall_Pivot.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-006_Firewall_Pivot.md
-  - type: ADD
-    src: blob_store/53b13aacdb9da8d618447af7af84e58b_commit008.md
-    dst: docs/Engineering_History/14_Commits/commit008.md
-  - type: ADD
+  - type: CREATE
     src: blob_store/4f5489cadfb080e259ae51418a75afe1_Engineering_Pivot_to_HA_TFF.md
     dst: docs/Vol1_MeghDut_Learning/06_Research_Direction/Engineering_Pivot_to_HA_TFF.md
+  - type: CREATE
+    src: blob_store/a2357848e6a1e97b2708bf112feb48c4_Engineering_Memory_v001.md
+    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v001/Engineering_Memory_v001.md
+  - type: CREATE
+    src: blob_store/d5716475b0a1ef409b19630515ee61c6_Engineering_Memory_v002.md
+    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v002/Engineering_Memory_v002.md
+  - type: CREATE
+    src: blob_store/b83905ce16213fd9f0400a8061b94807_Engineering_Memory_v003.md
+    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v003/Engineering_Memory_v003.md
+  - type: CREATE
+    src: blob_store/3e7ed349d8e3b009ff89877c0a6c8a8e_Engineering_Memory_v004.md
+    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v004/Engineering_Memory_v004.md
+  - type: CREATE
+    src: blob_store/060130ce1e438968f991d60c90283e21_Engineering_Memory_v005.md
+    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v005/Engineering_Memory_v005.md
+  issue:
+    action: open
+    title: Initial MeghDut Assessment
+    labels:
+    - bug
+- id: ev01
+  title: FPGA Architecture Planning
+  phase: Design
+  problem: Need hardware-accelerated pipeline
+  decision: Design 64-bit AXI Stream datapath
+  branch: feature/architecture
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-05'
+    message: 'FPGA Architecture Planning
+
+
+      Problem: Need hardware-accelerated pipeline
+
+      Decision: Design 64-bit AXI Stream datapath'
+  instructions:
+  - type: CREATE
+    src: blob_store/c6ad2201c821e0efff832b41816a163e_Timeline.md
+    dst: docs/Timeline.md
+  - type: CREATE
+    src: blob_store/6ec0a8f25df12975eed1e7216ae22f42_Timeline.md
+    dst: docs/Engineering_History/Timeline.md
+  - type: CREATE
+    src: blob_store/ddff42675e615e8befe5a12065fc7da3_Q001.md
+    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q001.md
+  - type: CREATE
+    src: blob_store/62aee9e6c786c3863e274ae8e70a6975_reason_for_rejection.md
+    dst: docs/Engineering_History/05_RTL/Discarded/historical/matcher_unpipelined_v001/reason_for_rejection.md
+  - type: CREATE
+    src: blob_store/7f312aa98898829623994062eb9a4b94_ADR-003_Hashing_Algorithm.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-003_Hashing_Algorithm.md
+  - type: CREATE
+    src: blob_store/5fc37ae9180d29f9969542ca42ee19b0_2026-01-29.md
+    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-29.md
+  - type: CREATE
+    src: blob_store/aa849efbdd4353b4c14c99c44e3165b9_2026-03-14.md
+    dst: docs/Engineering_History/11_Lab_Notebook/2026-03-14.md
+  - type: CREATE
+    src: blob_store/8af94b6f84b66c6e9788d9920f04fa33_Ethernet_IPv4_UDP_Notes.md
+    dst: docs/Vol0_Foundations/Networking/Ethernet_IPv4_UDP_Notes.md
+  issue:
+    action: close
+    ref: ev00
+  merge: main
 - id: ev02
-  title: Engineering Event 2
+  title: Parser FSM Implementation
+  phase: Implementation
+  problem: Parsing UDP packets at line rate
+  decision: Implement custom state machine
+  branch: feature/parser
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-09'
+    message: 'Parser FSM Implementation
+
+
+      Problem: Parsing UDP packets at line rate
+
+      Decision: Implement custom state machine'
+  instructions:
+  - type: CREATE
+    src: blob_store/007f5966c74ded0bb206942a2ea4b2d9_ha_tff_parser_v001.v
+    dst: rtl/ha_tff_parser_v001.v
+  - type: CREATE
+    src: blob_store/13628fe6a03410d8f3c0c6c3ecaf3d86_tb_ha_tff_parser_v001.v
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: CREATE
+    src: blob_store/0f939c47282970f7ce049fca343d11e4_ha_tff_parser_sim.vvp
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: CREATE
+    src: blob_store/6149628dbed9b2c26d127794d8126c22_simulation_log.txt
+    dst: sim/simulation_log.txt
+  - type: CREATE
+    src: blob_store/0cf68854cfc09b494b2a5dadde495e11_synth.tcl
+    dst: reports/synthesis/synth.tcl
+  - type: CREATE
+    src: blob_store/806ba0247df01dddd675cd72bcfd888a_utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - type: CREATE
+    src: blob_store/4915caae988f142c1878ce5f0da9fc55_2026-01-01_Origin.md
+    dst: docs/Engineering_History/00_Project_Journal/2026-01-01_Origin.md
+  - type: CREATE
+    src: blob_store/2854df9a58ca44817ddcc70099496585_Engineering_Memory_v003.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v003.md
+  - type: CREATE
+    src: blob_store/61ce90c36913875faa6d2face7561ae6_Q004.md
+    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q004.md
+  - type: CREATE
+    src: blob_store/523f50e0d4ce70834961b46617dcf605_001_Cuckoo_Collision_Model.md
+    dst: docs/Engineering_History/03_Math/001_Cuckoo_Collision_Model.md
+  - type: CREATE
+    src: blob_store/a12c843867db96c5fc2826e330b58232_ADR-0004_Control_Plane_Separation.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0004_Control_Plane_Separation.md
+  - type: CREATE
+    src: blob_store/156fab897fdb6775fd1b5c1f8a80bf6c_ADR-001_Parser_FSM.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-001_Parser_FSM.md
+  - type: CREATE
+    src: blob_store/a7a19cf86687d87c97adf15fa4877da3_commit009.md
+    dst: docs/Engineering_History/14_Commits/commit009.md
+- id: ev03
+  title: Parser FSM Timing Closure
+  phase: Verification
+  problem: FSM fails 6.4ns timing
+  decision: Add pipeline stage to tuple extraction
+  branch: feature/parser
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-13'
+    message: 'Parser FSM Timing Closure
+
+
+      Problem: FSM fails 6.4ns timing
+
+      Decision: Add pipeline stage to tuple extraction'
   instructions:
   - type: DELETE
     dst: rtl/ha_tff_parser_v001.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/8e2e2716602e83aec71cce25bfc059a4_ha_tff_parser_v002.v
     dst: rtl/ha_tff_parser_v002.v
   - type: DELETE
     dst: tb/tb_ha_tff_parser_v001.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/ee787309cb3610bc1c69a7f0106e86fd_tb_ha_tff_parser_v002.v
     dst: tb/tb_ha_tff_parser_v002.v
   - type: DELETE
     dst: sim/ha_tff_parser_sim.vvp
   - type: DELETE
     dst: sim/simulation_log.txt
-  - type: DELETE
-    dst: sim/tb_ha_tff_parser_v001.vcd
-  - type: ADD
+  - type: CREATE
     src: blob_store/6c15af2d0f6a3cfd7ec30b88278a0ad8_ha_tff_parser_v002_sim.vvp
     dst: sim/ha_tff_parser_v002_sim.vvp
-  - type: ADD
+  - type: CREATE
     src: blob_store/183589ac6c1d3b032798506a954e7d9d_simulation_log_v002.txt
     dst: sim/simulation_log_v002.txt
-  - type: ADD
-    src: blob_store/e7d39e190f5569237dca2b16cda4176f_tb_ha_tff_parser_v002.vcd
-    dst: sim/tb_ha_tff_parser_v002.vcd
   - type: DELETE
     dst: reports/synthesis/synth.tcl
   - type: DELETE
     dst: reports/synthesis/utilization_report.txt
-  - type: ADD
-    src: blob_store/ca62e292154e3b4bcee1a3319e55daa6_Project_Evolution.md
-    dst: docs/Project_Evolution.md
-  - type: ADD
-    src: blob_store/4a1c6ce454b584cbef9bc842b24e4e83_REQ-v003.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v003.md
-  - type: ADD
-    src: blob_store/3a850bce46f52fbe6be0c849109dac9e_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v009/architecture.md
-  - type: ADD
-    src: blob_store/6aa62355f1cb3ac45060b31c47366c28_ADR-007_SNN_Topology.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-007_SNN_Topology.md
-  - type: ADD
-    src: blob_store/a7a19cf86687d87c97adf15fa4877da3_commit009.md
-    dst: docs/Engineering_History/14_Commits/commit009.md
-  - type: ADD
-    src: blob_store/a2357848e6a1e97b2708bf112feb48c4_Engineering_Memory_v001.md
-    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v001/Engineering_Memory_v001.md
-  branch: feature/parser
-- id: ev03
-  title: Engineering Event 3
-  instructions:
-  - type: ADD
-    src: blob_store/5095c36d5d28daa55a3063108f2e3147_Skills_Evolution.md
-    dst: docs/Skills_Evolution.md
-  - type: ADD
-    src: blob_store/5d4cdd61dad9cb6a20da59f7b2900477_REQ-v005.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v005.md
-  - type: ADD
-    src: blob_store/d93b1f517802c3fee36353759647c943_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v010/architecture.md
-  - type: ADD
-    src: blob_store/ec0bccb84e7a62a71981e0a65b411b37_ADR-008_SNN_Verilog_Types.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-008_SNN_Verilog_Types.md
-  - type: ADD
-    src: blob_store/73d1c11aaf28feb82a05539c78f333fa_commit010.md
-    dst: docs/Engineering_History/14_Commits/commit010.md
-  - type: ADD
-    src: blob_store/d5716475b0a1ef409b19630515ee61c6_Engineering_Memory_v002.md
-    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v002/Engineering_Memory_v002.md
+  - type: CREATE
+    src: blob_store/0b751de46e10b4be9ffac7567342d87b_Final_Takeaway_Report.md
+    dst: docs/Engineering_History/20_Final/Final_Takeaway_Report.md
 - id: ev04
-  title: Engineering Event 4
+  title: Hash Unit Design
+  phase: Design
+  problem: Constant time lookup required for session tracking
+  decision: Use Cuckoo Hashing
+  branch: feature/hash
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-17'
+    message: 'Hash Unit Design
+
+
+      Problem: Constant time lookup required for session tracking
+
+      Decision: Use Cuckoo Hashing'
   instructions:
   - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
     dst: rtl/ha_tff_parser_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/2ae9cdef1ff0d5a3666a87f0dbf1df83_ha_tff_hash_v001.v
     dst: rtl/ha_tff_hash_v001.v
   - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
     dst: tb/tb_ha_tff_parser_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/b3c6da71ab781571436e403f4c3f46b0_tb_ha_tff_hash_v001.v
     dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: CREATE
+    src: blob_store/9ff0d971174a851b26ddb9c39535a77a_ha_tff_hash_sim.vvp
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: CREATE
+    src: blob_store/7b6159d8b986e6920af9fe427f921c03_simulation_log_v003.txt
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: reports/synthesis/synth.tcl
+  - type: DELETE
+    dst: reports/synthesis/utilization_report.txt
+  - type: CREATE
+    src: blob_store/cd3a713b04ada1823088b7d9b653e12a_Engineering_Memory_v009.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v009.md
+  - type: CREATE
+    src: blob_store/6bb1b1448b84efd3ee14a61998e7cecf_REQ-v002.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v002.md
+  - type: CREATE
+    src: blob_store/4a6a6033e5f0ebed8353053b99a5ccde_commit006.md
+    dst: docs/Engineering_History/14_Commits/commit006.md
+- id: ev05
+  title: Cuckoo Hash Insertion Deadlock
+  phase: Implementation
+  problem: Collisions cause infinite loops during insertion
+  decision: Implement eviction limit
+  branch: feature/hash
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-21'
+    message: 'Cuckoo Hash Insertion Deadlock
+
+
+      Problem: Collisions cause infinite loops during insertion
+
+      Decision: Implement eviction limit'
+  instructions:
+  - type: CREATE
+    src: blob_store/fd98ede6cdbd0cd1e9bcb826410cb5a1_bug005_dead_code_elimination.md
+    dst: docs/Engineering_History/10_Debug/bug005_dead_code_elimination.md
+  - type: CREATE
+    src: blob_store/b648c0ffe93c51dd9b7c47ddf513b85f_WAVE011.md
+    dst: docs/Engineering_History/11_Verification/Waveform_Analysis/WAVE011.md
+  issue:
+    action: open
+    title: Cuckoo Hash Insertion Deadlock
+    labels:
+    - bug
+- id: ev06
+  title: BRAM Bandwidth Limitations
+  phase: Implementation
+  problem: BRAM ports saturated by hash lookups
+  decision: Replicate BRAM banks for parallel access
+  branch: feature/hash
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-25'
+    message: 'BRAM Bandwidth Limitations
+
+
+      Problem: BRAM ports saturated by hash lookups
+
+      Decision: Replicate BRAM banks for parallel access'
+  instructions:
+  - type: CREATE
+    src: blob_store/801c34bdf1d7436f372f5124e33fc575_Engineering_Memory_v002.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v002.md
+  - type: CREATE
+    src: blob_store/2e3026a127937527de6cab431e0b198f_ADR-0001_Pivot_to_Firewall.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0001_Pivot_to_Firewall.md
+  issue:
+    action: close
+    ref: ev05
+  merge: feature/hash
+- id: ev07
+  title: Datapath Integration
+  phase: Integration
+  problem: Connect Parser and Hash unit
+  decision: Use AXI Stream FIFOs for backpressure
+  branch: feature/datapath
+  commit:
+    author: Ganeshkumara26
+    date: '2026-01-29'
+    message: 'Datapath Integration
+
+
+      Problem: Connect Parser and Hash unit
+
+      Decision: Use AXI Stream FIFOs for backpressure'
+  instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: CREATE
+    src: blob_store/327e0ca24bed4eaaf1b096d23fd8d66f_ha_tff_bram_bank.v
+    dst: rtl/ha_tff_bram_bank.v
+  - type: CREATE
+    src: blob_store/34e8a1962910991e26beccef2370cab1_ha_tff_datapath_top.v
+    dst: rtl/ha_tff_datapath_top.v
+  - type: CREATE
+    src: blob_store/02721b78fea2a2f2f8ba5c60eb0a0c90_ha_tff_matcher.v
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: CREATE
+    src: blob_store/127815451f6a7936ba0314a3494baeae_tb_ha_tff_datapath_top.v
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
   - type: DELETE
     dst: sim/ha_tff_parser_v002_sim.vvp
   - type: DELETE
     dst: sim/simulation_log_v002.txt
   - type: DELETE
-    dst: sim/tb_ha_tff_parser_v002.vcd
-  - type: ADD
-    src: blob_store/9ff0d971174a851b26ddb9c39535a77a_ha_tff_hash_sim.vvp
-    dst: sim/ha_tff_hash_sim.vvp
-  - type: ADD
-    src: blob_store/7b6159d8b986e6920af9fe427f921c03_simulation_log_v003.txt
-    dst: sim/simulation_log_v003.txt
-  - type: ADD
-    src: blob_store/079c93239de8e3ffbe4eda1232717081_tb_ha_tff_hash_v001.vcd
-    dst: sim/tb_ha_tff_hash_v001.vcd
-  - type: ADD
-    src: blob_store/c6ad2201c821e0efff832b41816a163e_Timeline.md
-    dst: docs/Timeline.md
-  - type: ADD
-    src: blob_store/7878f0dc40ffb548fc322e2e02adea7d_REQ-v006.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v006.md
-  - type: ADD
-    src: blob_store/4cfcb09fd91876e94b4c683edd4fb3fa_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v012/architecture.md
-  - type: ADD
-    src: blob_store/0cccf8d644b74d6f29737396f804f97c_ADR-009_Feature_Encoding.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-009_Feature_Encoding.md
-  - type: ADD
-    src: blob_store/6de1becdb9349981917e7bc7501b31c5_commit011.md
-    dst: docs/Engineering_History/14_Commits/commit011.md
-  - type: ADD
-    src: blob_store/b83905ce16213fd9f0400a8061b94807_Engineering_Memory_v003.md
-    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v003/Engineering_Memory_v003.md
-  merge: feature/parser
-- id: ev05
-  title: Engineering Event 5
-  instructions:
-  - type: ADD
-    src: blob_store/6ec0a8f25df12975eed1e7216ae22f42_Timeline.md
-    dst: docs/Engineering_History/Timeline.md
-  - type: ADD
-    src: blob_store/5e61383411b8a2ec611e1acf26bf0a80_Assumptions_Register.md
-    dst: docs/Engineering_History/02_Knowledge/Assumptions_Register.md
-  - type: ADD
-    src: blob_store/62aee9e6c786c3863e274ae8e70a6975_reason_for_rejection.md
-    dst: docs/Engineering_History/05_RTL/Discarded/historical/matcher_unpipelined_v001/reason_for_rejection.md
-  - type: ADD
-    src: blob_store/5854f25b6b96957686c3d2be1d268148_ADR-010_Combinatorial_Merge.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-010_Combinatorial_Merge.md
-  - type: ADD
-    src: blob_store/c7715614f8570fd65ec4d1ccfc63f0bf_commit012.md
-    dst: docs/Engineering_History/14_Commits/commit012.md
-  - type: ADD
-    src: blob_store/3e7ed349d8e3b009ff89877c0a6c8a8e_Engineering_Memory_v004.md
-    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v004/Engineering_Memory_v004.md
-- id: ev06
-  title: Engineering Event 6
-  instructions:
-  - type: ADD
-    src: blob_store/4915caae988f142c1878ce5f0da9fc55_2026-01-01_Origin.md
-    dst: docs/Engineering_History/00_Project_Journal/2026-01-01_Origin.md
-  - type: ADD
-    src: blob_store/5c371348e2a5e9091ef5aa0c1d3e20b9_BUG-003_Leak_Gating.md
-    dst: docs/Engineering_History/02_Knowledge/BUG-003_Leak_Gating.md
-  - type: ADD
-    src: blob_store/13894ad1037db789131aae2fbcb0203b_BUG-001_Tuple_Valid_Timeout.md
-    dst: docs/Engineering_History/10_Debug/BUG-001_Tuple_Valid_Timeout.md
-  - type: ADD
-    src: blob_store/2fa80e463eb8bc9ed8f1a79d1e01acf4_ADR-011_Data_Delay_Line.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-011_Data_Delay_Line.md
-  - type: ADD
-    src: blob_store/5bf792f5d714c3a58d94fc47e03375e0_Debt_v001.md
-    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v001.md
-  - type: ADD
-    src: blob_store/060130ce1e438968f991d60c90283e21_Engineering_Memory_v005.md
-    dst: docs/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v005/Engineering_Memory_v005.md
-- id: ev07
-  title: Engineering Event 7
-  instructions:
-  - type: ADD
-    src: blob_store/84042cfad6c16040530e917135d61e2c_Engineering_Memory_v001.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v001.md
-  - type: ADD
-    src: blob_store/74b3f5162d56984f5768f3aee8dfff80_BUG-004_Unsigned_Threshold.md
-    dst: docs/Engineering_History/02_Knowledge/BUG-004_Unsigned_Threshold.md
-  - type: ADD
-    src: blob_store/f066ca92d861928abb7ed99a9b221ea4_bug003_snn_leak_fail.md
-    dst: docs/Engineering_History/10_Debug/bug003_snn_leak_fail.md
-  - type: ADD
-    src: blob_store/fab2a0cc36c48a795231b1a382ab4d63_ADR-012_SNN_Pipelining.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-012_SNN_Pipelining.md
-  - type: ADD
-    src: blob_store/1c66d37e23b9d3ecbb464ce92b7c488e_Debt_v010.md
-    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v010.md
-  - type: ADD
-    src: blob_store/f54b08b42385faea21e20822f1017747_Lessons_Learned.md
-    dst: docs/Vol3_Capstone/01_Lessons_Learned/Lessons_Learned.md
-- id: ev08
-  title: Engineering Event 8
-  instructions:
-  - type: ADD
-    src: blob_store/801c34bdf1d7436f372f5124e33fc575_Engineering_Memory_v002.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v002.md
-  - type: ADD
-    src: blob_store/4a951d8fd427c1de06ec6a8f02ffd3dd_BUG-005_Dead_Code_Elimination.md
-    dst: docs/Engineering_History/02_Knowledge/BUG-005_Dead_Code_Elimination.md
-  - type: ADD
-    src: blob_store/5dc6cdffd7f1f55efef3be20e43b6022_bug004_unsigned_threshold.md
-    dst: docs/Engineering_History/10_Debug/bug004_unsigned_threshold.md
-  - type: ADD
-    src: blob_store/833d9d7232d8a15eb4cf889046dca775_2026-01-08.md
-    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-08.md
-  - type: ADD
-    src: blob_store/9f9c13b07265004aac3d21bd8b0350ef_performance.md
-    dst: docs/Engineering_History/18_Performance/performance.md
-  - type: ADD
-    src: blob_store/000a8c69bce253de893a898657752418_Roadmap.md
-    dst: docs/Vol3_Capstone/02_Future_Work/Roadmap.md
-- id: ev09
-  title: Engineering Event 9
-  instructions:
-  - type: ADD
-    src: blob_store/2854df9a58ca44817ddcc70099496585_Engineering_Memory_v003.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v003.md
-  - type: ADD
-    src: blob_store/ddff42675e615e8befe5a12065fc7da3_Q001.md
-    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q001.md
-  - type: ADD
-    src: blob_store/fd98ede6cdbd0cd1e9bcb826410cb5a1_bug005_dead_code_elimination.md
-    dst: docs/Engineering_History/10_Debug/bug005_dead_code_elimination.md
-  - type: ADD
-    src: blob_store/5fc37ae9180d29f9969542ca42ee19b0_2026-01-29.md
-    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-29.md
-  - type: ADD
-    src: blob_store/89d46f3fe7c06e18eb79f4defcd70c3d_performance_history.csv
-    dst: docs/Engineering_History/18_Performance/performance_history.csv
-  - type: ADD
-    src: blob_store/16c3df7799b24d86e9ab40635014df54_Recruiter_Overview.md
-    dst: docs/Vol3_Capstone/03_Portfolio_Summary/Recruiter_Overview.md
-- id: ev10
-  title: Engineering Event 10
-  instructions:
-  - type: DELETE
-    dst: rtl/ha_tff_hash_v001.v
-  - type: ADD
-    src: blob_store/327e0ca24bed4eaaf1b096d23fd8d66f_ha_tff_bram_bank.v
-    dst: rtl/ha_tff_bram_bank.v
-  - type: ADD
-    src: blob_store/34e8a1962910991e26beccef2370cab1_ha_tff_datapath_top.v
-    dst: rtl/ha_tff_datapath_top.v
-  - type: ADD
-    src: blob_store/02721b78fea2a2f2f8ba5c60eb0a0c90_ha_tff_matcher.v
-    dst: rtl/ha_tff_matcher.v
-  - type: DELETE
-    dst: tb/tb_ha_tff_hash_v001.v
-  - type: ADD
-    src: blob_store/127815451f6a7936ba0314a3494baeae_tb_ha_tff_datapath_top.v
-    dst: tb/tb_ha_tff_datapath_top.v
-  - type: DELETE
     dst: sim/ha_tff_hash_sim.vvp
   - type: DELETE
     dst: sim/simulation_log_v003.txt
-  - type: DELETE
-    dst: sim/tb_ha_tff_hash_v001.vcd
-  - type: ADD
+  - type: CREATE
     src: blob_store/c7a21cf6ffb38aff6767376e9822d26e_bank0.mem
     dst: sim/bank0.mem
-  - type: ADD
+  - type: CREATE
     src: blob_store/282e1f92be0c307dce7f6c329dfb80d6_bank1.mem
     dst: sim/bank1.mem
-  - type: ADD
+  - type: CREATE
     src: blob_store/282e1f92be0c307dce7f6c329dfb80d6_bank2.mem
     dst: sim/bank2.mem
-  - type: ADD
+  - type: CREATE
     src: blob_store/282e1f92be0c307dce7f6c329dfb80d6_bank3.mem
     dst: sim/bank3.mem
-  - type: ADD
+  - type: CREATE
     src: blob_store/5f04a99e4fa254f2df847b04e9d1480a_datapath_sim.vvp
     dst: sim/datapath_sim.vvp
-  - type: ADD
+  - type: CREATE
     src: blob_store/e61ad2820824d779d25d0162a40b272e_simulation_log_v004.txt
     dst: sim/simulation_log_v004.txt
-  - type: ADD
-    src: blob_store/6349366835f0517b10050fbf035d75d6_tb_ha_tff_datapath_top.vcd
-    dst: sim/tb_ha_tff_datapath_top.vcd
-  - type: ADD
+  - type: CREATE
     src: blob_store/4ba9e452886bbe9f928ddd426272d23e_ha_tff_datapath_top_synth.dcp
     dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
-  - type: ADD
+  - type: CREATE
     src: blob_store/fc3242570852596990b5ff3a4c7b6e84_power_report.txt
     dst: reports/synthesis/power_report.txt
-  - type: ADD
+  - type: MODIFY
     src: blob_store/0ba9e66ebdc1392a5010d75041491bea_synth.tcl
     dst: reports/synthesis/synth.tcl
-  - type: ADD
+  - type: MODIFY
     src: blob_store/b28a73f23078191d0e7a36f62b2ff5b0_utilization_report.txt
     dst: reports/synthesis/utilization_report.txt
-  - type: ADD
+  - type: CREATE
     src: blob_store/259c6b91073c07eff7804f3ca1d0744a_vivado.jou
     dst: reports/synthesis/vivado.jou
-  - type: ADD
+  - type: CREATE
     src: blob_store/6bbe1ac84b037da6196b9c495a36710d_vivado.log
     dst: reports/synthesis/vivado.log
-  - type: ADD
+  - type: CREATE
     src: blob_store/1f827c95be84394b6de8f8c781c52966_vivado_16904.backup.jou
     dst: reports/synthesis/vivado_16904.backup.jou
-  - type: ADD
+  - type: CREATE
     src: blob_store/ab7eb2649522410a4282b2a1e9c440bd_vivado_16904.backup.log
     dst: reports/synthesis/vivado_16904.backup.log
-  - type: ADD
+  - type: CREATE
     src: blob_store/b2f64888948054c7721dc27bf410a65f_vivado_21324.backup.jou
     dst: reports/synthesis/vivado_21324.backup.jou
-  - type: ADD
+  - type: CREATE
     src: blob_store/6ecd44ea06434ab3d3dc26e8485e63a7_vivado_21324.backup.log
     dst: reports/synthesis/vivado_21324.backup.log
-  - type: ADD
+  - type: CREATE
     src: blob_store/f4bb3b29844a63149bf2f357ad9aef09_vivado_4632.backup.jou
     dst: reports/synthesis/vivado_4632.backup.jou
-  - type: ADD
+  - type: CREATE
     src: blob_store/20f89f70dda39ad5b255aaa2dd70101a_vivado_4632.backup.log
     dst: reports/synthesis/vivado_4632.backup.log
-  - type: ADD
+  - type: CREATE
     src: blob_store/f3658c8748456bf4502665f70104d983_Engineering_Memory_v004.md
     dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v004.md
-  - type: ADD
-    src: blob_store/61ce90c36913875faa6d2face7561ae6_Q004.md
-    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q004.md
-  - type: ADD
-    src: blob_store/2e3026a127937527de6cab431e0b198f_ADR-0001_Pivot_to_Firewall.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0001_Pivot_to_Firewall.md
-  - type: ADD
-    src: blob_store/aa849efbdd4353b4c14c99c44e3165b9_2026-03-14.md
-    dst: docs/Engineering_History/11_Lab_Notebook/2026-03-14.md
-  - type: ADD
-    src: blob_store/2bdaa5c4ade7420b7876aeeb9b91aca0_todo_v005.md
-    dst: docs/Engineering_History/19_TODO/todo_v005.md
-- id: ev11
-  title: Engineering Event 11
-  instructions:
-  - type: ADD
+  - type: CREATE
     src: blob_store/bf916bc42e6c4c129c30faa0ecb5e752_Engineering_Memory_v005.md
     dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v005.md
-  - type: ADD
+  - type: CREATE
+    src: blob_store/2e4417d35e602540a7f428bd9723145e_Engineering_Memory_v013.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v013.md
+  - type: CREATE
+    src: blob_store/5e61383411b8a2ec611e1acf26bf0a80_Assumptions_Register.md
+    dst: docs/Engineering_History/02_Knowledge/Assumptions_Register.md
+  - type: CREATE
     src: blob_store/054a0dc66beee5787cb15eba8262c68f_002_Hardware_Cuckoo_Hashing.md
     dst: docs/Engineering_History/02_Literature/002_Hardware_Cuckoo_Hashing.md
-  - type: ADD
-    src: blob_store/4d43e3b3af38ba8c23411a0b006a5782_ADR-0002_64bit_Datapath.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0002_64bit_Datapath.md
-  - type: ADD
-    src: blob_store/0c1e7baef435d6a01f9412d1c728d84c_Coverage_Report_v012.md
-    dst: docs/Engineering_History/11_Verification/Coverage_Report_v012.md
-  - type: ADD
-    src: blob_store/0b751de46e10b4be9ffac7567342d87b_Final_Takeaway_Report.md
-    dst: docs/Engineering_History/20_Final/Final_Takeaway_Report.md
-- id: ev12
-  title: Engineering Event 12
+  - type: CREATE
+    src: blob_store/fe9d5d377bc9a583588a1ef92df41cb5_LIF_Neuron_Formulation.md
+    dst: docs/Engineering_History/03_Math/LIF_Neuron_Formulation.md
+  - type: CREATE
+    src: blob_store/2fa80e463eb8bc9ed8f1a79d1e01acf4_ADR-011_Data_Delay_Line.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-011_Data_Delay_Line.md
+  - type: CREATE
+    src: blob_store/6de1becdb9349981917e7bc7501b31c5_commit011.md
+    dst: docs/Engineering_History/14_Commits/commit011.md
+- id: ev08
+  title: Matcher Pipeline Stalls
+  phase: Verification
+  problem: Matcher logic stalls the entire pipeline
+  decision: Fully pipeline the matcher with delay lines
+  branch: feature/datapath
+  commit:
+    author: Ganeshkumara26
+    date: '2026-02-02'
+    message: 'Matcher Pipeline Stalls
+
+
+      Problem: Matcher logic stalls the entire pipeline
+
+      Decision: Fully pipeline the matcher with delay lines'
   instructions:
+  - type: CREATE
+    src: blob_store/57b7f78ecb3b0f96ad943ece957c45ea_Engineering_Memory_v011.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v011.md
+- id: ev09
+  title: Control Plane Interface
+  phase: Implementation
+  problem: Need CPU access to hash tables
+  decision: Implement AXI Lite register interface
+  branch: feature/control-plane
+  commit:
+    author: Ganeshkumara26
+    date: '2026-02-06'
+    message: 'Control Plane Interface
+
+
+      Problem: Need CPU access to hash tables
+
+      Decision: Implement AXI Lite register interface'
+  instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
   - type: DELETE
     dst: rtl/ha_tff_bram_bank.v
   - type: DELETE
     dst: rtl/ha_tff_datapath_top.v
   - type: DELETE
     dst: rtl/ha_tff_matcher.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/1ae7fff4c3fa8b190adcd0a905fc65f7_ha_tff_datapath_top_v002.v
     dst: rtl/ha_tff_datapath_top_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/d21c40ded5478c616fb9f3403995a327_ha_tff_matcher_v002.v
     dst: rtl/ha_tff_matcher_v002.v
   - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
     dst: tb/tb_ha_tff_datapath_top.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/a74563e87ca5abbfbaa25c727dbf27ce_tb_ha_tff_datapath_top_v002.v
     dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
   - type: DELETE
     dst: sim/datapath_sim.vvp
   - type: DELETE
     dst: sim/simulation_log_v004.txt
-  - type: DELETE
-    dst: sim/tb_ha_tff_datapath_top.vcd
-  - type: ADD
+  - type: CREATE
     src: blob_store/6f1497c2c3ad60c248a801cf9ca8db9c_pipelined_sim.vvp
     dst: sim/pipelined_sim.vvp
-  - type: ADD
+  - type: CREATE
     src: blob_store/9e6683fe6c0ecaec26b095ff8c757b67_simulation_log_v005.txt
     dst: sim/simulation_log_v005.txt
-  - type: ADD
-    src: blob_store/78a94bdce7fd8acbb813730719f74715_tb_ha_tff_datapath_v005.vcd
-    dst: sim/tb_ha_tff_datapath_v005.vcd
   - type: DELETE
     dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
   - type: DELETE
@@ -450,75 +538,164 @@ events:
     dst: reports/synthesis/vivado_4632.backup.jou
   - type: DELETE
     dst: reports/synthesis/vivado_4632.backup.log
-  - type: ADD
+  - type: CREATE
     src: blob_store/cbee9166d813781c99a1bb4d2b2a8abd_ha_tff_datapath_top_v002_synth.dcp
     dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
-  - type: ADD
+  - type: MODIFY
     src: blob_store/1e6e6c44a298dac2aed4783b5f7d13fa_power_report.txt
     dst: reports/synthesis/power_report.txt
-  - type: ADD
+  - type: MODIFY
     src: blob_store/f91f56d19a9f3fb913b40e797b510c8c_synth.tcl
     dst: reports/synthesis/synth.tcl
-  - type: ADD
+  - type: MODIFY
     src: blob_store/28f3df2a001e6b1f96b64c13e5a40565_utilization_report.txt
     dst: reports/synthesis/utilization_report.txt
-  - type: ADD
+  - type: MODIFY
     src: blob_store/9b9e8bdde01402cfe70848fbcd74026d_vivado.jou
     dst: reports/synthesis/vivado.jou
-  - type: ADD
+  - type: MODIFY
     src: blob_store/01481a77c4062d39db0d645de05acba4_vivado.log
     dst: reports/synthesis/vivado.log
-  - type: ADD
-    src: blob_store/69c8c3ada733ad7d078dda6b1735a3d6_Engineering_Memory_v006.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v006.md
-  - type: ADD
-    src: blob_store/088b70a7c0e15d85089aa0b11681340b_ENG-0006_SNN_for_NIDS.md
-    dst: docs/Engineering_History/02_Literature/ENG-0006_SNN_for_NIDS.md
-  - type: ADD
-    src: blob_store/97520a88652c6b7614345539e7068176_ADR-0003_Cuckoo_Hash_Table.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0003_Cuckoo_Hash_Table.md
-  - type: ADD
-    src: blob_store/b648c0ffe93c51dd9b7c47ddf513b85f_WAVE011.md
-    dst: docs/Engineering_History/11_Verification/Waveform_Analysis/WAVE011.md
-  - type: ADD
-    src: blob_store/4dd96998246c15f22ef4c2168227d812_Cuckoo_Hashing_Notes.md
-    dst: docs/Vol0_Foundations/Algorithms/Cuckoo_Hashing_Notes.md
-- id: ev13
-  title: Engineering Event 13
-  instructions:
-  - type: ADD
-    src: blob_store/601f9db38c55021043a6a8f15ccbf1b6_Engineering_Memory_v007.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v007.md
-  - type: ADD
-    src: blob_store/523f50e0d4ce70834961b46617dcf605_001_Cuckoo_Collision_Model.md
-    dst: docs/Engineering_History/03_Math/001_Cuckoo_Collision_Model.md
-  - type: ADD
-    src: blob_store/a12c843867db96c5fc2826e330b58232_ADR-0004_Control_Plane_Separation.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0004_Control_Plane_Separation.md
-  - type: ADD
-    src: blob_store/a9e933a6318dc68c20fa9a9cbf21843b_Engineering_Dashboard.md
-    dst: docs/Engineering_History/12_Performance/Engineering_Dashboard.md
-  - type: ADD
+  - type: CREATE
+    src: blob_store/5095c36d5d28daa55a3063108f2e3147_Skills_Evolution.md
+    dst: docs/Skills_Evolution.md
+  - type: CREATE
+    src: blob_store/9b4afad00b624805ef5b92d009c6a279_ADR-002_Bus_Width.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-002_Bus_Width.md
+  - type: CREATE
+    src: blob_store/5854f25b6b96957686c3d2be1d268148_ADR-010_Combinatorial_Merge.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-010_Combinatorial_Merge.md
+  - type: CREATE
+    src: blob_store/53b13aacdb9da8d618447af7af84e58b_commit008.md
+    dst: docs/Engineering_History/14_Commits/commit008.md
+  - type: CREATE
+    src: blob_store/c7715614f8570fd65ec4d1ccfc63f0bf_commit012.md
+    dst: docs/Engineering_History/14_Commits/commit012.md
+  - type: CREATE
+    src: blob_store/5bf792f5d714c3a58d94fc47e03375e0_Debt_v001.md
+    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v001.md
+  - type: CREATE
     src: blob_store/5a6fc0bb9cc852202da80e7ca03fa8cf_Pipeline_Design_Notes.md
     dst: docs/Vol0_Foundations/Algorithms/Pipeline_Design_Notes.md
-- id: ev14
-  title: Engineering Event 14
+- id: ev10
+  title: SNN Topology Exploration
+  phase: Research
+  problem: Determining optimal network for feature classification
+  decision: Use Leaky Integrate and Fire neurons
+  branch: feature/snn
+  commit:
+    author: Ganeshkumara26
+    date: '2026-02-10'
+    message: 'SNN Topology Exploration
+
+
+      Problem: Determining optimal network for feature classification
+
+      Decision: Use Leaky Integrate and Fire neurons'
   instructions:
+  - type: CREATE
+    src: blob_store/088b70a7c0e15d85089aa0b11681340b_ENG-0006_SNN_for_NIDS.md
+    dst: docs/Engineering_History/02_Literature/ENG-0006_SNN_for_NIDS.md
+  - type: CREATE
+    src: blob_store/192e3fe18f98e7251f4766d7c665648e_ADR-0006_SNN_Extension.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0006_SNN_Extension.md
+  - type: CREATE
+    src: blob_store/6aa62355f1cb3ac45060b31c47366c28_ADR-007_SNN_Topology.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-007_SNN_Topology.md
+  - type: CREATE
+    src: blob_store/ec0bccb84e7a62a71981e0a65b411b37_ADR-008_SNN_Verilog_Types.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-008_SNN_Verilog_Types.md
+  - type: CREATE
+    src: blob_store/fab2a0cc36c48a795231b1a382ab4d63_ADR-012_SNN_Pipelining.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-012_SNN_Pipelining.md
+  issue:
+    action: open
+    title: SNN Topology Exploration
+    labels:
+    - bug
+- id: ev11
+  title: Feature Encoder Design
+  phase: Design
+  problem: Converting packet lengths to spike trains
+  decision: Implement time-based threshold encoding
+  branch: feature/snn
+  commit:
+    author: Ganeshkumara26
+    date: '2026-02-14'
+    message: 'Feature Encoder Design
+
+
+      Problem: Converting packet lengths to spike trains
+
+      Decision: Implement time-based threshold encoding'
+  instructions: []
+  issue:
+    action: close
+    ref: ev10
+  merge: feature/snn
+- id: ev12
+  title: SNN Neuron Implementation
+  phase: Implementation
+  problem: Mapping LIF math to Verilog
+  decision: Use fixed-point arithmetic, bit-shift for leaks
+  branch: feature/snn
+  commit:
+    author: Ganeshkumara26
+    date: '2026-02-18'
+    message: 'SNN Neuron Implementation
+
+
+      Problem: Mapping LIF math to Verilog
+
+      Decision: Use fixed-point arithmetic, bit-shift for leaks'
+  instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
   - type: DELETE
     dst: rtl/ha_tff_datapath_top_v002.v
   - type: DELETE
     dst: rtl/ha_tff_matcher_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/4d1420578a255ce31a306a2a680ff101_snn_tff_layer.v
     dst: rtl/snn_tff_layer.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/bcc5a585fa5194627212146eebbecb64_snn_tff_neuron.v
     dst: rtl/snn_tff_neuron.v
   - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
     dst: tb/tb_ha_tff_datapath_top_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/e348a4ab6d392e794dc9d14a92e16235_tb_snn_layer.v
     dst: tb/tb_snn_layer.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
   - type: DELETE
     dst: sim/bank0.mem
   - type: DELETE
@@ -528,458 +705,1509 @@ events:
   - type: DELETE
     dst: sim/bank3.mem
   - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
     dst: sim/pipelined_sim.vvp
   - type: DELETE
     dst: sim/simulation_log_v005.txt
-  - type: DELETE
-    dst: sim/tb_ha_tff_datapath_v005.vcd
-  - type: ADD
+  - type: CREATE
     src: blob_store/0612e079d44050261a7b7371fabf20f5_simulation_log_v006.txt
     dst: sim/simulation_log_v006.txt
-  - type: ADD
+  - type: CREATE
     src: blob_store/cc22a1557f98ae56f195072f2665b5e2_sim_snn.vvp
     dst: sim/sim_snn.vvp
-  - type: ADD
-    src: blob_store/8ffc3333491a554eccf8876dc2f261e1_tb_snn_layer.vcd
-    dst: sim/tb_snn_layer.vcd
   - type: DELETE
-    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
   - type: DELETE
     dst: reports/synthesis/power_report.txt
-  - type: ADD
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: CREATE
     src: blob_store/99e4bc9abd82843e3f18dd0e1f228a64_snn_tff_layer_synth.dcp
     dst: reports/synthesis/snn_tff_layer_synth.dcp
-  - type: ADD
+  - type: MODIFY
     src: blob_store/04796f924af3a1d03b25eb49f6b4d8fe_synth.tcl
     dst: reports/synthesis/synth.tcl
-  - type: ADD
+  - type: MODIFY
     src: blob_store/9705d913960bcc6075477fc38ff23237_utilization_report.txt
     dst: reports/synthesis/utilization_report.txt
-  - type: ADD
+  - type: MODIFY
     src: blob_store/d8364597c98b8fc29128f747bc2142b9_vivado.jou
     dst: reports/synthesis/vivado.jou
-  - type: ADD
+  - type: MODIFY
     src: blob_store/7d3f7df592812fcf73c6a8467850020e_vivado.log
     dst: reports/synthesis/vivado.log
-  - type: ADD
+  - type: CREATE
     src: blob_store/c42347ed8461afd054ff29f399a6fb67_Engineering_Memory_v008.md
     dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v008.md
-  - type: ADD
-    src: blob_store/fe9d5d377bc9a583588a1ef92df41cb5_LIF_Neuron_Formulation.md
-    dst: docs/Engineering_History/03_Math/LIF_Neuron_Formulation.md
-  - type: ADD
-    src: blob_store/7fb47d4ade34e222c074eaf8231a24f2_ADR-0005_Matcher_Pipelining.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0005_Matcher_Pipelining.md
-  - type: ADD
-    src: blob_store/363ff01b568c5bfb097bec5b5e619842_commit001.md
-    dst: docs/Engineering_History/14_Commits/commit001.md
-  - type: ADD
-    src: blob_store/3e45428438ccb666b806e5bddfe549b8_AXI_Stream_Notes.md
-    dst: docs/Vol0_Foundations/Hardware/AXI_Stream_Notes.md
-- id: ev15
-  title: Engineering Event 15
+  - type: CREATE
+    src: blob_store/f066ca92d861928abb7ed99a9b221ea4_bug003_snn_leak_fail.md
+    dst: docs/Engineering_History/10_Debug/bug003_snn_leak_fail.md
+  - type: CREATE
+    src: blob_store/dd16ce22fd4f2feb372a8157054fccf7_ADR-006_Firewall_Pivot.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-006_Firewall_Pivot.md
+  - type: CREATE
+    src: blob_store/0cccf8d644b74d6f29737396f804f97c_ADR-009_Feature_Encoding.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-009_Feature_Encoding.md
+- id: ev13
+  title: SNN Layer Integration
+  phase: Integration
+  problem: Connecting 32 neurons in a layer
+  decision: Use broadcast bus for spikes
+  branch: feature/snn
+  commit:
+    author: Ganeshkumara26
+    date: '2026-02-22'
+    message: 'SNN Layer Integration
+
+
+      Problem: Connecting 32 neurons in a layer
+
+      Decision: Use broadcast bus for spikes'
   instructions:
-  - type: ADD
-    src: blob_store/cd3a713b04ada1823088b7d9b653e12a_Engineering_Memory_v009.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v009.md
-  - type: ADD
-    src: blob_store/d7175c42ce5b8a0d16d5ad339975ef10_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v001/architecture.md
-  - type: ADD
-    src: blob_store/192e3fe18f98e7251f4766d7c665648e_ADR-0006_SNN_Extension.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0006_SNN_Extension.md
-  - type: ADD
-    src: blob_store/672cb39873d10007e8b5239caf30132a_commit002.md
-    dst: docs/Engineering_History/14_Commits/commit002.md
-  - type: ADD
-    src: blob_store/8af94b6f84b66c6e9788d9920f04fa33_Ethernet_IPv4_UDP_Notes.md
-    dst: docs/Vol0_Foundations/Networking/Ethernet_IPv4_UDP_Notes.md
-- id: ev16
-  title: Engineering Event 16
-  instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher_v002.v
   - type: DELETE
     dst: rtl/snn_tff_layer.v
   - type: DELETE
     dst: rtl/snn_tff_neuron.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/06f09b7826f4e9f5401e7133aa4564c9_snn_tff_layer_v002.v
     dst: rtl/snn_tff_layer_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/d576cf25b775d58bd9eb7743c1368596_snn_tff_neuron_v002.v
     dst: rtl/snn_tff_neuron_v002.v
   - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
     dst: tb/tb_snn_layer.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/454bd1907ffec6cda128e79fa51d38b9_tb_snn_layer_v002.v
     dst: tb/tb_snn_layer_v002.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: sim/bank0.mem
+  - type: DELETE
+    dst: sim/bank1.mem
+  - type: DELETE
+    dst: sim/bank2.mem
+  - type: DELETE
+    dst: sim/bank3.mem
+  - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
+    dst: sim/pipelined_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v005.txt
   - type: DELETE
     dst: sim/simulation_log_v006.txt
   - type: DELETE
     dst: sim/sim_snn.vvp
-  - type: DELETE
-    dst: sim/tb_snn_layer.vcd
-  - type: ADD
+  - type: CREATE
     src: blob_store/35ad32d96612d4d05547d304636ce4d9_simulation_log_v007.txt
     dst: sim/simulation_log_v007.txt
-  - type: ADD
+  - type: CREATE
     src: blob_store/47af960bb2890e73cc09e22050492cd5_sim_snn_v002.vvp
     dst: sim/sim_snn_v002.vvp
-  - type: ADD
-    src: blob_store/d22a2982f5221727d883774b4b433ec6_tb_snn_layer_v002.vcd
-    dst: sim/tb_snn_layer_v002.vcd
-  - type: DELETE
-    dst: reports/synthesis/snn_tff_layer_synth.dcp
   - type: DELETE
     dst: reports/synthesis/synth.tcl
   - type: DELETE
     dst: reports/synthesis/utilization_report.txt
   - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/power_report.txt
+  - type: DELETE
     dst: reports/synthesis/vivado.jou
   - type: DELETE
     dst: reports/synthesis/vivado.log
-  - type: ADD
-    src: blob_store/a1399320e568849157a9285010ac8b8d_Engineering_Memory_v010.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v010.md
-  - type: ADD
-    src: blob_store/bbb56ba8acb1154e75830c0115f14a81_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v002/architecture.md
-  - type: ADD
-    src: blob_store/156fab897fdb6775fd1b5c1f8a80bf6c_ADR-001_Parser_FSM.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-001_Parser_FSM.md
-  - type: ADD
-    src: blob_store/24975dcfe2fe95583e5d38f763ea2ed9_commit003.md
-    dst: docs/Engineering_History/14_Commits/commit003.md
-  - type: ADD
-    src: blob_store/a92849da6bd0edc5b16b7328a09f8233_Linux_Network_Stack.md
-    dst: docs/Vol0_Foundations/Networking/Linux_Network_Stack.md
-- id: ev17
-  title: Engineering Event 17
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
+  - type: CREATE
+    src: blob_store/833d9d7232d8a15eb4cf889046dca775_2026-01-08.md
+    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-08.md
+  - type: CREATE
+    src: blob_store/89d46f3fe7c06e18eb79f4defcd70c3d_performance_history.csv
+    dst: docs/Engineering_History/18_Performance/performance_history.csv
+- id: ev14
+  title: SNN Timing Closure Failure
+  phase: Verification
+  problem: Critical path exceeds 6.4 ns
+  decision: Insert pipeline stage
+  branch: bugfix/snn-timing
+  commit:
+    author: Ganeshkumara26
+    date: '2026-02-26'
+    message: 'SNN Timing Closure Failure
+
+
+      Problem: Critical path exceeds 6.4 ns
+
+      Decision: Insert pipeline stage'
   instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron.v
   - type: DELETE
     dst: rtl/snn_tff_layer_v002.v
   - type: DELETE
     dst: rtl/snn_tff_neuron_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/f477876586169d5ae64d4251d50e1a48_snn_tff_layer_v003.v
     dst: rtl/snn_tff_layer_v003.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/d2a150bd4048375da8b8ac9f6ad4b562_snn_tff_neuron_v003.v
     dst: rtl/snn_tff_neuron_v003.v
   - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer.v
+  - type: DELETE
     dst: tb/tb_snn_layer_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/13db646c59957137670b014cf7c1a475_tb_snn_layer_v003.v
     dst: tb/tb_snn_layer_v003.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: sim/bank0.mem
+  - type: DELETE
+    dst: sim/bank1.mem
+  - type: DELETE
+    dst: sim/bank2.mem
+  - type: DELETE
+    dst: sim/bank3.mem
+  - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
+    dst: sim/pipelined_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v005.txt
+  - type: DELETE
+    dst: sim/simulation_log_v006.txt
+  - type: DELETE
+    dst: sim/sim_snn.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v007.txt
+  - type: DELETE
+    dst: sim/sim_snn_v002.vvp
+  - type: CREATE
+    src: blob_store/7e3945dd0e1d882fc9af5aec4f99f565_simulation_log_v008.txt
+    dst: sim/simulation_log_v008.txt
+  - type: CREATE
+    src: blob_store/a14588129e4e8751165c18b9ad9069f4_sim_snn_v003.vvp
+    dst: sim/sim_snn_v003.vvp
+  - type: DELETE
+    dst: reports/synthesis/synth.tcl
+  - type: DELETE
+    dst: reports/synthesis/utilization_report.txt
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/power_report.txt
+  - type: DELETE
+    dst: reports/synthesis/vivado.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
+  - type: CREATE
+    src: blob_store/69c8c3ada733ad7d078dda6b1735a3d6_Engineering_Memory_v006.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v006.md
+  - type: CREATE
+    src: blob_store/97520a88652c6b7614345539e7068176_ADR-0003_Cuckoo_Hash_Table.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0003_Cuckoo_Hash_Table.md
+  - type: CREATE
+    src: blob_store/a9e933a6318dc68c20fa9a9cbf21843b_Engineering_Dashboard.md
+    dst: docs/Engineering_History/12_Performance/Engineering_Dashboard.md
+  - type: CREATE
+    src: blob_store/2bdaa5c4ade7420b7876aeeb9b91aca0_todo_v005.md
+    dst: docs/Engineering_History/19_TODO/todo_v005.md
+- id: ev15
+  title: System Top Integration
+  phase: Integration
+  problem: Connecting SNN to Datapath
+  decision: Implement Top-level wrapper
+  branch: feature/system-integration
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-02'
+    message: 'System Top Integration
+
+
+      Problem: Connecting SNN to Datapath
+
+      Decision: Implement Top-level wrapper'
+  instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v003.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v003.v
+  - type: CREATE
+    src: blob_store/419dd0749622efe364470342d5ff486d_ha_tff_system_top_v001.v
+    dst: rtl/ha_tff_system_top_v001.v
+  - type: CREATE
+    src: blob_store/2c933e1fcceab7f86fe7914787618a32_snn_feature_encoder.v
+    dst: rtl/snn_feature_encoder.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v003.v
+  - type: CREATE
+    src: blob_store/630b970d42db15df344b59937a363cd0_tb_ha_tff_system_top.v
+    dst: tb/tb_ha_tff_system_top.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: sim/bank0.mem
+  - type: DELETE
+    dst: sim/bank1.mem
+  - type: DELETE
+    dst: sim/bank2.mem
+  - type: DELETE
+    dst: sim/bank3.mem
+  - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
+    dst: sim/pipelined_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v005.txt
+  - type: DELETE
+    dst: sim/simulation_log_v006.txt
+  - type: DELETE
+    dst: sim/sim_snn.vvp
   - type: DELETE
     dst: sim/simulation_log_v007.txt
   - type: DELETE
     dst: sim/sim_snn_v002.vvp
   - type: DELETE
-    dst: sim/tb_snn_layer_v002.vcd
-  - type: ADD
-    src: blob_store/7e3945dd0e1d882fc9af5aec4f99f565_simulation_log_v008.txt
     dst: sim/simulation_log_v008.txt
-  - type: ADD
-    src: blob_store/a14588129e4e8751165c18b9ad9069f4_sim_snn_v003.vvp
+  - type: DELETE
     dst: sim/sim_snn_v003.vvp
-  - type: ADD
-    src: blob_store/812576575f165c8e0e1be147e4241c1b_tb_snn_layer_v003.vcd
-    dst: sim/tb_snn_layer_v003.vcd
-  - type: ADD
-    src: blob_store/57b7f78ecb3b0f96ad943ece957c45ea_Engineering_Memory_v011.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v011.md
-  - type: ADD
-    src: blob_store/3e9bbec26d8cacccf38636e483e382ea_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v003/architecture.md
-  - type: ADD
-    src: blob_store/9b4afad00b624805ef5b92d009c6a279_ADR-002_Bus_Width.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-002_Bus_Width.md
-  - type: ADD
-    src: blob_store/aec390e36390d752ed9baa70373f4556_commit004.md
-    dst: docs/Engineering_History/14_Commits/commit004.md
-  - type: ADD
-    src: blob_store/44f55b172b00cbab1014672d487405a9_System_Architecture.md
-    dst: docs/Vol1_MeghDut_Learning/01_Architecture/System_Architecture.md
-- id: ev18
-  title: Engineering Event 18
+  - type: CREATE
+    src: blob_store/1a976498fcacdc793263effd5bb5a0ef_simulation_log_v009.txt
+    dst: sim/simulation_log_v009.txt
+  - type: CREATE
+    src: blob_store/57837dadd7076315820683880fed17a7_sim_sys.vvp
+    dst: sim/sim_sys.vvp
+  - type: DELETE
+    dst: reports/synthesis/synth.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/power_report.txt
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
+  - type: CREATE
+    src: blob_store/e2ee283c4a3fcb333ee5dbe896e01472_ha_tff_system_top_synth.dcp
+    dst: reports/synthesis/ha_tff_system_top_synth.dcp
+  - type: CREATE
+    src: blob_store/c826958a04cd76406f718efb8b5d1122_synth_sys.tcl
+    dst: reports/synthesis/synth_sys.tcl
+  - type: MODIFY
+    src: blob_store/b06ad8d5424be48f2b56aba5117dfe44_utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - type: MODIFY
+    src: blob_store/a096af6eb0a06736ddcba2b6d02097ea_vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - type: MODIFY
+    src: blob_store/ba1fc86b86830d523923c847353d0942_vivado.log
+    dst: reports/synthesis/vivado.log
+  - type: CREATE
+    src: blob_store/ca62e292154e3b4bcee1a3319e55daa6_Project_Evolution.md
+    dst: docs/Project_Evolution.md
+  - type: CREATE
+    src: blob_store/4a951d8fd427c1de06ec6a8f02ffd3dd_BUG-005_Dead_Code_Elimination.md
+    dst: docs/Engineering_History/02_Knowledge/BUG-005_Dead_Code_Elimination.md
+  - type: CREATE
+    src: blob_store/0c1e7baef435d6a01f9412d1c728d84c_Coverage_Report_v012.md
+    dst: docs/Engineering_History/11_Verification/Coverage_Report_v012.md
+  issue:
+    action: open
+    title: System Top Integration
+    labels:
+    - bug
+- id: ev16
+  title: SNN Leak Precision Issue
+  phase: Verification
+  problem: Neurons not leaking fast enough
+  decision: Increase precision of leak shift register
+  branch: bugfix/snn-leak
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-06'
+    message: 'SNN Leak Precision Issue
+
+
+      Problem: Neurons not leaking fast enough
+
+      Decision: Increase precision of leak shift register'
   instructions:
-  - type: ADD
-    src: blob_store/08c2673903fe4529534e83944833f939_Engineering_Memory_v012.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v012.md
-  - type: ADD
-    src: blob_store/b2cad2addb43959781428dea3d7b212f_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v004/architecture.md
-  - type: ADD
-    src: blob_store/7f312aa98898829623994062eb9a4b94_ADR-003_Hashing_Algorithm.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-003_Hashing_Algorithm.md
-  - type: ADD
-    src: blob_store/1004f8102c2fb98c99614c40d0b443af_commit005.md
-    dst: docs/Engineering_History/14_Commits/commit005.md
-  - type: ADD
-    src: blob_store/1e25486fb49d4d6071f1780a29459f13_MavlinkBridge_Notes.md
-    dst: docs/Vol1_MeghDut_Learning/02_Code_Reading/MavlinkBridge_Notes.md
-- id: ev19
-  title: Engineering Event 19
-  instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v002.v
   - type: DELETE
     dst: rtl/snn_tff_layer_v003.v
   - type: DELETE
     dst: rtl/snn_tff_neuron_v003.v
-  - type: ADD
-    src: blob_store/419dd0749622efe364470342d5ff486d_ha_tff_system_top_v001.v
+  - type: DELETE
     dst: rtl/ha_tff_system_top_v001.v
-  - type: ADD
-    src: blob_store/2c933e1fcceab7f86fe7914787618a32_snn_feature_encoder.v
+  - type: DELETE
     dst: rtl/snn_feature_encoder.v
+  - type: CREATE
+    src: blob_store/505e5abc05c3d35eb653cedce8e4b847_ha_tff_system_top_v002.v
+    dst: rtl/ha_tff_system_top_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v002.v
   - type: DELETE
     dst: tb/tb_snn_layer_v003.v
-  - type: ADD
-    src: blob_store/630b970d42db15df344b59937a363cd0_tb_ha_tff_system_top.v
+  - type: DELETE
     dst: tb/tb_ha_tff_system_top.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: sim/bank0.mem
+  - type: DELETE
+    dst: sim/bank1.mem
+  - type: DELETE
+    dst: sim/bank2.mem
+  - type: DELETE
+    dst: sim/bank3.mem
+  - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
+    dst: sim/pipelined_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v005.txt
+  - type: DELETE
+    dst: sim/simulation_log_v006.txt
+  - type: DELETE
+    dst: sim/sim_snn.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v007.txt
+  - type: DELETE
+    dst: sim/sim_snn_v002.vvp
   - type: DELETE
     dst: sim/simulation_log_v008.txt
   - type: DELETE
     dst: sim/sim_snn_v003.vvp
   - type: DELETE
-    dst: sim/tb_snn_layer_v003.vcd
-  - type: ADD
-    src: blob_store/1a976498fcacdc793263effd5bb5a0ef_simulation_log_v009.txt
     dst: sim/simulation_log_v009.txt
-  - type: ADD
-    src: blob_store/57837dadd7076315820683880fed17a7_sim_sys.vvp
+  - type: DELETE
     dst: sim/sim_sys.vvp
-  - type: ADD
-    src: blob_store/96cc26bec35d4a82853b3697d01d3ad1_tb_ha_tff_system_top.vcd
-    dst: sim/tb_ha_tff_system_top.vcd
-  - type: ADD
-    src: blob_store/e2ee283c4a3fcb333ee5dbe896e01472_ha_tff_system_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/synth.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/power_report.txt
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
+  - type: DELETE
     dst: reports/synthesis/ha_tff_system_top_synth.dcp
-  - type: ADD
-    src: blob_store/c826958a04cd76406f718efb8b5d1122_synth_sys.tcl
+  - type: DELETE
     dst: reports/synthesis/synth_sys.tcl
-  - type: ADD
-    src: blob_store/b06ad8d5424be48f2b56aba5117dfe44_utilization_report.txt
+  - type: CREATE
+    src: blob_store/277fddfde3593e0175c69c1223a94b70_ha_tff_system_top_v002_synth.dcp
+    dst: reports/synthesis/ha_tff_system_top_v002_synth.dcp
+  - type: CREATE
+    src: blob_store/134d8ca15c80e84bda99be4ab3ab3025_synth_sys_v002.tcl
+    dst: reports/synthesis/synth_sys_v002.tcl
+  - type: MODIFY
+    src: blob_store/ada068499cd1e301b6f1b1fd22fd8a6e_utilization_report.txt
     dst: reports/synthesis/utilization_report.txt
-  - type: ADD
-    src: blob_store/a096af6eb0a06736ddcba2b6d02097ea_vivado.jou
+  - type: MODIFY
+    src: blob_store/375dd951b2526f1a4ab85294dc250c09_vivado.jou
     dst: reports/synthesis/vivado.jou
-  - type: ADD
-    src: blob_store/ba1fc86b86830d523923c847353d0942_vivado.log
+  - type: MODIFY
+    src: blob_store/da1ce3153e4cd9cfd44b471adaa1b884_vivado.log
     dst: reports/synthesis/vivado.log
-  - type: ADD
-    src: blob_store/2e4417d35e602540a7f428bd9723145e_Engineering_Memory_v013.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v013.md
-  - type: ADD
-    src: blob_store/33921598268044adda47b07857d315b2_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v005/architecture.md
-  - type: ADD
-    src: blob_store/8a0c649e7d68951824e1b4f5eafb2a4d_ADR-004_Memory_Primitive.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-004_Memory_Primitive.md
-  - type: ADD
-    src: blob_store/4a6a6033e5f0ebed8353053b99a5ccde_commit006.md
-    dst: docs/Engineering_History/14_Commits/commit006.md
-  - type: ADD
-    src: blob_store/c978ad6b9bf0948e84aa488028823d35_Software_Bottlenecks.md
-    dst: docs/Vol1_MeghDut_Learning/04_Performance_Study/Software_Bottlenecks.md
-  issue:
-    action: open
-    title: SNN Timing Closure Failure
-- id: ev20
-  title: Engineering Event 20
-  instructions: []
   issue:
     action: close
-    ref: ev19
-  branch: bugfix/snn-timing
-- id: ev21
-  title: Engineering Event 21
-  instructions: []
-- id: ev22
-  title: Engineering Event 22
-  instructions: []
-- id: ev23
-  title: Engineering Event 23
+    ref: ev15
+  merge: feature/system-integration
+- id: ev17
+  title: Drop FSM Implementation
+  phase: Implementation
+  problem: Need to physically drop malicious packets
+  decision: Implement tail-drop mechanism
+  branch: feature/drop-fsm
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-10'
+    message: 'Drop FSM Implementation
+
+
+      Problem: Need to physically drop malicious packets
+
+      Decision: Implement tail-drop mechanism'
   instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v003.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v003.v
   - type: DELETE
     dst: rtl/ha_tff_system_top_v001.v
   - type: DELETE
     dst: rtl/snn_feature_encoder.v
-  - type: ADD
-    src: blob_store/505e5abc05c3d35eb653cedce8e4b847_ha_tff_system_top_v002.v
+  - type: DELETE
     dst: rtl/ha_tff_system_top_v002.v
+  - type: CREATE
+    src: blob_store/2f2b8c84c17018b939f06875e7e95ecf_axi_stream_delay_line.v
+    dst: rtl/axi_stream_delay_line.v
+  - type: CREATE
+    src: blob_store/d08bb239656ffeed4ef4929f60765c3a_ha_tff_system_top_v003.v
+    dst: rtl/ha_tff_system_top_v003.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v003.v
   - type: DELETE
     dst: tb/tb_ha_tff_system_top.v
+  - type: CREATE
+    src: blob_store/754b2c9d85035c9f9a07e58c374cbcd0_tb_ha_tff_system_top_v003.v
+    dst: tb/tb_ha_tff_system_top_v003.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: sim/bank0.mem
+  - type: DELETE
+    dst: sim/bank1.mem
+  - type: DELETE
+    dst: sim/bank2.mem
+  - type: DELETE
+    dst: sim/bank3.mem
+  - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
+    dst: sim/pipelined_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v005.txt
+  - type: DELETE
+    dst: sim/simulation_log_v006.txt
+  - type: DELETE
+    dst: sim/sim_snn.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v007.txt
+  - type: DELETE
+    dst: sim/sim_snn_v002.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v008.txt
+  - type: DELETE
+    dst: sim/sim_snn_v003.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v009.txt
+  - type: DELETE
+    dst: sim/sim_sys.vvp
+  - type: CREATE
+    src: blob_store/5c75f518867c3c30476a43fd0c9b84db_simulation_log_v011.txt
+    dst: sim/simulation_log_v011.txt
+  - type: CREATE
+    src: blob_store/8890d6cf089a44efc27e7e600e09a03b_sim_sys_v011.vvp
+    dst: sim/sim_sys_v011.vvp
+  - type: DELETE
+    dst: reports/synthesis/synth.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/power_report.txt
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_system_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/synth_sys.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_system_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/synth_sys_v002.tcl
+  - type: CREATE
+    src: blob_store/b3e23d8b0230a332ba20ec59bf3ae7ea_ha_tff_system_top_v003_synth.dcp
+    dst: reports/synthesis/ha_tff_system_top_v003_synth.dcp
+  - type: CREATE
+    src: blob_store/30adeaea2c30d9724b2a2322c02863a5_synth_sys_v003.tcl
+    dst: reports/synthesis/synth_sys_v003.tcl
+  - type: MODIFY
+    src: blob_store/b533808e8a3a1e030e930d8c38bcdb8f_utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - type: MODIFY
+    src: blob_store/bf77bb3ce1881768113a9345ff7ba526_vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - type: MODIFY
+    src: blob_store/d85325bbbae075e19691b363ee3281b0_vivado.log
+    dst: reports/synthesis/vivado.log
+  - type: CREATE
+    src: blob_store/9a99e4e16d11ec392ac8ba71fe146c7e_Decision_Graph.md
+    dst: docs/Decision_Graph.md
+  - type: CREATE
+    src: blob_store/601f9db38c55021043a6a8f15ccbf1b6_Engineering_Memory_v007.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v007.md
+  - type: CREATE
+    src: blob_store/17aae059dffeac863d9d4435dc9b4bf1_REQ-v001.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v001.md
+  - type: CREATE
+    src: blob_store/24975dcfe2fe95583e5d38f763ea2ed9_commit003.md
+    dst: docs/Engineering_History/14_Commits/commit003.md
+  - type: CREATE
+    src: blob_store/094ecb0579f7bf9d1d71d802ece0322a_commit007.md
+    dst: docs/Engineering_History/14_Commits/commit007.md
+- id: ev18
+  title: VLAN Alignment Bug
+  phase: Verification
+  problem: 802.1Q tags break parsing offset
+  decision: Add VLAN detection state
+  branch: bugfix/vlan
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-14'
+    message: 'VLAN Alignment Bug
+
+
+      Problem: 802.1Q tags break parsing offset
+
+      Decision: Add VLAN detection state'
+  instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v003.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v003.v
+  - type: DELETE
+    dst: rtl/ha_tff_system_top_v001.v
+  - type: DELETE
+    dst: rtl/snn_feature_encoder.v
+  - type: DELETE
+    dst: rtl/ha_tff_system_top_v002.v
+  - type: DELETE
+    dst: rtl/axi_stream_delay_line.v
+  - type: DELETE
+    dst: rtl/ha_tff_system_top_v003.v
+  - type: CREATE
+    src: blob_store/54ce295a0bfe2e843f55e2fcdc297a86_ha_tff_system_top_v004.v
+    dst: rtl/ha_tff_system_top_v004.v
+  - type: CREATE
+    src: blob_store/d9c8f58b6f6487df60a5dcb8cdb800a2_snn_tff_layer_v004.v
+    dst: rtl/snn_tff_layer_v004.v
+  - type: CREATE
+    src: blob_store/a7ad97913c6d1e960aa03eee66924643_snn_tff_neuron_v004.v
+    dst: rtl/snn_tff_neuron_v004.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v003.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_system_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_system_top_v003.v
+  - type: CREATE
+    src: blob_store/cc6c704991747ea348de521946499199_tb_ha_tff_system_top_v004.v
+    dst: tb/tb_ha_tff_system_top_v004.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: sim/bank0.mem
+  - type: DELETE
+    dst: sim/bank1.mem
+  - type: DELETE
+    dst: sim/bank2.mem
+  - type: DELETE
+    dst: sim/bank3.mem
+  - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
+    dst: sim/pipelined_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v005.txt
+  - type: DELETE
+    dst: sim/simulation_log_v006.txt
+  - type: DELETE
+    dst: sim/sim_snn.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v007.txt
+  - type: DELETE
+    dst: sim/sim_snn_v002.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v008.txt
+  - type: DELETE
+    dst: sim/sim_snn_v003.vvp
   - type: DELETE
     dst: sim/simulation_log_v009.txt
   - type: DELETE
     dst: sim/sim_sys.vvp
   - type: DELETE
-    dst: sim/tb_ha_tff_system_top.vcd
+    dst: sim/simulation_log_v011.txt
+  - type: DELETE
+    dst: sim/sim_sys_v011.vvp
+  - type: CREATE
+    src: blob_store/5d963ba27f43070571d26d9af0fafdea_simulation_log_v012.txt
+    dst: sim/simulation_log_v012.txt
+  - type: CREATE
+    src: blob_store/1c0c4e8ec98ebad9f42ade31f1870af9_sim_sys_v012.vvp
+    dst: sim/sim_sys_v012.vvp
+  - type: DELETE
+    dst: reports/synthesis/synth.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/power_report.txt
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
   - type: DELETE
     dst: reports/synthesis/ha_tff_system_top_synth.dcp
   - type: DELETE
     dst: reports/synthesis/synth_sys.tcl
-  - type: ADD
-    src: blob_store/277fddfde3593e0175c69c1223a94b70_ha_tff_system_top_v002_synth.dcp
-    dst: reports/synthesis/ha_tff_system_top_v002_synth.dcp
-  - type: ADD
-    src: blob_store/134d8ca15c80e84bda99be4ab3ab3025_synth_sys_v002.tcl
-    dst: reports/synthesis/synth_sys_v002.tcl
-  - type: ADD
-    src: blob_store/ada068499cd1e301b6f1b1fd22fd8a6e_utilization_report.txt
-    dst: reports/synthesis/utilization_report.txt
-  - type: ADD
-    src: blob_store/375dd951b2526f1a4ab85294dc250c09_vivado.jou
-    dst: reports/synthesis/vivado.jou
-  - type: ADD
-    src: blob_store/da1ce3153e4cd9cfd44b471adaa1b884_vivado.log
-    dst: reports/synthesis/vivado.log
-  merge: bugfix/snn-timing
-- id: ev24
-  title: Engineering Event 24
-  instructions: []
-- id: ev25
-  title: Engineering Event 25
-  instructions:
-  - type: DELETE
-    dst: rtl/ha_tff_system_top_v002.v
-  - type: ADD
-    src: blob_store/2f2b8c84c17018b939f06875e7e95ecf_axi_stream_delay_line.v
-    dst: rtl/axi_stream_delay_line.v
-  - type: ADD
-    src: blob_store/d08bb239656ffeed4ef4929f60765c3a_ha_tff_system_top_v003.v
-    dst: rtl/ha_tff_system_top_v003.v
-  - type: ADD
-    src: blob_store/754b2c9d85035c9f9a07e58c374cbcd0_tb_ha_tff_system_top_v003.v
-    dst: tb/tb_ha_tff_system_top_v003.v
-  - type: ADD
-    src: blob_store/5c75f518867c3c30476a43fd0c9b84db_simulation_log_v011.txt
-    dst: sim/simulation_log_v011.txt
-  - type: ADD
-    src: blob_store/8890d6cf089a44efc27e7e600e09a03b_sim_sys_v011.vvp
-    dst: sim/sim_sys_v011.vvp
-  - type: ADD
-    src: blob_store/c34d1986727bed4f5a71439b163c656f_tb_ha_tff_system_top_v003.vcd
-    dst: sim/tb_ha_tff_system_top_v003.vcd
   - type: DELETE
     dst: reports/synthesis/ha_tff_system_top_v002_synth.dcp
   - type: DELETE
     dst: reports/synthesis/synth_sys_v002.tcl
-  - type: ADD
-    src: blob_store/b3e23d8b0230a332ba20ec59bf3ae7ea_ha_tff_system_top_v003_synth.dcp
-    dst: reports/synthesis/ha_tff_system_top_v003_synth.dcp
-  - type: ADD
-    src: blob_store/30adeaea2c30d9724b2a2322c02863a5_synth_sys_v003.tcl
-    dst: reports/synthesis/synth_sys_v003.tcl
-  - type: ADD
-    src: blob_store/b533808e8a3a1e030e930d8c38bcdb8f_utilization_report.txt
-    dst: reports/synthesis/utilization_report.txt
-  - type: ADD
-    src: blob_store/bf77bb3ce1881768113a9345ff7ba526_vivado.jou
-    dst: reports/synthesis/vivado.jou
-  - type: ADD
-    src: blob_store/d85325bbbae075e19691b363ee3281b0_vivado.log
-    dst: reports/synthesis/vivado.log
-- id: ev26
-  title: Engineering Event 26
-  instructions:
-  - type: DELETE
-    dst: rtl/axi_stream_delay_line.v
-  - type: DELETE
-    dst: rtl/ha_tff_system_top_v003.v
-  - type: ADD
-    src: blob_store/54ce295a0bfe2e843f55e2fcdc297a86_ha_tff_system_top_v004.v
-    dst: rtl/ha_tff_system_top_v004.v
-  - type: ADD
-    src: blob_store/d9c8f58b6f6487df60a5dcb8cdb800a2_snn_tff_layer_v004.v
-    dst: rtl/snn_tff_layer_v004.v
-  - type: ADD
-    src: blob_store/a7ad97913c6d1e960aa03eee66924643_snn_tff_neuron_v004.v
-    dst: rtl/snn_tff_neuron_v004.v
-  - type: DELETE
-    dst: tb/tb_ha_tff_system_top_v003.v
-  - type: ADD
-    src: blob_store/cc6c704991747ea348de521946499199_tb_ha_tff_system_top_v004.v
-    dst: tb/tb_ha_tff_system_top_v004.v
-  - type: DELETE
-    dst: sim/simulation_log_v011.txt
-  - type: DELETE
-    dst: sim/sim_sys_v011.vvp
-  - type: DELETE
-    dst: sim/tb_ha_tff_system_top_v003.vcd
-  - type: ADD
-    src: blob_store/5d963ba27f43070571d26d9af0fafdea_simulation_log_v012.txt
-    dst: sim/simulation_log_v012.txt
-  - type: ADD
-    src: blob_store/1c0c4e8ec98ebad9f42ade31f1870af9_sim_sys_v012.vvp
-    dst: sim/sim_sys_v012.vvp
-  - type: ADD
-    src: blob_store/6c4e76baa77022f7e7049df577072fa1_tb_ha_tff_system_top_v004.vcd
-    dst: sim/tb_ha_tff_system_top_v004.vcd
   - type: DELETE
     dst: reports/synthesis/ha_tff_system_top_v003_synth.dcp
   - type: DELETE
     dst: reports/synthesis/synth_sys_v003.tcl
-  - type: ADD
+  - type: CREATE
     src: blob_store/a2f9480c5a9a57c14bed3c3ff88320b0_ha_tff_system_top_v004_synth.dcp
     dst: reports/synthesis/ha_tff_system_top_v004_synth.dcp
-  - type: ADD
+  - type: CREATE
     src: blob_store/9c887684c0e302a2bc6aa5a850cb7ca6_synth_sys_v004.tcl
     dst: reports/synthesis/synth_sys_v004.tcl
-  - type: ADD
+  - type: MODIFY
     src: blob_store/02de438bc3a3a5bbffe9797822726813_utilization_report.txt
     dst: reports/synthesis/utilization_report.txt
-  - type: ADD
+  - type: MODIFY
     src: blob_store/1b5e6e9e1d54a650ccdc73a015eb91f7_vivado.jou
     dst: reports/synthesis/vivado.jou
-  - type: ADD
+  - type: MODIFY
     src: blob_store/ae9fb99c0c80c49923f449d68933372b_vivado.log
     dst: reports/synthesis/vivado.log
-- id: ev27
-  title: Engineering Event 27
-  instructions: []
-- id: ev28
-  title: Engineering Event 28
-  instructions: []
-- id: ev29
-  title: Engineering Event 29
+- id: ev19
+  title: Final Timing Validation
+  phase: Verification
+  problem: Ensure complete system meets 156.25 MHz
+  decision: Run full synthesis and implementation
+  branch: release/v1.0
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-18'
+    message: 'Final Timing Validation
+
+
+      Problem: Ensure complete system meets 156.25 MHz
+
+      Decision: Run full synthesis and implementation'
   instructions:
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_parser_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_hash_v001.v
+  - type: DELETE
+    dst: rtl/ha_tff_bram_bank.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher.v
+  - type: DELETE
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: rtl/ha_tff_matcher_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v002.v
+  - type: DELETE
+    dst: rtl/snn_tff_layer_v003.v
+  - type: DELETE
+    dst: rtl/snn_tff_neuron_v003.v
+  - type: DELETE
+    dst: rtl/ha_tff_system_top_v001.v
+  - type: DELETE
+    dst: rtl/snn_feature_encoder.v
+  - type: DELETE
+    dst: rtl/ha_tff_system_top_v002.v
+  - type: DELETE
+    dst: rtl/axi_stream_delay_line.v
+  - type: DELETE
+    dst: rtl/ha_tff_system_top_v003.v
   - type: DELETE
     dst: rtl/ha_tff_system_top_v004.v
   - type: DELETE
     dst: rtl/snn_tff_layer_v004.v
   - type: DELETE
     dst: rtl/snn_tff_neuron_v004.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/1f39e779af78c8b92b36ad0dd9d3c9bb_ha_tff_axi_lite_regs.v
     dst: rtl/ha_tff_axi_lite_regs.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/cc661c3f442288cb7d37b89ed7cbe65a_ha_tff_datapath_top_v003.v
     dst: rtl/ha_tff_datapath_top_v003.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/a7ff6646c844ed65b42fbc39e2e8aba8_ha_tff_hash_v002.v
     dst: rtl/ha_tff_hash_v002.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/b6fb32d11dc9fc4f58cc431683d9ac54_ha_tff_system_top_v005.v
     dst: rtl/ha_tff_system_top_v005.v
-  - type: ADD
+  - type: CREATE
     src: blob_store/04e44d4352c30a7dfca79ecda62db3d0_snn_tff_layer_v005.v
     dst: rtl/snn_tff_layer_v005.v
   - type: DELETE
+    dst: tb/tb_ha_tff_parser_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_parser_v002.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_hash_v001.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v002.v
+  - type: DELETE
+    dst: tb/tb_snn_layer_v003.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_system_top.v
+  - type: DELETE
+    dst: tb/tb_ha_tff_system_top_v003.v
+  - type: DELETE
     dst: tb/tb_ha_tff_system_top_v004.v
+  - type: DELETE
+    dst: sim/ha_tff_parser_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log.txt
+  - type: DELETE
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v002.txt
+  - type: DELETE
+    dst: sim/ha_tff_hash_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v003.txt
+  - type: DELETE
+    dst: sim/bank0.mem
+  - type: DELETE
+    dst: sim/bank1.mem
+  - type: DELETE
+    dst: sim/bank2.mem
+  - type: DELETE
+    dst: sim/bank3.mem
+  - type: DELETE
+    dst: sim/datapath_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v004.txt
+  - type: DELETE
+    dst: sim/pipelined_sim.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v005.txt
+  - type: DELETE
+    dst: sim/simulation_log_v006.txt
+  - type: DELETE
+    dst: sim/sim_snn.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v007.txt
+  - type: DELETE
+    dst: sim/sim_snn_v002.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v008.txt
+  - type: DELETE
+    dst: sim/sim_snn_v003.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v009.txt
+  - type: DELETE
+    dst: sim/sim_sys.vvp
+  - type: DELETE
+    dst: sim/simulation_log_v011.txt
+  - type: DELETE
+    dst: sim/sim_sys_v011.vvp
   - type: DELETE
     dst: sim/simulation_log_v012.txt
   - type: DELETE
     dst: sim/sim_sys_v012.vvp
   - type: DELETE
-    dst: sim/tb_ha_tff_system_top_v004.vcd
-  - type: DELETE
-    dst: reports/synthesis/ha_tff_system_top_v004_synth.dcp
-  - type: DELETE
-    dst: reports/synthesis/synth_sys_v004.tcl
+    dst: reports/synthesis/synth.tcl
   - type: DELETE
     dst: reports/synthesis/utilization_report.txt
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/power_report.txt
   - type: DELETE
     dst: reports/synthesis/vivado.jou
   - type: DELETE
     dst: reports/synthesis/vivado.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_16904.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_21324.backup.log
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - type: DELETE
+    dst: reports/synthesis/vivado_4632.backup.log
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_system_top_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/synth_sys.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_system_top_v002_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/synth_sys_v002.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_system_top_v003_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/synth_sys_v003.tcl
+  - type: DELETE
+    dst: reports/synthesis/ha_tff_system_top_v004_synth.dcp
+  - type: DELETE
+    dst: reports/synthesis/synth_sys_v004.tcl
+  - type: CREATE
+    src: blob_store/84042cfad6c16040530e917135d61e2c_Engineering_Memory_v001.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v001.md
+  - type: CREATE
+    src: blob_store/13894ad1037db789131aae2fbcb0203b_BUG-001_Tuple_Valid_Timeout.md
+    dst: docs/Engineering_History/10_Debug/BUG-001_Tuple_Valid_Timeout.md
+  - type: CREATE
+    src: blob_store/5dc6cdffd7f1f55efef3be20e43b6022_bug004_unsigned_threshold.md
+    dst: docs/Engineering_History/10_Debug/bug004_unsigned_threshold.md
+  - type: CREATE
+    src: blob_store/7fb47d4ade34e222c074eaf8231a24f2_ADR-0005_Matcher_Pipelining.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0005_Matcher_Pipelining.md
+  - type: CREATE
+    src: blob_store/8a0c649e7d68951824e1b4f5eafb2a4d_ADR-004_Memory_Primitive.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-004_Memory_Primitive.md
+  - type: CREATE
+    src: blob_store/363ff01b568c5bfb097bec5b5e619842_commit001.md
+    dst: docs/Engineering_History/14_Commits/commit001.md
+  - type: CREATE
+    src: blob_store/672cb39873d10007e8b5239caf30132a_commit002.md
+    dst: docs/Engineering_History/14_Commits/commit002.md
+- id: ev20
+  title: Engineering Refinement 20
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-22'
+    message: 'Engineering Refinement 20
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions:
+  - type: CREATE
+    src: blob_store/08c2673903fe4529534e83944833f939_Engineering_Memory_v012.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v012.md
+  - type: CREATE
+    src: blob_store/a92849da6bd0edc5b16b7328a09f8233_Linux_Network_Stack.md
+    dst: docs/Vol0_Foundations/Networking/Linux_Network_Stack.md
+  issue:
+    action: open
+    title: Engineering Refinement 20
+    labels:
+    - bug
+- id: ev21
+  title: Engineering Refinement 21
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-26'
+    message: 'Engineering Refinement 21
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions:
+  - type: CREATE
+    src: blob_store/a1399320e568849157a9285010ac8b8d_Engineering_Memory_v010.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v010.md
+  - type: CREATE
+    src: blob_store/4a1c6ce454b584cbef9bc842b24e4e83_REQ-v003.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v003.md
+  - type: CREATE
+    src: blob_store/74b3f5162d56984f5768f3aee8dfff80_BUG-004_Unsigned_Threshold.md
+    dst: docs/Engineering_History/02_Knowledge/BUG-004_Unsigned_Threshold.md
+  - type: CREATE
+    src: blob_store/4d43e3b3af38ba8c23411a0b006a5782_ADR-0002_64bit_Datapath.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0002_64bit_Datapath.md
+  issue:
+    action: close
+    ref: ev20
+  merge: develop
+- id: ev22
+  title: Engineering Refinement 22
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-03-30'
+    message: 'Engineering Refinement 22
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions:
+  - type: CREATE
+    src: blob_store/baa663d8499666b5fbe6209abb53f086_Engineering_Question_Register.md
+    dst: docs/Engineering_Question_Register.md
+  - type: CREATE
+    src: blob_store/7878f0dc40ffb548fc322e2e02adea7d_REQ-v006.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v006.md
+  - type: CREATE
+    src: blob_store/d7175c42ce5b8a0d16d5ad339975ef10_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v001/architecture.md
+  - type: CREATE
+    src: blob_store/bbb56ba8acb1154e75830c0115f14a81_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v002/architecture.md
+  - type: CREATE
+    src: blob_store/3e9bbec26d8cacccf38636e483e382ea_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v003/architecture.md
+  - type: CREATE
+    src: blob_store/b2cad2addb43959781428dea3d7b212f_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v004/architecture.md
+  - type: CREATE
+    src: blob_store/33921598268044adda47b07857d315b2_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v005/architecture.md
+  - type: CREATE
+    src: blob_store/bcf41f77b2116363bee7ce6aadb5dc0e_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v006/architecture.md
+  - type: CREATE
+    src: blob_store/6ca445ab6300e934fe0c56b3ee8db2a1_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v007/architecture.md
+  - type: CREATE
+    src: blob_store/3a850bce46f52fbe6be0c849109dac9e_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v009/architecture.md
+  - type: CREATE
+    src: blob_store/d93b1f517802c3fee36353759647c943_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v010/architecture.md
+  - type: CREATE
+    src: blob_store/4cfcb09fd91876e94b4c683edd4fb3fa_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v012/architecture.md
+  - type: CREATE
+    src: blob_store/812082c60741d64692396f0d25698e5d_ADR-005_Matcher_Pipelining.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-005_Matcher_Pipelining.md
+  - type: CREATE
+    src: blob_store/aec390e36390d752ed9baa70373f4556_commit004.md
+    dst: docs/Engineering_History/14_Commits/commit004.md
+  - type: CREATE
+    src: blob_store/1c66d37e23b9d3ecbb464ce92b7c488e_Debt_v010.md
+    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v010.md
+- id: ev23
+  title: Engineering Refinement 23
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-04-03'
+    message: 'Engineering Refinement 23
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions:
+  - type: CREATE
+    src: blob_store/9f9c13b07265004aac3d21bd8b0350ef_performance.md
+    dst: docs/Engineering_History/18_Performance/performance.md
+- id: ev24
+  title: Engineering Refinement 24
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-04-07'
+    message: 'Engineering Refinement 24
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions:
+  - type: CREATE
+    src: blob_store/5d4cdd61dad9cb6a20da59f7b2900477_REQ-v005.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v005.md
+  - type: CREATE
+    src: blob_store/5c371348e2a5e9091ef5aa0c1d3e20b9_BUG-003_Leak_Gating.md
+    dst: docs/Engineering_History/02_Knowledge/BUG-003_Leak_Gating.md
+  - type: CREATE
+    src: blob_store/1004f8102c2fb98c99614c40d0b443af_commit005.md
+    dst: docs/Engineering_History/14_Commits/commit005.md
+  - type: CREATE
+    src: blob_store/73d1c11aaf28feb82a05539c78f333fa_commit010.md
+    dst: docs/Engineering_History/14_Commits/commit010.md
+- id: ev25
+  title: Engineering Refinement 25
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-04-11'
+    message: 'Engineering Refinement 25
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions: []
+- id: ev26
+  title: Engineering Refinement 26
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-04-15'
+    message: 'Engineering Refinement 26
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions: []
+  issue:
+    action: close
+    ref: ev25
+  merge: develop
+- id: ev27
+  title: Engineering Refinement 27
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-04-19'
+    message: 'Engineering Refinement 27
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions: []
+- id: ev28
+  title: Engineering Refinement 28
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-04-23'
+    message: 'Engineering Refinement 28
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions: []
+- id: ev29
+  title: Engineering Refinement 29
+  phase: Refinement
+  problem: Ongoing integration tasks
+  decision: Implemented fixes
+  branch: develop
+  commit:
+    author: Ganeshkumara26
+    date: '2026-04-27'
+    message: 'Engineering Refinement 29
+
+
+      Problem: Ongoing integration tasks
+
+      Decision: N/A'
+  instructions:
+  - type: CREATE
+    src: blob_store/f54b08b42385faea21e20822f1017747_Lessons_Learned.md
+    dst: docs/Vol3_Capstone/01_Lessons_Learned/Lessons_Learned.md
+  - type: CREATE
+    src: blob_store/000a8c69bce253de893a898657752418_Roadmap.md
+    dst: docs/Vol3_Capstone/02_Future_Work/Roadmap.md
+  - type: CREATE
+    src: blob_store/16c3df7799b24d86e9ab40635014df54_Recruiter_Overview.md
+    dst: docs/Vol3_Capstone/03_Portfolio_Summary/Recruiter_Overview.md
