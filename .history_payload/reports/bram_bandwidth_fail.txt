@@ -1,1 +1,0 @@
-// Actual implementation of bram_bandwidth_fail.txt will be placed here.

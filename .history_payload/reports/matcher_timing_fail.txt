@@ -1,1 +1,0 @@
-// Actual implementation of matcher_timing_fail.txt will be placed here.
