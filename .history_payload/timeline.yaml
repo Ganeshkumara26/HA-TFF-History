@@ -10,178 +10,251 @@ events:
     title: Migrate Datapath to FPGA
     content: Use AXI4-Stream on Artix-7.
   artifacts:
-  - reports/profiling.md
-  - Master_Archive/Decision_Graph.md
-  - Master_Archive/Engineering_Question_Register.md
-  - Master_Archive/Project_Evolution.md
-  - Master_Archive/Skills_Evolution.md
-  - Master_Archive/Timeline.md
-  - Master_Archive/Engineering_History/generate_meta.ps1
-  - Master_Archive/Engineering_History/Timeline.md
-  - Master_Archive/Engineering_History/00_Project_Journal/2026-01-01_Origin.md
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v001.md
-  - Master_Archive/Engineering_History/01_Requirements/REQ-v001.md
-  - Master_Archive/Engineering_History/02_Knowledge/Assumptions_Register.md
-  - Master_Archive/Engineering_History/02_Knowledge/BUG-003_Leak_Gating.md
-  - Master_Archive/Engineering_History/02_Knowledge/BUG-004_Unsigned_Threshold.md
-  - Master_Archive/Engineering_History/02_Knowledge/BUG-005_Dead_Code_Elimination.md
-  - Master_Archive/Engineering_History/02_Knowledge/Engineering_State.json
-  - Master_Archive/Engineering_History/02_Knowledge/Open_Questions/Q001.md
-  - Master_Archive/Engineering_History/02_Knowledge/Open_Questions/Q004.md
-  - Master_Archive/Engineering_History/02_Literature/002_Hardware_Cuckoo_Hashing.md
-  - Master_Archive/Engineering_History/02_Literature/ENG-0006_SNN_for_NIDS.md
-  - Master_Archive/Engineering_History/03_Math/001_Cuckoo_Collision_Model.md
-  - Master_Archive/Engineering_History/03_Math/LIF_Neuron_Formulation.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v001/architecture.md
-  - Master_Archive/Engineering_History/05_RTL/Discarded/historical/matcher_unpipelined_v001/reason_for_rejection.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v001/ha_tff_parser_v001.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v003/ha_tff_hash_v001.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v009/ha_tff_system_top_v001.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v001/tb_ha_tff_parser_v001.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v003/tb_ha_tff_hash_v001.v
-  - Master_Archive/Engineering_History/07_Simulations/sim001/ha_tff_parser_sim.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim001/simulation_log.txt
-  - Master_Archive/Engineering_History/07_Simulations/sim001/tb_ha_tff_parser_v001.vcd
-  - Master_Archive/Engineering_History/07_Simulations/sim003/ha_tff_hash_sim.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim003/tb_ha_tff_hash_v001.vcd
-  - Master_Archive/Engineering_History/07_Simulations/sim004/bank0.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim004/bank1.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim004/bank2.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim004/bank3.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim004/datapath_sim.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim004/tb_ha_tff_datapath_top.vcd
-  - Master_Archive/Engineering_History/07_Simulations/sim005/bank0.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim005/bank1.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim005/bank2.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim005/bank3.mem
-  - Master_Archive/Engineering_History/07_Simulations/sim005/pipelined_sim.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim006/sim_snn.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim006/tb_snn_layer.vcd
-  - Master_Archive/Engineering_History/07_Simulations/sim009/sim_sys.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim009/tb_ha_tff_system_top.vcd
-  - Master_Archive/Engineering_History/08_Synthesis/available_parts.txt
-  - Master_Archive/Engineering_History/08_Synthesis/list_parts.tcl
-  - Master_Archive/Engineering_History/08_Synthesis/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/vivado.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth001/synth.tcl
-  - Master_Archive/Engineering_History/08_Synthesis/synth001/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/ha_tff_datapath_top_synth.dcp
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/power_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/synth.tcl
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado_16904.backup.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado_16904.backup.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado_21324.backup.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado_21324.backup.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado_4632.backup.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth004/vivado_4632.backup.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth005/power_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth005/synth.tcl
-  - Master_Archive/Engineering_History/08_Synthesis/synth005/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth005/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth005/vivado.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth006/snn_tff_layer_synth.dcp
-  - Master_Archive/Engineering_History/08_Synthesis/synth006/synth.tcl
-  - Master_Archive/Engineering_History/08_Synthesis/synth006/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth006/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth006/vivado.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth009/ha_tff_system_top_synth.dcp
-  - Master_Archive/Engineering_History/08_Synthesis/synth009/synth_sys.tcl
-  - Master_Archive/Engineering_History/08_Synthesis/synth009/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth009/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth009/vivado.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth010/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth010/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth010/vivado.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth011/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth011/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth011/vivado.log
-  - Master_Archive/Engineering_History/08_Synthesis/synth012/utilization_report.txt
-  - Master_Archive/Engineering_History/08_Synthesis/synth012/vivado.jou
-  - Master_Archive/Engineering_History/08_Synthesis/synth012/vivado.log
-  - Master_Archive/Engineering_History/09_Timing/timing001/timing_summary.txt
-  - Master_Archive/Engineering_History/09_Timing/timing004/timing_summary.txt
-  - Master_Archive/Engineering_History/09_Timing/timing005/timing_summary.txt
-  - Master_Archive/Engineering_History/09_Timing/timing006/timing_summary.txt
-  - Master_Archive/Engineering_History/09_Timing/timing009/timing_summary.txt
-  - Master_Archive/Engineering_History/09_Timing/timing010/timing_summary.txt
-  - Master_Archive/Engineering_History/09_Timing/timing011/timing_summary.txt
-  - Master_Archive/Engineering_History/09_Timing/timing012/timing_summary.txt
-  - Master_Archive/Engineering_History/10_Debug/BUG-001_Tuple_Valid_Timeout.md
-  - Master_Archive/Engineering_History/10_Debug/bug003_snn_leak_fail.md
-  - Master_Archive/Engineering_History/10_Debug/bug004_unsigned_threshold.md
-  - Master_Archive/Engineering_History/10_Debug/bug005_dead_code_elimination.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-0001_Pivot_to_Firewall.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-0002_64bit_Datapath.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-0003_Cuckoo_Hash_Table.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-0004_Control_Plane_Separation.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-0005_Matcher_Pipelining.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-0006_SNN_Extension.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-001_Parser_FSM.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-002_Bus_Width.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-003_Hashing_Algorithm.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-004_Memory_Primitive.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-005_Matcher_Pipelining.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-006_Firewall_Pivot.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-007_SNN_Topology.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-008_SNN_Verilog_Types.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-009_Feature_Encoding.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-010_Combinatorial_Merge.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-011_Data_Delay_Line.md
-  - Master_Archive/Engineering_History/10_Design_Reviews/ADR-012_SNN_Pipelining.md
-  - Master_Archive/Engineering_History/11_Lab_Notebook/2026-01-08.md
-  - Master_Archive/Engineering_History/11_Lab_Notebook/2026-01-29.md
-  - Master_Archive/Engineering_History/11_Lab_Notebook/2026-03-14.md
-  - Master_Archive/Engineering_History/11_Lab_Notebook/generate_notebook.ps1
-  - Master_Archive/Engineering_History/11_Verification/Waveform_Analysis/WAVE011.md
-  - Master_Archive/Engineering_History/12_Performance/Engineering_Dashboard.md
-  - Master_Archive/Engineering_History/14_Commits/commit001.md
-  - Master_Archive/Engineering_History/14_Commits/commit002.md
-  - Master_Archive/Engineering_History/14_Commits/commit003.md
-  - Master_Archive/Engineering_History/14_Commits/commit004.md
-  - Master_Archive/Engineering_History/14_Commits/commit005.md
-  - Master_Archive/Engineering_History/14_Commits/commit006.md
-  - Master_Archive/Engineering_History/14_Commits/commit007.md
-  - Master_Archive/Engineering_History/14_Commits/commit008.md
-  - Master_Archive/Engineering_History/14_Commits/commit009.md
-  - Master_Archive/Engineering_History/14_Commits/commit010.md
-  - Master_Archive/Engineering_History/14_Commits/commit011.md
-  - Master_Archive/Engineering_History/14_Commits/commit012.md
-  - Master_Archive/Engineering_History/14_Commits/generate_commits.ps1
-  - Master_Archive/Engineering_History/15_Engineering_Debt/Debt_v001.md
-  - Master_Archive/Engineering_History/16_Experiments/001_Cuckoo_Placement/bank0.mem
-  - Master_Archive/Engineering_History/16_Experiments/001_Cuckoo_Placement/bank1.mem
-  - Master_Archive/Engineering_History/16_Experiments/001_Cuckoo_Placement/bank2.mem
-  - Master_Archive/Engineering_History/16_Experiments/001_Cuckoo_Placement/bank3.mem
-  - Master_Archive/Engineering_History/16_Experiments/001_Cuckoo_Placement/cuckoo_place.py
-  - Master_Archive/Engineering_History/18_Performance/performance.md
-  - Master_Archive/Engineering_History/18_Performance/performance_history.csv
-  - Master_Archive/Engineering_History/20_Final/Final_Takeaway_Report.md
-  - Master_Archive/Vol0_Foundations/Algorithms/Cuckoo_Hashing_Notes.md
-  - Master_Archive/Vol0_Foundations/Algorithms/Pipeline_Design_Notes.md
-  - Master_Archive/Vol0_Foundations/Hardware/AXI_Stream_Notes.md
-  - Master_Archive/Vol0_Foundations/Networking/Ethernet_IPv4_UDP_Notes.md
-  - Master_Archive/Vol0_Foundations/Networking/Linux_Network_Stack.md
-  - Master_Archive/Vol1_MeghDut_Learning/01_Architecture/System_Architecture.md
-  - Master_Archive/Vol1_MeghDut_Learning/02_Code_Reading/MavlinkBridge_Notes.md
-  - Master_Archive/Vol1_MeghDut_Learning/04_Performance_Study/Software_Bottlenecks.md
-  - Master_Archive/Vol1_MeghDut_Learning/05_Engineering_Gap/Hardware_Software_Partitioning.md
-  - Master_Archive/Vol1_MeghDut_Learning/06_Research_Direction/Engineering_Pivot_to_HA_TFF.md
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v001/Engineering_Memory_v001.md
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v001/mavlink_otg_reader.py
-  - Master_Archive/Vol3_Capstone/01_Lessons_Learned/Lessons_Learned.md
-  - Master_Archive/Vol3_Capstone/02_Future_Work/Roadmap.md
-  - Master_Archive/Vol3_Capstone/03_Portfolio_Summary/Recruiter_Overview.md
+  - src: flattened/ev00/docs/general/Decision_Graph.md
+    dst: docs/general/Decision_Graph.md
+  - src: flattened/ev00/docs/general/Engineering_Question_Register.md
+    dst: docs/general/Engineering_Question_Register.md
+  - src: flattened/ev00/docs/general/Project_Evolution.md
+    dst: docs/general/Project_Evolution.md
+  - src: flattened/ev00/docs/general/Skills_Evolution.md
+    dst: docs/general/Skills_Evolution.md
+  - src: flattened/ev00/docs/general/Timeline.md
+    dst: docs/general/Timeline.md
+  - src: flattened/ev00/docs/general/generate_meta.ps1
+    dst: docs/general/generate_meta.ps1
+  - src: flattened/ev00/docs/general/simulation_log_v004.txt
+    dst: docs/general/simulation_log_v004.txt
+  - src: flattened/ev00/docs/general/Timeline.md
+    dst: docs/general/Timeline.md
+  - src: flattened/ev00/docs/general/2026-01-01_Origin.md
+    dst: docs/general/2026-01-01_Origin.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v001.md
+    dst: docs/general/Engineering_Memory_v001.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v002.md
+    dst: docs/general/Engineering_Memory_v002.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v003.md
+    dst: docs/general/Engineering_Memory_v003.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v004.md
+    dst: docs/general/Engineering_Memory_v004.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v005.md
+    dst: docs/general/Engineering_Memory_v005.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v006.md
+    dst: docs/general/Engineering_Memory_v006.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v007.md
+    dst: docs/general/Engineering_Memory_v007.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v008.md
+    dst: docs/general/Engineering_Memory_v008.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v009.md
+    dst: docs/general/Engineering_Memory_v009.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v010.md
+    dst: docs/general/Engineering_Memory_v010.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v011.md
+    dst: docs/general/Engineering_Memory_v011.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v012.md
+    dst: docs/general/Engineering_Memory_v012.md
+  - src: flattened/ev00/docs/general/Engineering_Memory_v013.md
+    dst: docs/general/Engineering_Memory_v013.md
+  - src: flattened/ev00/docs/general/REQ-v001.md
+    dst: docs/general/REQ-v001.md
+  - src: flattened/ev00/docs/general/REQ-v002.md
+    dst: docs/general/REQ-v002.md
+  - src: flattened/ev00/docs/general/REQ-v003.md
+    dst: docs/general/REQ-v003.md
+  - src: flattened/ev00/docs/general/REQ-v005.md
+    dst: docs/general/REQ-v005.md
+  - src: flattened/ev00/docs/general/REQ-v006.md
+    dst: docs/general/REQ-v006.md
+  - src: flattened/ev00/docs/general/Assumptions_Register.md
+    dst: docs/general/Assumptions_Register.md
+  - src: flattened/ev00/docs/general/BUG-003_Leak_Gating.md
+    dst: docs/general/BUG-003_Leak_Gating.md
+  - src: flattened/ev00/docs/general/BUG-004_Unsigned_Threshold.md
+    dst: docs/general/BUG-004_Unsigned_Threshold.md
+  - src: flattened/ev00/docs/general/BUG-005_Dead_Code_Elimination.md
+    dst: docs/general/BUG-005_Dead_Code_Elimination.md
+  - src: flattened/ev00/docs/general/Engineering_State.json
+    dst: docs/general/Engineering_State.json
+  - src: flattened/ev00/docs/general/Q001.md
+    dst: docs/general/Q001.md
+  - src: flattened/ev00/docs/general/Q004.md
+    dst: docs/general/Q004.md
+  - src: flattened/ev00/docs/general/002_Hardware_Cuckoo_Hashing.md
+    dst: docs/general/002_Hardware_Cuckoo_Hashing.md
+  - src: flattened/ev00/docs/general/ENG-0006_SNN_for_NIDS.md
+    dst: docs/general/ENG-0006_SNN_for_NIDS.md
+  - src: flattened/ev00/docs/general/001_Cuckoo_Collision_Model.md
+    dst: docs/general/001_Cuckoo_Collision_Model.md
+  - src: flattened/ev00/docs/general/LIF_Neuron_Formulation.md
+    dst: docs/general/LIF_Neuron_Formulation.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/architecture.md
+    dst: docs/general/architecture.md
+  - src: flattened/ev00/docs/general/reason_for_rejection.md
+    dst: docs/general/reason_for_rejection.md
+  - src: flattened/ev00/rtl/ha_tff_parser_v001.v
+    dst: rtl/ha_tff_parser_v001.v
+  - src: flattened/ev00/tb/tb_ha_tff_parser_v001.v
+    dst: tb/tb_ha_tff_parser_v001.v
+  - src: flattened/ev00/sim/ha_tff_parser_sim.vvp
+    dst: sim/ha_tff_parser_sim.vvp
+  - src: flattened/ev00/sim/simulation_log.txt
+    dst: sim/simulation_log.txt
+  - src: flattened/ev00/sim/tb_ha_tff_parser_v001.vcd
+    dst: sim/tb_ha_tff_parser_v001.vcd
+  - src: flattened/ev00/docs/general/available_parts.txt
+    dst: docs/general/available_parts.txt
+  - src: flattened/ev00/docs/general/list_parts.tcl
+    dst: docs/general/list_parts.tcl
+  - src: flattened/ev00/docs/general/vivado.jou
+    dst: docs/general/vivado.jou
+  - src: flattened/ev00/docs/general/vivado.log
+    dst: docs/general/vivado.log
+  - src: flattened/ev00/reports/synthesis/synth.tcl
+    dst: reports/synthesis/synth.tcl
+  - src: flattened/ev00/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/timing_summary.txt
+    dst: docs/general/timing_summary.txt
+  - src: flattened/ev00/docs/general/BUG-001_Tuple_Valid_Timeout.md
+    dst: docs/general/BUG-001_Tuple_Valid_Timeout.md
+  - src: flattened/ev00/docs/general/bug003_snn_leak_fail.md
+    dst: docs/general/bug003_snn_leak_fail.md
+  - src: flattened/ev00/docs/general/bug004_unsigned_threshold.md
+    dst: docs/general/bug004_unsigned_threshold.md
+  - src: flattened/ev00/docs/general/bug005_dead_code_elimination.md
+    dst: docs/general/bug005_dead_code_elimination.md
+  - src: flattened/ev00/docs/general/Coverage_Report_v012.md
+    dst: docs/general/Coverage_Report_v012.md
+  - src: flattened/ev00/docs/general/WAVE011.md
+    dst: docs/general/WAVE011.md
+  - src: flattened/ev00/docs/general/Engineering_Dashboard.md
+    dst: docs/general/Engineering_Dashboard.md
+  - src: flattened/ev00/docs/general/commit001.md
+    dst: docs/general/commit001.md
+  - src: flattened/ev00/docs/general/commit002.md
+    dst: docs/general/commit002.md
+  - src: flattened/ev00/docs/general/commit003.md
+    dst: docs/general/commit003.md
+  - src: flattened/ev00/docs/general/commit004.md
+    dst: docs/general/commit004.md
+  - src: flattened/ev00/docs/general/commit005.md
+    dst: docs/general/commit005.md
+  - src: flattened/ev00/docs/general/commit006.md
+    dst: docs/general/commit006.md
+  - src: flattened/ev00/docs/general/commit007.md
+    dst: docs/general/commit007.md
+  - src: flattened/ev00/docs/general/commit008.md
+    dst: docs/general/commit008.md
+  - src: flattened/ev00/docs/general/commit009.md
+    dst: docs/general/commit009.md
+  - src: flattened/ev00/docs/general/commit010.md
+    dst: docs/general/commit010.md
+  - src: flattened/ev00/docs/general/commit011.md
+    dst: docs/general/commit011.md
+  - src: flattened/ev00/docs/general/commit012.md
+    dst: docs/general/commit012.md
+  - src: flattened/ev00/docs/general/generate_commits.ps1
+    dst: docs/general/generate_commits.ps1
+  - src: flattened/ev00/docs/general/Debt_v001.md
+    dst: docs/general/Debt_v001.md
+  - src: flattened/ev00/docs/general/Debt_v010.md
+    dst: docs/general/Debt_v010.md
+  - src: flattened/ev00/docs/general/bank0.mem
+    dst: docs/general/bank0.mem
+  - src: flattened/ev00/docs/general/bank1.mem
+    dst: docs/general/bank1.mem
+  - src: flattened/ev00/docs/general/bank2.mem
+    dst: docs/general/bank2.mem
+  - src: flattened/ev00/docs/general/bank3.mem
+    dst: docs/general/bank3.mem
+  - src: flattened/ev00/docs/general/cuckoo_place.py
+    dst: docs/general/cuckoo_place.py
+  - src: flattened/ev00/docs/general/performance.md
+    dst: docs/general/performance.md
+  - src: flattened/ev00/docs/general/performance_history.csv
+    dst: docs/general/performance_history.csv
+  - src: flattened/ev00/docs/general/todo_v005.md
+    dst: docs/general/todo_v005.md
+  - src: flattened/ev00/docs/general/Final_Takeaway_Report.md
+    dst: docs/general/Final_Takeaway_Report.md
+  - src: flattened/ev00/docs/general/Cuckoo_Hashing_Notes.md
+    dst: docs/general/Cuckoo_Hashing_Notes.md
+  - src: flattened/ev00/docs/general/Pipeline_Design_Notes.md
+    dst: docs/general/Pipeline_Design_Notes.md
+  - src: flattened/ev00/docs/general/AXI_Stream_Notes.md
+    dst: docs/general/AXI_Stream_Notes.md
+  - src: flattened/ev00/docs/general/Ethernet_IPv4_UDP_Notes.md
+    dst: docs/general/Ethernet_IPv4_UDP_Notes.md
+  - src: flattened/ev00/docs/general/Linux_Network_Stack.md
+    dst: docs/general/Linux_Network_Stack.md
+  - src: flattened/ev00/docs/meghdut/System_Architecture.md
+    dst: docs/meghdut/System_Architecture.md
+  - src: flattened/ev00/docs/meghdut/MavlinkBridge_Notes.md
+    dst: docs/meghdut/MavlinkBridge_Notes.md
+  - src: flattened/ev00/docs/meghdut/Software_Bottlenecks.md
+    dst: docs/meghdut/Software_Bottlenecks.md
+  - src: flattened/ev00/docs/meghdut/Hardware_Software_Partitioning.md
+    dst: docs/meghdut/Hardware_Software_Partitioning.md
+  - src: flattened/ev00/docs/meghdut/Engineering_Pivot_to_HA_TFF.md
+    dst: docs/meghdut/Engineering_Pivot_to_HA_TFF.md
+  - src: flattened/ev00/docs/meghdut/Engineering_Memory_v001.md
+    dst: docs/meghdut/Engineering_Memory_v001.md
+  - src: flattened/ev00/docs/meghdut/mavlink_otg_reader.py
+    dst: docs/meghdut/mavlink_otg_reader.py
+  - src: flattened/ev00/docs/meghdut/Engineering_Memory_v002.md
+    dst: docs/meghdut/Engineering_Memory_v002.md
+  - src: flattened/ev00/docs/meghdut/mavlink_network_reader.py
+    dst: docs/meghdut/mavlink_network_reader.py
+  - src: flattened/ev00/docs/meghdut/Engineering_Memory_v003.md
+    dst: docs/meghdut/Engineering_Memory_v003.md
+  - src: flattened/ev00/docs/meghdut/MeghdutESP32.ino
+    dst: docs/meghdut/MeghdutESP32.ino
+  - src: flattened/ev00/docs/meghdut/mqtt_bridge.py
+    dst: docs/meghdut/mqtt_bridge.py
+  - src: flattened/ev00/docs/meghdut/Engineering_Memory_v004.md
+    dst: docs/meghdut/Engineering_Memory_v004.md
+  - src: flattened/ev00/docs/meghdut/mqtt_telemetry_flooder.py
+    dst: docs/meghdut/mqtt_telemetry_flooder.py
+  - src: flattened/ev00/docs/meghdut/Engineering_Memory_v005.md
+    dst: docs/meghdut/Engineering_Memory_v005.md
   commit_msg: Initialize FPGA datapath (v001)
 - id: ev02
   title: 8-bit Parser Throughput Failure
   issue:
     title: 8-bit parser fails timing
     description: 1-byte parser cannot sustain 10GbE (requires >1.25 GHz clock).
-  artifacts:
-  - rtl/ha_tff_parser_v001_deprecated.v
+  artifacts: []
   commit_msg: Document 8-bit parser timing failure
 - id: ev03
   title: 64-bit Extraction FSM
@@ -189,30 +262,16 @@ events:
     title: Implement 64-bit width parsing
     description: We need to parse 8 bytes per cycle at 156.25MHz.
   artifacts:
-  - rtl/ha_tff_parser_v002.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v002.md
-  - Master_Archive/Engineering_History/01_Requirements/REQ-v002.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v002/architecture.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v002/ha_tff_parser_v002.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v005/ha_tff_datapath_top_v002.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v005/ha_tff_matcher_v002.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v007/snn_tff_layer_v002.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v007/snn_tff_neuron_v002.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v010/ha_tff_system_top_v002.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v013/ha_tff_hash_v002.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v002/tb_ha_tff_parser_v002.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v005/tb_ha_tff_datapath_top_v002.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v007/tb_snn_layer_v002.v
-  - Master_Archive/Engineering_History/07_Simulations/sim002/ha_tff_parser_v002_sim.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim002/simulation_log_v002.txt
-  - Master_Archive/Engineering_History/07_Simulations/sim002/tb_ha_tff_parser_v002.vcd
-  - Master_Archive/Engineering_History/07_Simulations/sim007/sim_snn_v002.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim007/tb_snn_layer_v002.vcd
-  - Master_Archive/Engineering_History/08_Synthesis/synth005/ha_tff_datapath_top_v002_synth.dcp
-  - Master_Archive/Engineering_History/08_Synthesis/synth010/ha_tff_system_top_v002_synth.dcp
-  - Master_Archive/Engineering_History/08_Synthesis/synth010/synth_sys_v002.tcl
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v002/Engineering_Memory_v002.md
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v002/mavlink_network_reader.py
+  - src: flattened/ev02/rtl/ha_tff_parser_v002.v
+    dst: rtl/ha_tff_parser_v002.v
+  - src: flattened/ev02/tb/tb_ha_tff_parser_v002.v
+    dst: tb/tb_ha_tff_parser_v002.v
+  - src: flattened/ev02/sim/ha_tff_parser_v002_sim.vvp
+    dst: sim/ha_tff_parser_v002_sim.vvp
+  - src: flattened/ev02/sim/simulation_log_v002.txt
+    dst: sim/simulation_log_v002.txt
+  - src: flattened/ev02/sim/tb_ha_tff_parser_v002.vcd
+    dst: sim/tb_ha_tff_parser_v002.vcd
   commit_msg: Implement 64-bit extraction FSM (v002)
 - id: ev04
   title: VLAN Tag Alignment Bug
@@ -220,8 +279,7 @@ events:
     title: Parser alignment incorrect after VLAN tag
     description: Packet parsing fails when 802.1Q VLAN headers are present due to
       static offsets.
-  artifacts:
-  - waveforms/parser/vlan_alignment_fail.vcd
+  artifacts: []
   commit_msg: Add dynamic offset FSM for VLAN skipping
 - id: ev05
   title: Parser Checksum Verification
@@ -230,33 +288,23 @@ events:
     description: The parser does not validate the IP header checksum, allowing corrupt
       packets.
   artifacts:
-  - rtl/ip_checksum_calc.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v003.md
-  - Master_Archive/Engineering_History/01_Requirements/REQ-v003.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v003/architecture.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v008/snn_tff_layer_v003.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v008/snn_tff_neuron_v003.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v011/ha_tff_system_top_v003.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v013/ha_tff_datapath_top_v003.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v008/tb_snn_layer_v003.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v011/tb_ha_tff_system_top_v003.v
-  - Master_Archive/Engineering_History/07_Simulations/sim003/simulation_log_v003.txt
-  - Master_Archive/Engineering_History/07_Simulations/sim008/sim_snn_v003.vvp
-  - Master_Archive/Engineering_History/07_Simulations/sim008/tb_snn_layer_v003.vcd
-  - Master_Archive/Engineering_History/07_Simulations/sim011/tb_ha_tff_system_top_v003.vcd
-  - Master_Archive/Engineering_History/08_Synthesis/synth011/ha_tff_system_top_v003_synth.dcp
-  - Master_Archive/Engineering_History/08_Synthesis/synth011/synth_sys_v003.tcl
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v003/Engineering_Memory_v003.md
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v003/MeghdutESP32.ino
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v003/mqtt_bridge.py
+  - src: flattened/ev04/rtl/ha_tff_hash_v001.v
+    dst: rtl/ha_tff_hash_v001.v
+  - src: flattened/ev04/tb/tb_ha_tff_hash_v001.v
+    dst: tb/tb_ha_tff_hash_v001.v
+  - src: flattened/ev04/sim/ha_tff_hash_sim.vvp
+    dst: sim/ha_tff_hash_sim.vvp
+  - src: flattened/ev04/sim/simulation_log_v003.txt
+    dst: sim/simulation_log_v003.txt
+  - src: flattened/ev04/sim/tb_ha_tff_hash_v001.vcd
+    dst: sim/tb_ha_tff_hash_v001.vcd
   commit_msg: Integrate IP checksum validation logic
 - id: ev06
   title: Tuple Extraction Finalization
   issue:
     title: Extract 5-tuple for matching
     description: We need a normalized 104-bit tuple output from the parser.
-  artifacts:
-  - tb/parser_tb.v
+  artifacts: []
   commit_msg: Finalize 5-tuple extraction pipeline
 - id: ev07
   title: Basic Exact Match Scalability
@@ -267,58 +315,28 @@ events:
     id: ADR-014
     title: Use 4-way Cuckoo Hashing
     content: 4 independent BRAM banks.
-  artifacts:
-  - architecture/decisions/ADR-014.md
-  - Master_Archive/Engineering_History/simulation_log_v004.txt
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v004.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v004/architecture.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v004/ha_tff_bram_bank.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v004/ha_tff_datapath_top.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v004/ha_tff_matcher.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v012/ha_tff_system_top_v004.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v012/snn_tff_layer_v004.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v012/snn_tff_neuron_v004.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v004/tb_ha_tff_datapath_top.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v012/tb_ha_tff_system_top_v004.v
-  - Master_Archive/Engineering_History/07_Simulations/sim004/simulation_log_v004.txt
-  - Master_Archive/Engineering_History/07_Simulations/sim012/tb_ha_tff_system_top_v004.vcd
-  - Master_Archive/Engineering_History/08_Synthesis/synth012/ha_tff_system_top_v004_synth.dcp
-  - Master_Archive/Engineering_History/08_Synthesis/synth012/synth_sys_v004.tcl
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v004/Engineering_Memory_v004.md
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v004/mqtt_telemetry_flooder.py
+  artifacts: []
   commit_msg: Establish Cuckoo Hash architecture
 - id: ev08
   title: Cuckoo Hash Functions
   issue:
     title: Hash function logic depth
     description: Need 4 parallel, unique hash functions that evaluate in 1 cycle.
-  artifacts:
-  - rtl/ha_tff_hash_functions.v
+  artifacts: []
   commit_msg: Implement 4-way parallel hash functions
 - id: ev09
   title: BRAM Bank Integration
   issue:
     title: Connect Cuckoo Hash to memory
     description: Instantiate the 4 True Dual-Port BRAM tiles.
-  artifacts:
-  - rtl/ha_tff_bram_bank.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v005.md
-  - Master_Archive/Engineering_History/01_Requirements/REQ-v005.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v005/architecture.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v013/ha_tff_system_top_v005.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v013/snn_tff_layer_v005.v
-  - Master_Archive/Engineering_History/07_Simulations/sim005/simulation_log_v005.txt
-  - Master_Archive/Engineering_History/07_Simulations/sim005/tb_ha_tff_datapath_v005.vcd
-  - Master_Archive/Engineering_History/19_TODO/todo_v005.md
-  - Master_Archive/Vol1_MeghDut_Learning/07_Integration_History/meghdut_v005/Engineering_Memory_v005.md
+  artifacts: []
   commit_msg: Integrate 4-way BRAM banks
 - id: ev10
   title: Matcher Timing Failure
   issue:
     title: Matcher logic depth too deep
     description: Combinatorial comparison of four 104-bit tuples fails 6.4ns timing.
-  artifacts:
-  - reports/matcher_timing_fail.txt
+  artifacts: []
   commit_msg: Document matcher timing violation
 - id: ev11
   title: Pipelined Tuple Matcher
@@ -326,15 +344,95 @@ events:
     title: Pipeline the matcher stages
     description: Break the comparator tree into a 2-stage pipeline.
   artifacts:
-  - rtl/ha_tff_matcher_v004.v
+  - src: flattened/ev10/rtl/ha_tff_bram_bank.v
+    dst: rtl/ha_tff_bram_bank.v
+  - src: flattened/ev10/rtl/ha_tff_datapath_top.v
+    dst: rtl/ha_tff_datapath_top.v
+  - src: flattened/ev10/rtl/ha_tff_matcher.v
+    dst: rtl/ha_tff_matcher.v
+  - src: flattened/ev10/tb/tb_ha_tff_datapath_top.v
+    dst: tb/tb_ha_tff_datapath_top.v
+  - src: flattened/ev10/sim/bank0.mem
+    dst: sim/bank0.mem
+  - src: flattened/ev10/sim/bank1.mem
+    dst: sim/bank1.mem
+  - src: flattened/ev10/sim/bank2.mem
+    dst: sim/bank2.mem
+  - src: flattened/ev10/sim/bank3.mem
+    dst: sim/bank3.mem
+  - src: flattened/ev10/sim/datapath_sim.vvp
+    dst: sim/datapath_sim.vvp
+  - src: flattened/ev10/sim/simulation_log_v004.txt
+    dst: sim/simulation_log_v004.txt
+  - src: flattened/ev10/sim/tb_ha_tff_datapath_top.vcd
+    dst: sim/tb_ha_tff_datapath_top.vcd
+  - src: flattened/ev10/reports/synthesis/ha_tff_datapath_top_synth.dcp
+    dst: reports/synthesis/ha_tff_datapath_top_synth.dcp
+  - src: flattened/ev10/reports/synthesis/power_report.txt
+    dst: reports/synthesis/power_report.txt
+  - src: flattened/ev10/reports/synthesis/synth.tcl
+    dst: reports/synthesis/synth.tcl
+  - src: flattened/ev10/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev10/reports/synthesis/vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - src: flattened/ev10/reports/synthesis/vivado.log
+    dst: reports/synthesis/vivado.log
+  - src: flattened/ev10/reports/synthesis/vivado_16904.backup.jou
+    dst: reports/synthesis/vivado_16904.backup.jou
+  - src: flattened/ev10/reports/synthesis/vivado_16904.backup.log
+    dst: reports/synthesis/vivado_16904.backup.log
+  - src: flattened/ev10/reports/synthesis/vivado_21324.backup.jou
+    dst: reports/synthesis/vivado_21324.backup.jou
+  - src: flattened/ev10/reports/synthesis/vivado_21324.backup.log
+    dst: reports/synthesis/vivado_21324.backup.log
+  - src: flattened/ev10/reports/synthesis/vivado_4632.backup.jou
+    dst: reports/synthesis/vivado_4632.backup.jou
+  - src: flattened/ev10/reports/synthesis/vivado_4632.backup.log
+    dst: reports/synthesis/vivado_4632.backup.log
+  - src: flattened/ev10/architecture/decisions/ADR-0001_Pivot_to_Firewall.md
+    dst: architecture/decisions/ADR-0001_Pivot_to_Firewall.md
+  - src: flattened/ev10/architecture/decisions/ADR-0002_64bit_Datapath.md
+    dst: architecture/decisions/ADR-0002_64bit_Datapath.md
+  - src: flattened/ev10/architecture/decisions/ADR-0003_Cuckoo_Hash_Table.md
+    dst: architecture/decisions/ADR-0003_Cuckoo_Hash_Table.md
+  - src: flattened/ev10/architecture/decisions/ADR-0004_Control_Plane_Separation.md
+    dst: architecture/decisions/ADR-0004_Control_Plane_Separation.md
+  - src: flattened/ev10/architecture/decisions/ADR-0005_Matcher_Pipelining.md
+    dst: architecture/decisions/ADR-0005_Matcher_Pipelining.md
+  - src: flattened/ev10/architecture/decisions/ADR-0006_SNN_Extension.md
+    dst: architecture/decisions/ADR-0006_SNN_Extension.md
+  - src: flattened/ev10/architecture/decisions/ADR-001_Parser_FSM.md
+    dst: architecture/decisions/ADR-001_Parser_FSM.md
+  - src: flattened/ev10/architecture/decisions/ADR-002_Bus_Width.md
+    dst: architecture/decisions/ADR-002_Bus_Width.md
+  - src: flattened/ev10/architecture/decisions/ADR-003_Hashing_Algorithm.md
+    dst: architecture/decisions/ADR-003_Hashing_Algorithm.md
+  - src: flattened/ev10/architecture/decisions/ADR-004_Memory_Primitive.md
+    dst: architecture/decisions/ADR-004_Memory_Primitive.md
+  - src: flattened/ev10/architecture/decisions/ADR-005_Matcher_Pipelining.md
+    dst: architecture/decisions/ADR-005_Matcher_Pipelining.md
+  - src: flattened/ev10/architecture/decisions/ADR-006_Firewall_Pivot.md
+    dst: architecture/decisions/ADR-006_Firewall_Pivot.md
+  - src: flattened/ev10/architecture/decisions/ADR-007_SNN_Topology.md
+    dst: architecture/decisions/ADR-007_SNN_Topology.md
+  - src: flattened/ev10/architecture/decisions/ADR-008_SNN_Verilog_Types.md
+    dst: architecture/decisions/ADR-008_SNN_Verilog_Types.md
+  - src: flattened/ev10/architecture/decisions/ADR-009_Feature_Encoding.md
+    dst: architecture/decisions/ADR-009_Feature_Encoding.md
+  - src: flattened/ev10/architecture/decisions/ADR-010_Combinatorial_Merge.md
+    dst: architecture/decisions/ADR-010_Combinatorial_Merge.md
+  - src: flattened/ev10/architecture/decisions/ADR-011_Data_Delay_Line.md
+    dst: architecture/decisions/ADR-011_Data_Delay_Line.md
+  - src: flattened/ev10/architecture/decisions/ADR-012_SNN_Pipelining.md
+    dst: architecture/decisions/ADR-012_SNN_Pipelining.md
   commit_msg: Pipeline tuple matcher to close timing
 - id: ev12
   title: Cuckoo Table Insert Deadlocks
   issue:
     title: Infinite loops on Cuckoo insert
     description: When the table is full, the eviction logic cycles infinitely.
-  artifacts:
-  - waveforms/cuckoo/insert_deadlock.vcd
+  artifacts: []
   commit_msg: Add maximum displacement counter to Cuckoo insert
 - id: ev13
   title: Control Plane AXI Interface for Hash
@@ -343,15 +441,45 @@ events:
     description: We need an AXI4-Lite wrapper to allow the CPU to populate the Cuckoo
       tables.
   artifacts:
-  - rtl/ha_tff_axi_lite_cuckoo.v
+  - src: flattened/ev12/rtl/ha_tff_datapath_top_v002.v
+    dst: rtl/ha_tff_datapath_top_v002.v
+  - src: flattened/ev12/rtl/ha_tff_matcher_v002.v
+    dst: rtl/ha_tff_matcher_v002.v
+  - src: flattened/ev12/tb/tb_ha_tff_datapath_top_v002.v
+    dst: tb/tb_ha_tff_datapath_top_v002.v
+  - src: flattened/ev12/sim/bank0.mem
+    dst: sim/bank0.mem
+  - src: flattened/ev12/sim/bank1.mem
+    dst: sim/bank1.mem
+  - src: flattened/ev12/sim/bank2.mem
+    dst: sim/bank2.mem
+  - src: flattened/ev12/sim/bank3.mem
+    dst: sim/bank3.mem
+  - src: flattened/ev12/sim/pipelined_sim.vvp
+    dst: sim/pipelined_sim.vvp
+  - src: flattened/ev12/sim/simulation_log_v005.txt
+    dst: sim/simulation_log_v005.txt
+  - src: flattened/ev12/sim/tb_ha_tff_datapath_v005.vcd
+    dst: sim/tb_ha_tff_datapath_v005.vcd
+  - src: flattened/ev12/reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+    dst: reports/synthesis/ha_tff_datapath_top_v002_synth.dcp
+  - src: flattened/ev12/reports/synthesis/power_report.txt
+    dst: reports/synthesis/power_report.txt
+  - src: flattened/ev12/reports/synthesis/synth.tcl
+    dst: reports/synthesis/synth.tcl
+  - src: flattened/ev12/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev12/reports/synthesis/vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - src: flattened/ev12/reports/synthesis/vivado.log
+    dst: reports/synthesis/vivado.log
   commit_msg: Implement AXI4-Lite interface for Cuckoo table programming
 - id: ev14
   title: Datapath FIFO Overflows
   issue:
     title: AXI-Stream backpressure drops packets
     description: When Cuckoo match stalls, TREADY drops and packets are lost.
-  artifacts:
-  - rtl/axi_stream_fifo.v
+  artifacts: []
   commit_msg: Add AXI-Stream skid buffers for backpressure handling
 - id: ev15
   title: Datapath Integration Release (v006)
@@ -359,14 +487,28 @@ events:
     title: Finalize exact match datapath
     description: Stitch parser, matcher, and AXI stream logic together.
   artifacts:
-  - rtl/ha_tff_datapath_top_v006.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v006.md
-  - Master_Archive/Engineering_History/01_Requirements/REQ-v006.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v006/architecture.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v006/snn_tff_layer.v
-  - Master_Archive/Engineering_History/05_RTL/rtl_v006/snn_tff_neuron.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v006/tb_snn_layer.v
-  - Master_Archive/Engineering_History/07_Simulations/sim006/simulation_log_v006.txt
+  - src: flattened/ev14/rtl/snn_tff_layer.v
+    dst: rtl/snn_tff_layer.v
+  - src: flattened/ev14/rtl/snn_tff_neuron.v
+    dst: rtl/snn_tff_neuron.v
+  - src: flattened/ev14/tb/tb_snn_layer.v
+    dst: tb/tb_snn_layer.v
+  - src: flattened/ev14/sim/simulation_log_v006.txt
+    dst: sim/simulation_log_v006.txt
+  - src: flattened/ev14/sim/sim_snn.vvp
+    dst: sim/sim_snn.vvp
+  - src: flattened/ev14/sim/tb_snn_layer.vcd
+    dst: sim/tb_snn_layer.vcd
+  - src: flattened/ev14/reports/synthesis/snn_tff_layer_synth.dcp
+    dst: reports/synthesis/snn_tff_layer_synth.dcp
+  - src: flattened/ev14/reports/synthesis/synth.tcl
+    dst: reports/synthesis/synth.tcl
+  - src: flattened/ev14/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev14/reports/synthesis/vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - src: flattened/ev14/reports/synthesis/vivado.log
+    dst: reports/synthesis/vivado.log
   commit_msg: Release integrated Exact Match datapath (v006)
 - id: ev16
   title: Zero-Day Anomaly Detection
@@ -378,7 +520,14 @@ events:
     title: Integrate SNN
     content: Run an SNN in parallel with the datapath.
   artifacts:
-  - architecture/decisions/ADR-022.md
+  - src: flattened/ev15/docs/notebook/2026-01-08.md
+    dst: docs/notebook/2026-01-08.md
+  - src: flattened/ev15/docs/notebook/2026-01-29.md
+    dst: docs/notebook/2026-01-29.md
+  - src: flattened/ev15/docs/notebook/2026-03-14.md
+    dst: docs/notebook/2026-03-14.md
+  - src: flattened/ev15/docs/notebook/generate_notebook.ps1
+    dst: docs/notebook/generate_notebook.ps1
   commit_msg: Establish SNN coprocessor architecture
 - id: ev17
   title: Feature to Spike Encoder
@@ -386,10 +535,18 @@ events:
     title: Convert packet headers to spikes
     description: We need logic to encode TCP/UDP ports into binary spike trains.
   artifacts:
-  - rtl/snn_feature_encoder.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v007.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v007/architecture.md
-  - Master_Archive/Engineering_History/07_Simulations/sim007/simulation_log_v007.txt
+  - src: flattened/ev16/rtl/snn_tff_layer_v002.v
+    dst: rtl/snn_tff_layer_v002.v
+  - src: flattened/ev16/rtl/snn_tff_neuron_v002.v
+    dst: rtl/snn_tff_neuron_v002.v
+  - src: flattened/ev16/tb/tb_snn_layer_v002.v
+    dst: tb/tb_snn_layer_v002.v
+  - src: flattened/ev16/sim/simulation_log_v007.txt
+    dst: sim/simulation_log_v007.txt
+  - src: flattened/ev16/sim/sim_snn_v002.vvp
+    dst: sim/sim_snn_v002.vvp
+  - src: flattened/ev16/sim/tb_snn_layer_v002.vcd
+    dst: sim/tb_snn_layer_v002.vcd
   commit_msg: Implement packet feature to spike encoder
 - id: ev18
   title: LIF Neuron Arithmetic
@@ -398,17 +555,25 @@ events:
     description: Use Leaky Integrate and Fire (LIF) model using shifts and adds to
       save DSPs.
   artifacts:
-  - rtl/snn_tff_neuron.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v008.md
-  - Master_Archive/Engineering_History/07_Simulations/sim008/simulation_log_v008.txt
+  - src: flattened/ev17/rtl/snn_tff_layer_v003.v
+    dst: rtl/snn_tff_layer_v003.v
+  - src: flattened/ev17/rtl/snn_tff_neuron_v003.v
+    dst: rtl/snn_tff_neuron_v003.v
+  - src: flattened/ev17/tb/tb_snn_layer_v003.v
+    dst: tb/tb_snn_layer_v003.v
+  - src: flattened/ev17/sim/simulation_log_v008.txt
+    dst: sim/simulation_log_v008.txt
+  - src: flattened/ev17/sim/sim_snn_v003.vvp
+    dst: sim/sim_snn_v003.vvp
+  - src: flattened/ev17/sim/tb_snn_layer_v003.vcd
+    dst: sim/tb_snn_layer_v003.vcd
   commit_msg: Implement LIF neuron logic
 - id: ev19
   title: SNN Timing Closure Failure (WNS)
   issue:
     title: SNN Adder Tree fails 6.4ns timing
     description: 8-way combinational addition in the LIF neuron results in WNS -0.465ns.
-  artifacts:
-  - reports/snn_timing_violation.txt
+  artifacts: []
   commit_msg: Document SNN adder tree timing failure
 - id: ev20
   title: Pipelined LIF Neuron
@@ -417,12 +582,28 @@ events:
     description: Split the LIF neuron into separate accumulation and thresholding
       pipeline stages.
   artifacts:
-  - rtl/snn_tff_neuron_v004.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v009.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v009/architecture.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v009/snn_feature_encoder.v
-  - Master_Archive/Engineering_History/06_Testbenches/tb_v009/tb_ha_tff_system_top.v
-  - Master_Archive/Engineering_History/07_Simulations/sim009/simulation_log_v009.txt
+  - src: flattened/ev19/rtl/ha_tff_system_top_v001.v
+    dst: rtl/ha_tff_system_top_v001.v
+  - src: flattened/ev19/rtl/snn_feature_encoder.v
+    dst: rtl/snn_feature_encoder.v
+  - src: flattened/ev19/tb/tb_ha_tff_system_top.v
+    dst: tb/tb_ha_tff_system_top.v
+  - src: flattened/ev19/sim/simulation_log_v009.txt
+    dst: sim/simulation_log_v009.txt
+  - src: flattened/ev19/sim/sim_sys.vvp
+    dst: sim/sim_sys.vvp
+  - src: flattened/ev19/sim/tb_ha_tff_system_top.vcd
+    dst: sim/tb_ha_tff_system_top.vcd
+  - src: flattened/ev19/reports/synthesis/ha_tff_system_top_synth.dcp
+    dst: reports/synthesis/ha_tff_system_top_synth.dcp
+  - src: flattened/ev19/reports/synthesis/synth_sys.tcl
+    dst: reports/synthesis/synth_sys.tcl
+  - src: flattened/ev19/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev19/reports/synthesis/vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - src: flattened/ev19/reports/synthesis/vivado.log
+    dst: reports/synthesis/vivado.log
   commit_msg: Pipeline LIF neuron (Latency +1) to close timing
 - id: ev21
   title: SNN Output Synchronization
@@ -430,8 +611,7 @@ events:
     title: SNN spikes misaligned with datapath
     description: SNN takes 6 cycles, datapath takes 4. The outputs hit the decision
       engine at different times.
-  artifacts:
-  - waveforms/system/sync_failure.vcd
+  artifacts: []
   commit_msg: Add synchronization registers to SNN output
 - id: ev22
   title: Datapath Delay Line (SRL16E)
@@ -443,8 +623,7 @@ events:
     id: ADR-028
     title: Use SRL16E
     content: Use Shift Register LUTs for shallow FIFOs.
-  artifacts:
-  - rtl/axi_stream_delay_line.v
+  artifacts: []
   commit_msg: Implement AXI-Stream delay line using SRL16E
 - id: ev23
   title: Drop FSM Logic
@@ -452,8 +631,7 @@ events:
     title: Merge Cuckoo and SNN decisions
     description: Final routing logic to drop the packet if either the Hash table or
       SNN flags it.
-  artifacts:
-  - rtl/ha_tff_drop_fsm.v
+  artifacts: []
   commit_msg: Implement final Drop FSM arbitration logic
 - id: ev24
   title: SNN Datapath Integration (v010)
@@ -461,18 +639,25 @@ events:
     title: Finalize SNN Integration
     description: Wire the SNN layer and delay lines into the top-level system.
   artifacts:
-  - rtl/snn_tff_layer_v010.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v010.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v010/architecture.md
-  - Master_Archive/Engineering_History/15_Engineering_Debt/Debt_v010.md
+  - src: flattened/ev23/rtl/ha_tff_system_top_v002.v
+    dst: rtl/ha_tff_system_top_v002.v
+  - src: flattened/ev23/reports/synthesis/ha_tff_system_top_v002_synth.dcp
+    dst: reports/synthesis/ha_tff_system_top_v002_synth.dcp
+  - src: flattened/ev23/reports/synthesis/synth_sys_v002.tcl
+    dst: reports/synthesis/synth_sys_v002.tcl
+  - src: flattened/ev23/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev23/reports/synthesis/vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - src: flattened/ev23/reports/synthesis/vivado.log
+    dst: reports/synthesis/vivado.log
   commit_msg: Release integrated SNN Datapath (v010)
 - id: ev25
   title: AI Weights ROM Bottleneck
   issue:
     title: AI weights are hardcoded in ROM
     description: Retraining the AI requires a 10-hour FPGA bitstream recompile.
-  artifacts:
-  - architecture/tradeoffs/weight_memory.md
+  artifacts: []
   commit_msg: Analyze AI weight memory bottlenecks
 - id: ev26
   title: BRAM Bandwidth Failure
@@ -480,11 +665,28 @@ events:
     title: BRAM cannot supply 16 weights simultaneously
     description: SNN needs 16 parallel reads. BRAM only has 2.
   artifacts:
-  - reports/bram_bandwidth_fail.txt
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v011.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v011/axi_stream_delay_line.v
-  - Master_Archive/Engineering_History/07_Simulations/sim011/simulation_log_v011.txt
-  - Master_Archive/Engineering_History/07_Simulations/sim011/sim_sys_v011.vvp
+  - src: flattened/ev25/rtl/axi_stream_delay_line.v
+    dst: rtl/axi_stream_delay_line.v
+  - src: flattened/ev25/rtl/ha_tff_system_top_v003.v
+    dst: rtl/ha_tff_system_top_v003.v
+  - src: flattened/ev25/tb/tb_ha_tff_system_top_v003.v
+    dst: tb/tb_ha_tff_system_top_v003.v
+  - src: flattened/ev25/sim/simulation_log_v011.txt
+    dst: sim/simulation_log_v011.txt
+  - src: flattened/ev25/sim/sim_sys_v011.vvp
+    dst: sim/sim_sys_v011.vvp
+  - src: flattened/ev25/sim/tb_ha_tff_system_top_v003.vcd
+    dst: sim/tb_ha_tff_system_top_v003.vcd
+  - src: flattened/ev25/reports/synthesis/ha_tff_system_top_v003_synth.dcp
+    dst: reports/synthesis/ha_tff_system_top_v003_synth.dcp
+  - src: flattened/ev25/reports/synthesis/synth_sys_v003.tcl
+    dst: reports/synthesis/synth_sys_v003.tcl
+  - src: flattened/ev25/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev25/reports/synthesis/vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - src: flattened/ev25/reports/synthesis/vivado.log
+    dst: reports/synthesis/vivado.log
   commit_msg: Document BRAM parallel read limitation for SNNs
 - id: ev27
   title: Register File Control Plane
@@ -493,7 +695,30 @@ events:
     description: Use flip-flops (Register File) via AXI-Lite for 1-cycle parallel
       weight reads.
   artifacts:
-  - rtl/ha_tff_axi_lite_regs.v
+  - src: flattened/ev26/rtl/ha_tff_system_top_v004.v
+    dst: rtl/ha_tff_system_top_v004.v
+  - src: flattened/ev26/rtl/snn_tff_layer_v004.v
+    dst: rtl/snn_tff_layer_v004.v
+  - src: flattened/ev26/rtl/snn_tff_neuron_v004.v
+    dst: rtl/snn_tff_neuron_v004.v
+  - src: flattened/ev26/tb/tb_ha_tff_system_top_v004.v
+    dst: tb/tb_ha_tff_system_top_v004.v
+  - src: flattened/ev26/sim/simulation_log_v012.txt
+    dst: sim/simulation_log_v012.txt
+  - src: flattened/ev26/sim/sim_sys_v012.vvp
+    dst: sim/sim_sys_v012.vvp
+  - src: flattened/ev26/sim/tb_ha_tff_system_top_v004.vcd
+    dst: sim/tb_ha_tff_system_top_v004.vcd
+  - src: flattened/ev26/reports/synthesis/ha_tff_system_top_v004_synth.dcp
+    dst: reports/synthesis/ha_tff_system_top_v004_synth.dcp
+  - src: flattened/ev26/reports/synthesis/synth_sys_v004.tcl
+    dst: reports/synthesis/synth_sys_v004.tcl
+  - src: flattened/ev26/reports/synthesis/utilization_report.txt
+    dst: reports/synthesis/utilization_report.txt
+  - src: flattened/ev26/reports/synthesis/vivado.jou
+    dst: reports/synthesis/vivado.jou
+  - src: flattened/ev26/reports/synthesis/vivado.log
+    dst: reports/synthesis/vivado.log
   commit_msg: Implement AXI-Lite Register File for dynamic SNN weights
 - id: ev28
   title: Algorithmic Hash Complexity Vulnerability
@@ -501,13 +726,7 @@ events:
     title: Static hash vulnerable to DDoS
     description: The Cuckoo hash uses static XORs, allowing attackers to force 100%
       hash collisions.
-  artifacts:
-  - architecture/tradeoffs/hash_security.md
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v012.md
-  - Master_Archive/Engineering_History/04_Architecture/ARCH-v012/architecture.md
-  - Master_Archive/Engineering_History/07_Simulations/sim012/simulation_log_v012.txt
-  - Master_Archive/Engineering_History/07_Simulations/sim012/sim_sys_v012.vvp
-  - Master_Archive/Engineering_History/11_Verification/Coverage_Report_v012.md
+  artifacts: []
   commit_msg: Analyze algorithmic hash collision vulnerabilities
 - id: ev29
   title: SipHash Timing Failure
@@ -515,8 +734,7 @@ events:
     title: SipHash violates 1-cycle latency
     description: Standard SipHash requires >10 cycles to evaluate, ruining datapath
       synchronization.
-  artifacts:
-  - reports/siphash_timing_fail.txt
+  artifacts: []
   commit_msg: Document SipHash timing closure failure
 - id: ev30
   title: Parameterized Toeplitz Hash (v013 Release)
@@ -525,8 +743,20 @@ events:
     description: Use an AXI-configurable 128-bit secret key with 1-cycle Galois XOR
       folding.
   artifacts:
-  - rtl/ha_tff_hash_v002.v
-  - rtl/ha_tff_system_top_v013.v
-  - Master_Archive/Engineering_History/00_Project_Journal/Engineering_Memory_v013.md
-  - Master_Archive/Engineering_History/05_RTL/rtl_v013/ha_tff_axi_lite_regs.v
+  - src: flattened/ev29/rtl/ha_tff_axi_lite_regs.v
+    dst: rtl/ha_tff_axi_lite_regs.v
+  - src: flattened/ev29/rtl/ha_tff_datapath_top_v003.v
+    dst: rtl/ha_tff_datapath_top_v003.v
+  - src: flattened/ev29/rtl/ha_tff_hash_v002.v
+    dst: rtl/ha_tff_hash_v002.v
+  - src: flattened/ev29/rtl/ha_tff_system_top_v005.v
+    dst: rtl/ha_tff_system_top_v005.v
+  - src: flattened/ev29/rtl/snn_tff_layer_v005.v
+    dst: rtl/snn_tff_layer_v005.v
+  - src: flattened/ev29/docs/capstone/Lessons_Learned.md
+    dst: docs/capstone/Lessons_Learned.md
+  - src: flattened/ev29/docs/capstone/Roadmap.md
+    dst: docs/capstone/Roadmap.md
+  - src: flattened/ev29/docs/capstone/Recruiter_Overview.md
+    dst: docs/capstone/Recruiter_Overview.md
   commit_msg: Implement Parameterized Toeplitz Hash and release final HA-TFF v013
