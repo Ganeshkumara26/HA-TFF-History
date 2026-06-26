@@ -1,115 +1,95 @@
 events:
-  - id: week_1
-    title: MeghDut Baseline Profiling
+  - id: v001
+    title: MeghDut Baseline to FPGA (v001)
     issue:
       title: Software forwarding latency unacceptable for 10GbE
-      description: |
-        Observed: Linux network stack (netfilter/iptables) introduces latency in the microsecond range and drops packets under heavy load.
-        Expected: Firewall must process 10GbE line rate (~14.88 Mpps).
-        Conclusion: We must migrate the core firewall datapath to an FPGA (Hardware Acceleration).
-    adr:
-      id: "ADR-001"
-      title: "Migrate Datapath to FPGA via AXI4-Stream"
-      content: |
-        Decision: Use AXI4-Stream on Artix-7 for line-rate packet processing.
-        Alternatives: DPDK (still software, CPU bound), Custom bus (too much IP overhead).
-    artifacts:
-      - rtl/ha_tff_system_top_v001.v
-      - reports/profiling.md
-    commit_msg: "Initialize FPGA datapath replacing MeghDut software baseline"
+      description: Linux network stack introduces latency in the microsecond range. We must migrate datapath to FPGA.
+    commit_msg: "Initialize FPGA datapath (v001)"
 
-  - id: week_2
-    title: 64-bit Parser Implementation
+  - id: v002
+    title: 64-bit Parser Implementation (v002)
     issue:
-      title: 8-bit parser fails timing and throughput
-      description: |
-        Observed: A 1-byte per cycle parser cannot sustain 10GbE (requires >1.25 GHz clock).
-        Expected: Parse at 156.25 MHz using a 64-bit bus.
-    artifacts:
-      - rtl/ha_tff_parser_v002.v
-    commit_msg: "Implement 64-bit extraction FSM for IP/TCP headers"
+      title: 8-bit parser fails timing
+      description: 1-byte parser cannot sustain 10GbE.
+    commit_msg: "Implement 64-bit extraction FSM (v002)"
 
-  - id: week_3
-    title: Exact Match Datapath Architecture
+  - id: v003
+    title: Exact Match Pipeline (v003)
     issue:
-      title: Hash collisions dropping legitimate traffic
-      description: |
-        Observed: Standard direct-mapped hash tables suffer severe collisions at 80% occupancy.
-        Expected: >95% memory utilization for 5-tuple tracking.
+      title: Basic exact match lacks scalability
+      description: Need structured memory access.
+    commit_msg: "Implement structured tuple matcher (v003)"
+
+  - id: v004
+    title: Pipelined Tuple Matcher (v004)
+    issue:
+      title: Matcher timing failure
+      description: Combinatorial match too deep.
+    commit_msg: "Pipeline tuple matcher (v004)"
+
+  - id: v005
+    title: Cuckoo Hash Architecture (v005)
+    issue:
+      title: Hash collisions dropping traffic
+      description: Direct map hash tables collide frequently.
     adr:
       id: "ADR-014"
       title: "Use 4-way Cuckoo Hashing"
-      content: |
-        Decision: Use 4 independent BRAM banks with 4 parallel hash functions to achieve O(1) lookup with 95% load factor.
-        Alternatives: TCAM (too expensive in FPGA fabric), Bloom Filter (false positives unacceptable for dropping).
-    artifacts:
-      - architecture/decisions/ADR-014.md
-    commit_msg: "Establish Cuckoo Hash architecture for exact matching"
+      content: "Use 4 independent BRAM banks."
+    commit_msg: "Establish Cuckoo Hash architecture (v005)"
 
-  - id: week_4
-    title: Cuckoo Datapath Integration
+  - id: v006
+    title: BRAM Bank Integration (v006)
     issue:
-      title: Integrate memory banks with Hash engine
-      description: Connect the 4 BRAM banks to the pipelined matcher.
-    artifacts:
-      - rtl/ha_tff_bram_bank.v
-      - rtl/ha_tff_matcher_v002.v
-    commit_msg: "Integrate 4-way Cuckoo Hash BRAM banks into pipelined matcher"
+      title: Connect Cuckoo Hash
+      description: Memory banks not attached to datapath.
+    commit_msg: "Integrate 4-way BRAM banks (v006)"
 
-  - id: week_5
-    title: SNN Coprocessor Concept
+  - id: v007
+    title: SNN Coprocessor Concept (v007)
     issue:
-      title: Static rules fail against zero-day anomalies
-      description: Exact-match tables cannot detect subtle anomalous behavior if the specific IP/Port isn't blacklisted.
-    adr:
-      id: "ADR-022"
-      title: "Integrate Spiking Neural Network (SNN) Coprocessor"
-      content: |
-        Decision: Run an SNN in parallel with the datapath to classify zero-day anomalies.
-        Alternatives: Deep Learning CNN (Too much DSP/Multiplier usage). SNN uses multiplier-less Leaky Integrate and Fire (LIF) neurons.
-    artifacts:
-      - rtl/snn_feature_encoder.v
-    commit_msg: "Implement packet feature to spike encoder for SNN"
+      title: Static rules fail against anomalies
+      description: Cannot detect zero-day attacks.
+    commit_msg: "Implement feature to spike encoder (v007)"
 
-  - id: week_6
-    title: SNN Timing Closure Failure
+  - id: v008
+    title: LIF Neuron Implementation (v008)
+    issue:
+      title: Spikes need integration
+      description: Construct the Leaky Integrate and Fire neuron.
+    commit_msg: "Implement LIF neuron logic (v008)"
+
+  - id: v009
+    title: SNN Timing Closure Failure (v009)
     issue:
       title: SNN Adder Tree fails 6.4ns timing
-      description: |
-        Observed: WNS is -0.465ns. 8-way combinational addition in the LIF neuron takes too long.
-        Expected: WNS > 0ns.
-    artifacts:
-      - rtl/snn_tff_neuron_v004.v
-      - reports/snn_timing_violation.txt
-    commit_msg: "Pipeline LIF neuron into Arithmetic and Threshold stages to close timing"
+      description: WNS is -0.465ns. 8-way addition takes too long.
+    commit_msg: "Pipeline LIF neuron into Arithmetic/Threshold (v009)"
 
-  - id: week_7
-    title: Datapath Delay Line
+  - id: v010
+    title: SNN Datapath Integration (v010)
     issue:
-      title: SNN evaluation desynchronizes packet stream
-      description: The SNN now takes 6 cycles to evaluate. The datapath match takes 4. We must buffer the original packet.
-    adr:
-      id: "ADR-028"
-      title: "Use SRL16E for shallow FIFOs"
-      content: |
-        Decision: Use Shift Register LUTs (SRL16E) to delay the 64-bit bus for 6 cycles.
-        Alternatives: BRAM FIFO.
-        Reasoning: BRAM is too precious (needed for Cuckoo tables). 6 cycles is shallow enough to map efficiently to fabric LUTs.
-    artifacts:
-      - rtl/axi_stream_delay_line.v
-    commit_msg: "Implement AXI-Stream delay line for packet buffering (SRL16E)"
+      title: Attach SNN to parallel processing
+      description: Route SNN spikes alongside exact match.
+    commit_msg: "Integrate SNN with main datapath (v010)"
 
-  - id: week_8
-    title: Dynamic AI Weights and Hash Security (v013)
+  - id: v011
+    title: Datapath Delay Line (v011)
+    issue:
+      title: SNN desynchronizes packet stream
+      description: Must buffer original packet while SNN evaluates.
+    commit_msg: "Implement AXI-Stream delay line using SRL16E (v011)"
+
+  - id: v012
+    title: Cuckoo Table Eviction Logic (v012)
+    issue:
+      title: Cuckoo tables locking up on insert
+      description: Need eviction and rehash FSM for Cuckoo writes.
+    commit_msg: "Implement Cuckoo table eviction FSM (v012)"
+
+  - id: v013
+    title: Dynamic AI Weights and Secure Hash (v013 Release)
     issue:
       title: Hardcoded weights and vulnerable static hash
-      description: |
-        Observed: AI weights are ROM. Hash uses static XOR (vulnerable to algorithmic complexity DDOS).
-        Expected: Dynamic AXI-Lite updatability and secure parameterized hash.
-    artifacts:
-      - rtl/ha_tff_axi_lite_regs.v
-      - rtl/ha_tff_hash_v002.v
-      - rtl/snn_tff_layer_v005.v
-      - rtl/ha_tff_system_top_v005.v
-      - reports/utilization_v013.txt
-    commit_msg: "Implement AXI-Lite Register File and Parameterized Toeplitz Hash (v013)"
+      description: AI weights are ROM. Hash uses static XOR.
+    commit_msg: "Implement AXI-Lite Register File and Toeplitz Hash (v013)"
