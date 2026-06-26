@@ -1,0 +1,115 @@
+events:
+  - id: week_1
+    title: MeghDut Baseline Profiling
+    issue:
+      title: Software forwarding latency unacceptable for 10GbE
+      description: |
+        Observed: Linux network stack (netfilter/iptables) introduces latency in the microsecond range and drops packets under heavy load.
+        Expected: Firewall must process 10GbE line rate (~14.88 Mpps).
+        Conclusion: We must migrate the core firewall datapath to an FPGA (Hardware Acceleration).
+    adr:
+      id: "ADR-001"
+      title: "Migrate Datapath to FPGA via AXI4-Stream"
+      content: |
+        Decision: Use AXI4-Stream on Artix-7 for line-rate packet processing.
+        Alternatives: DPDK (still software, CPU bound), Custom bus (too much IP overhead).
+    artifacts:
+      - rtl/ha_tff_system_top_v001.v
+      - reports/profiling.md
+    commit_msg: "Initialize FPGA datapath replacing MeghDut software baseline"
+
+  - id: week_2
+    title: 64-bit Parser Implementation
+    issue:
+      title: 8-bit parser fails timing and throughput
+      description: |
+        Observed: A 1-byte per cycle parser cannot sustain 10GbE (requires >1.25 GHz clock).
+        Expected: Parse at 156.25 MHz using a 64-bit bus.
+    artifacts:
+      - rtl/ha_tff_parser_v002.v
+    commit_msg: "Implement 64-bit extraction FSM for IP/TCP headers"
+
+  - id: week_3
+    title: Exact Match Datapath Architecture
+    issue:
+      title: Hash collisions dropping legitimate traffic
+      description: |
+        Observed: Standard direct-mapped hash tables suffer severe collisions at 80% occupancy.
+        Expected: >95% memory utilization for 5-tuple tracking.
+    adr:
+      id: "ADR-014"
+      title: "Use 4-way Cuckoo Hashing"
+      content: |
+        Decision: Use 4 independent BRAM banks with 4 parallel hash functions to achieve O(1) lookup with 95% load factor.
+        Alternatives: TCAM (too expensive in FPGA fabric), Bloom Filter (false positives unacceptable for dropping).
+    artifacts:
+      - architecture/decisions/ADR-014.md
+    commit_msg: "Establish Cuckoo Hash architecture for exact matching"
+
+  - id: week_4
+    title: Cuckoo Datapath Integration
+    issue:
+      title: Integrate memory banks with Hash engine
+      description: Connect the 4 BRAM banks to the pipelined matcher.
+    artifacts:
+      - rtl/ha_tff_bram_bank.v
+      - rtl/ha_tff_matcher_v002.v
+    commit_msg: "Integrate 4-way Cuckoo Hash BRAM banks into pipelined matcher"
+
+  - id: week_5
+    title: SNN Coprocessor Concept
+    issue:
+      title: Static rules fail against zero-day anomalies
+      description: Exact-match tables cannot detect subtle anomalous behavior if the specific IP/Port isn't blacklisted.
+    adr:
+      id: "ADR-022"
+      title: "Integrate Spiking Neural Network (SNN) Coprocessor"
+      content: |
+        Decision: Run an SNN in parallel with the datapath to classify zero-day anomalies.
+        Alternatives: Deep Learning CNN (Too much DSP/Multiplier usage). SNN uses multiplier-less Leaky Integrate and Fire (LIF) neurons.
+    artifacts:
+      - rtl/snn_feature_encoder.v
+    commit_msg: "Implement packet feature to spike encoder for SNN"
+
+  - id: week_6
+    title: SNN Timing Closure Failure
+    issue:
+      title: SNN Adder Tree fails 6.4ns timing
+      description: |
+        Observed: WNS is -0.465ns. 8-way combinational addition in the LIF neuron takes too long.
+        Expected: WNS > 0ns.
+    artifacts:
+      - rtl/snn_tff_neuron_v004.v
+      - reports/snn_timing_violation.txt
+    commit_msg: "Pipeline LIF neuron into Arithmetic and Threshold stages to close timing"
+
+  - id: week_7
+    title: Datapath Delay Line
+    issue:
+      title: SNN evaluation desynchronizes packet stream
+      description: The SNN now takes 6 cycles to evaluate. The datapath match takes 4. We must buffer the original packet.
+    adr:
+      id: "ADR-028"
+      title: "Use SRL16E for shallow FIFOs"
+      content: |
+        Decision: Use Shift Register LUTs (SRL16E) to delay the 64-bit bus for 6 cycles.
+        Alternatives: BRAM FIFO.
+        Reasoning: BRAM is too precious (needed for Cuckoo tables). 6 cycles is shallow enough to map efficiently to fabric LUTs.
+    artifacts:
+      - rtl/axi_stream_delay_line.v
+    commit_msg: "Implement AXI-Stream delay line for packet buffering (SRL16E)"
+
+  - id: week_8
+    title: Dynamic AI Weights and Hash Security (v013)
+    issue:
+      title: Hardcoded weights and vulnerable static hash
+      description: |
+        Observed: AI weights are ROM. Hash uses static XOR (vulnerable to algorithmic complexity DDOS).
+        Expected: Dynamic AXI-Lite updatability and secure parameterized hash.
+    artifacts:
+      - rtl/ha_tff_axi_lite_regs.v
+      - rtl/ha_tff_hash_v002.v
+      - rtl/snn_tff_layer_v005.v
+      - rtl/ha_tff_system_top_v005.v
+      - reports/utilization_v013.txt
+    commit_msg: "Implement AXI-Lite Register File and Parameterized Toeplitz Hash (v013)"
