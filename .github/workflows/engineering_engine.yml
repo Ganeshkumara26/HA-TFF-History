@@ -1,7 +1,7 @@
 name: HA-TFF Autonomous Engineering Engine
 on:
   schedule:
-    - cron: '0 0 */9 * *' # Runs every 14 days
+    - cron: '0 0 */2 * *' # Runs every 14 days
   workflow_dispatch: # Allows manual trigger for testing
 
 jobs:

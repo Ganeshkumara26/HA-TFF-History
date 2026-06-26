@@ -1,95 +1,248 @@
 events:
-  - id: v001
-    title: MeghDut Baseline to FPGA (v001)
+  # --- Phase 1: MeghDut Baseline & Parser (Events 1-6) ---
+  - id: ev01
+    title: MeghDut Baseline Bottleneck
     issue:
       title: Software forwarding latency unacceptable for 10GbE
-      description: Linux network stack introduces latency in the microsecond range. We must migrate datapath to FPGA.
+      description: Linux netfilter introduces microsecond latency. Packets drop under load.
+    adr: {id: "ADR-001", title: "Migrate Datapath to FPGA", content: "Use AXI4-Stream on Artix-7."}
+    artifacts: ["reports/profiling.md"]
     commit_msg: "Initialize FPGA datapath (v001)"
 
-  - id: v002
-    title: 64-bit Parser Implementation (v002)
+  - id: ev02
+    title: 8-bit Parser Throughput Failure
     issue:
       title: 8-bit parser fails timing
-      description: 1-byte parser cannot sustain 10GbE.
+      description: 1-byte parser cannot sustain 10GbE (requires >1.25 GHz clock).
+    artifacts: ["rtl/ha_tff_parser_v001_deprecated.v"]
+    commit_msg: "Document 8-bit parser timing failure"
+
+  - id: ev03
+    title: 64-bit Extraction FSM
+    issue:
+      title: Implement 64-bit width parsing
+      description: We need to parse 8 bytes per cycle at 156.25MHz.
+    artifacts: ["rtl/ha_tff_parser_v002.v"]
     commit_msg: "Implement 64-bit extraction FSM (v002)"
 
-  - id: v003
-    title: Exact Match Pipeline (v003)
+  - id: ev04
+    title: VLAN Tag Alignment Bug
     issue:
-      title: Basic exact match lacks scalability
-      description: Need structured memory access.
-    commit_msg: "Implement structured tuple matcher (v003)"
+      title: Parser alignment incorrect after VLAN tag
+      description: Packet parsing fails when 802.1Q VLAN headers are present due to static offsets.
+    artifacts: ["waveforms/parser/vlan_alignment_fail.vcd"]
+    commit_msg: "Add dynamic offset FSM for VLAN skipping"
 
-  - id: v004
-    title: Pipelined Tuple Matcher (v004)
+  - id: ev05
+    title: Parser Checksum Verification
     issue:
-      title: Matcher timing failure
-      description: Combinatorial match too deep.
-    commit_msg: "Pipeline tuple matcher (v004)"
+      title: IPv4 Checksum offload missing
+      description: The parser does not validate the IP header checksum, allowing corrupt packets.
+    artifacts: ["rtl/ip_checksum_calc.v"]
+    commit_msg: "Integrate IP checksum validation logic"
 
-  - id: v005
-    title: Cuckoo Hash Architecture (v005)
+  - id: ev06
+    title: Tuple Extraction Finalization
     issue:
-      title: Hash collisions dropping traffic
-      description: Direct map hash tables collide frequently.
-    adr:
-      id: "ADR-014"
-      title: "Use 4-way Cuckoo Hashing"
-      content: "Use 4 independent BRAM banks."
-    commit_msg: "Establish Cuckoo Hash architecture (v005)"
+      title: Extract 5-tuple for matching
+      description: We need a normalized 104-bit tuple output from the parser.
+    artifacts: ["tb/parser_tb.v"]
+    commit_msg: "Finalize 5-tuple extraction pipeline"
 
-  - id: v006
-    title: BRAM Bank Integration (v006)
+  # --- Phase 2: Exact Match Pipeline & Cuckoo Hash (Events 7-15) ---
+  - id: ev07
+    title: Basic Exact Match Scalability
     issue:
-      title: Connect Cuckoo Hash
-      description: Memory banks not attached to datapath.
-    commit_msg: "Integrate 4-way BRAM banks (v006)"
+      title: Direct mapped hash collisions
+      description: Standard hash tables suffer severe collisions at >50% occupancy.
+    adr: {id: "ADR-014", title: "Use 4-way Cuckoo Hashing", content: "4 independent BRAM banks."}
+    artifacts: ["architecture/decisions/ADR-014.md"]
+    commit_msg: "Establish Cuckoo Hash architecture"
 
-  - id: v007
-    title: SNN Coprocessor Concept (v007)
+  - id: ev08
+    title: Cuckoo Hash Functions
     issue:
-      title: Static rules fail against anomalies
-      description: Cannot detect zero-day attacks.
-    commit_msg: "Implement feature to spike encoder (v007)"
+      title: Hash function logic depth
+      description: Need 4 parallel, unique hash functions that evaluate in 1 cycle.
+    artifacts: ["rtl/ha_tff_hash_functions.v"]
+    commit_msg: "Implement 4-way parallel hash functions"
 
-  - id: v008
-    title: LIF Neuron Implementation (v008)
+  - id: ev09
+    title: BRAM Bank Integration
     issue:
-      title: Spikes need integration
-      description: Construct the Leaky Integrate and Fire neuron.
-    commit_msg: "Implement LIF neuron logic (v008)"
+      title: Connect Cuckoo Hash to memory
+      description: Instantiate the 4 True Dual-Port BRAM tiles.
+    artifacts: ["rtl/ha_tff_bram_bank.v"]
+    commit_msg: "Integrate 4-way BRAM banks"
 
-  - id: v009
-    title: SNN Timing Closure Failure (v009)
+  - id: ev10
+    title: Matcher Timing Failure
+    issue:
+      title: Matcher logic depth too deep
+      description: Combinatorial comparison of four 104-bit tuples fails 6.4ns timing.
+    artifacts: ["reports/matcher_timing_fail.txt"]
+    commit_msg: "Document matcher timing violation"
+
+  - id: ev11
+    title: Pipelined Tuple Matcher
+    issue:
+      title: Pipeline the matcher stages
+      description: Break the comparator tree into a 2-stage pipeline.
+    artifacts: ["rtl/ha_tff_matcher_v004.v"]
+    commit_msg: "Pipeline tuple matcher to close timing"
+
+  - id: ev12
+    title: Cuckoo Table Insert Deadlocks
+    issue:
+      title: Infinite loops on Cuckoo insert
+      description: When the table is full, the eviction logic cycles infinitely.
+    artifacts: ["waveforms/cuckoo/insert_deadlock.vcd"]
+    commit_msg: "Add maximum displacement counter to Cuckoo insert"
+
+  - id: ev13
+    title: Control Plane AXI Interface for Hash
+    issue:
+      title: CPU cannot write to Hash tables
+      description: We need an AXI4-Lite wrapper to allow the CPU to populate the Cuckoo tables.
+    artifacts: ["rtl/ha_tff_axi_lite_cuckoo.v"]
+    commit_msg: "Implement AXI4-Lite interface for Cuckoo table programming"
+
+  - id: ev14
+    title: Datapath FIFO Overflows
+    issue:
+      title: AXI-Stream backpressure drops packets
+      description: When Cuckoo match stalls, TREADY drops and packets are lost.
+    artifacts: ["rtl/axi_stream_fifo.v"]
+    commit_msg: "Add AXI-Stream skid buffers for backpressure handling"
+
+  - id: ev15
+    title: Datapath Integration Release (v006)
+    issue:
+      title: Finalize exact match datapath
+      description: Stitch parser, matcher, and AXI stream logic together.
+    artifacts: ["rtl/ha_tff_datapath_top_v006.v"]
+    commit_msg: "Release integrated Exact Match datapath (v006)"
+
+  # --- Phase 3: SNN Integration (Events 16-24) ---
+  - id: ev16
+    title: Zero-Day Anomaly Detection
+    issue:
+      title: Static rules fail against zero-day anomalies
+      description: The exact match table cannot detect port-scanning or DDoSes dynamically.
+    adr: {id: "ADR-022", title: "Integrate SNN", content: "Run an SNN in parallel with the datapath."}
+    artifacts: ["architecture/decisions/ADR-022.md"]
+    commit_msg: "Establish SNN coprocessor architecture"
+
+  - id: ev17
+    title: Feature to Spike Encoder
+    issue:
+      title: Convert packet headers to spikes
+      description: We need logic to encode TCP/UDP ports into binary spike trains.
+    artifacts: ["rtl/snn_feature_encoder.v"]
+    commit_msg: "Implement packet feature to spike encoder"
+
+  - id: ev18
+    title: LIF Neuron Arithmetic
+    issue:
+      title: Design multiplier-less neuron
+      description: Use Leaky Integrate and Fire (LIF) model using shifts and adds to save DSPs.
+    artifacts: ["rtl/snn_tff_neuron.v"]
+    commit_msg: "Implement LIF neuron logic"
+
+  - id: ev19
+    title: SNN Timing Closure Failure (WNS)
     issue:
       title: SNN Adder Tree fails 6.4ns timing
-      description: WNS is -0.465ns. 8-way addition takes too long.
-    commit_msg: "Pipeline LIF neuron into Arithmetic/Threshold (v009)"
+      description: 8-way combinational addition in the LIF neuron results in WNS -0.465ns.
+    artifacts: ["reports/snn_timing_violation.txt"]
+    commit_msg: "Document SNN adder tree timing failure"
 
-  - id: v010
+  - id: ev20
+    title: Pipelined LIF Neuron
+    issue:
+      title: Pipeline the SNN Arithmetic
+      description: Split the LIF neuron into separate accumulation and thresholding pipeline stages.
+    artifacts: ["rtl/snn_tff_neuron_v004.v"]
+    commit_msg: "Pipeline LIF neuron (Latency +1) to close timing"
+
+  - id: ev21
+    title: SNN Output Synchronization
+    issue:
+      title: SNN spikes misaligned with datapath
+      description: SNN takes 6 cycles, datapath takes 4. The outputs hit the decision engine at different times.
+    artifacts: ["waveforms/system/sync_failure.vcd"]
+    commit_msg: "Add synchronization registers to SNN output"
+
+  - id: ev22
+    title: Datapath Delay Line (SRL16E)
+    issue:
+      title: Must buffer packet payload while SNN evaluates
+      description: Original packet payload needs to be delayed by 6 cycles without wasting BRAM.
+    adr: {id: "ADR-028", title: "Use SRL16E", content: "Use Shift Register LUTs for shallow FIFOs."}
+    artifacts: ["rtl/axi_stream_delay_line.v"]
+    commit_msg: "Implement AXI-Stream delay line using SRL16E"
+
+  - id: ev23
+    title: Drop FSM Logic
+    issue:
+      title: Merge Cuckoo and SNN decisions
+      description: Final routing logic to drop the packet if either the Hash table or SNN flags it.
+    artifacts: ["rtl/ha_tff_drop_fsm.v"]
+    commit_msg: "Implement final Drop FSM arbitration logic"
+
+  - id: ev24
     title: SNN Datapath Integration (v010)
     issue:
-      title: Attach SNN to parallel processing
-      description: Route SNN spikes alongside exact match.
-    commit_msg: "Integrate SNN with main datapath (v010)"
+      title: Finalize SNN Integration
+      description: Wire the SNN layer and delay lines into the top-level system.
+    artifacts: ["rtl/snn_tff_layer_v010.v"]
+    commit_msg: "Release integrated SNN Datapath (v010)"
 
-  - id: v011
-    title: Datapath Delay Line (v011)
+  # --- Phase 4: Final Security & Dynamic Updates (Events 25-30) ---
+  - id: ev25
+    title: AI Weights ROM Bottleneck
     issue:
-      title: SNN desynchronizes packet stream
-      description: Must buffer original packet while SNN evaluates.
-    commit_msg: "Implement AXI-Stream delay line using SRL16E (v011)"
+      title: AI weights are hardcoded in ROM
+      description: Retraining the AI requires a 10-hour FPGA bitstream recompile.
+    artifacts: ["architecture/tradeoffs/weight_memory.md"]
+    commit_msg: "Analyze AI weight memory bottlenecks"
 
-  - id: v012
-    title: Cuckoo Table Eviction Logic (v012)
+  - id: ev26
+    title: BRAM Bandwidth Failure
     issue:
-      title: Cuckoo tables locking up on insert
-      description: Need eviction and rehash FSM for Cuckoo writes.
-    commit_msg: "Implement Cuckoo table eviction FSM (v012)"
+      title: BRAM cannot supply 16 weights simultaneously
+      description: SNN needs 16 parallel reads. BRAM only has 2.
+    artifacts: ["reports/bram_bandwidth_fail.txt"]
+    commit_msg: "Document BRAM parallel read limitation for SNNs"
 
-  - id: v013
-    title: Dynamic AI Weights and Secure Hash (v013 Release)
+  - id: ev27
+    title: Register File Control Plane
     issue:
-      title: Hardcoded weights and vulnerable static hash
-      description: AI weights are ROM. Hash uses static XOR.
-    commit_msg: "Implement AXI-Lite Register File and Toeplitz Hash (v013)"
+      title: Implement Distributed RAM for weights
+      description: Use flip-flops (Register File) via AXI-Lite for 1-cycle parallel weight reads.
+    artifacts: ["rtl/ha_tff_axi_lite_regs.v"]
+    commit_msg: "Implement AXI-Lite Register File for dynamic SNN weights"
+
+  - id: ev28
+    title: Algorithmic Hash Complexity Vulnerability
+    issue:
+      title: Static hash vulnerable to DDoS
+      description: The Cuckoo hash uses static XORs, allowing attackers to force 100% hash collisions.
+    artifacts: ["architecture/tradeoffs/hash_security.md"]
+    commit_msg: "Analyze algorithmic hash collision vulnerabilities"
+
+  - id: ev29
+    title: SipHash Timing Failure
+    issue:
+      title: SipHash violates 1-cycle latency
+      description: Standard SipHash requires >10 cycles to evaluate, ruining datapath synchronization.
+    artifacts: ["reports/siphash_timing_fail.txt"]
+    commit_msg: "Document SipHash timing closure failure"
+
+  - id: ev30
+    title: Parameterized Toeplitz Hash (v013 Release)
+    issue:
+      title: Implement Secure Hardware Hash
+      description: Use an AXI-configurable 128-bit secret key with 1-cycle Galois XOR folding.
+    artifacts: ["rtl/ha_tff_hash_v002.v", "rtl/ha_tff_system_top_v013.v"]
+    commit_msg: "Implement Parameterized Toeplitz Hash and release final HA-TFF v013"
