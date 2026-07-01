@@ -1,0 +1,5 @@
+# Hide local automation artifacts and runtime state
+# The .py scripts remain tracked so CI / gh Actions can execute them.
+automation/state.json
+automation/*.log
+*.vvp

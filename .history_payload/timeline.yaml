@@ -16,11 +16,14 @@ events:
       Decision: Pivot to FPGA'
   instructions:
   - type: CREATE
-    src: blob_store/4dd96998246c15f22ef4c2168227d812_Cuckoo_Hashing_Notes.md
-    dst: docs/Vol0_Foundations/Algorithms/Cuckoo_Hashing_Notes.md
+    src: blob_store/bf916bc42e6c4c129c30faa0ecb5e752_Engineering_Memory_v005.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v005.md
   - type: CREATE
-    src: blob_store/3e45428438ccb666b806e5bddfe549b8_AXI_Stream_Notes.md
-    dst: docs/Vol0_Foundations/Hardware/AXI_Stream_Notes.md
+    src: blob_store/fe9d5d377bc9a583588a1ef92df41cb5_LIF_Neuron_Formulation.md
+    dst: docs/Engineering_History/03_Math/LIF_Neuron_Formulation.md
+  - type: CREATE
+    src: blob_store/f066ca92d861928abb7ed99a9b221ea4_bug003_snn_leak_fail.md
+    dst: docs/Engineering_History/10_Debug/bug003_snn_leak_fail.md
   - type: CREATE
     src: blob_store/44f55b172b00cbab1014672d487405a9_System_Architecture.md
     dst: docs/Vol1_MeghDut_Learning/01_Architecture/System_Architecture.md
@@ -73,29 +76,17 @@ events:
       Decision: Design 64-bit AXI Stream datapath'
   instructions:
   - type: CREATE
-    src: blob_store/c6ad2201c821e0efff832b41816a163e_Timeline.md
-    dst: docs/Timeline.md
+    src: blob_store/f3658c8748456bf4502665f70104d983_Engineering_Memory_v004.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v004.md
   - type: CREATE
-    src: blob_store/6ec0a8f25df12975eed1e7216ae22f42_Timeline.md
-    dst: docs/Engineering_History/Timeline.md
+    src: blob_store/08c2673903fe4529534e83944833f939_Engineering_Memory_v012.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v012.md
   - type: CREATE
-    src: blob_store/ddff42675e615e8befe5a12065fc7da3_Q001.md
-    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q001.md
+    src: blob_store/6bb1b1448b84efd3ee14a61998e7cecf_REQ-v002.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v002.md
   - type: CREATE
-    src: blob_store/62aee9e6c786c3863e274ae8e70a6975_reason_for_rejection.md
-    dst: docs/Engineering_History/05_RTL/Discarded/historical/matcher_unpipelined_v001/reason_for_rejection.md
-  - type: CREATE
-    src: blob_store/7f312aa98898829623994062eb9a4b94_ADR-003_Hashing_Algorithm.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-003_Hashing_Algorithm.md
-  - type: CREATE
-    src: blob_store/5fc37ae9180d29f9969542ca42ee19b0_2026-01-29.md
-    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-29.md
-  - type: CREATE
-    src: blob_store/aa849efbdd4353b4c14c99c44e3165b9_2026-03-14.md
-    dst: docs/Engineering_History/11_Lab_Notebook/2026-03-14.md
-  - type: CREATE
-    src: blob_store/8af94b6f84b66c6e9788d9920f04fa33_Ethernet_IPv4_UDP_Notes.md
-    dst: docs/Vol0_Foundations/Networking/Ethernet_IPv4_UDP_Notes.md
+    src: blob_store/5854f25b6b96957686c3d2be1d268148_ADR-010_Combinatorial_Merge.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-010_Combinatorial_Merge.md
   issue:
     action: close
     ref: ev00
@@ -135,26 +126,14 @@ events:
     src: blob_store/806ba0247df01dddd675cd72bcfd888a_utilization_report.txt
     dst: reports/synthesis/utilization_report.txt
   - type: CREATE
-    src: blob_store/4915caae988f142c1878ce5f0da9fc55_2026-01-01_Origin.md
-    dst: docs/Engineering_History/00_Project_Journal/2026-01-01_Origin.md
-  - type: CREATE
-    src: blob_store/2854df9a58ca44817ddcc70099496585_Engineering_Memory_v003.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v003.md
-  - type: CREATE
-    src: blob_store/61ce90c36913875faa6d2face7561ae6_Q004.md
-    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q004.md
-  - type: CREATE
-    src: blob_store/523f50e0d4ce70834961b46617dcf605_001_Cuckoo_Collision_Model.md
-    dst: docs/Engineering_History/03_Math/001_Cuckoo_Collision_Model.md
-  - type: CREATE
-    src: blob_store/a12c843867db96c5fc2826e330b58232_ADR-0004_Control_Plane_Separation.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0004_Control_Plane_Separation.md
-  - type: CREATE
     src: blob_store/156fab897fdb6775fd1b5c1f8a80bf6c_ADR-001_Parser_FSM.md
     dst: docs/Engineering_History/10_Design_Reviews/ADR-001_Parser_FSM.md
   - type: CREATE
-    src: blob_store/a7a19cf86687d87c97adf15fa4877da3_commit009.md
-    dst: docs/Engineering_History/14_Commits/commit009.md
+    src: blob_store/b648c0ffe93c51dd9b7c47ddf513b85f_WAVE011.md
+    dst: docs/Engineering_History/11_Verification/Waveform_Analysis/WAVE011.md
+  - type: CREATE
+    src: blob_store/672cb39873d10007e8b5239caf30132a_commit002.md
+    dst: docs/Engineering_History/14_Commits/commit002.md
 - id: ev03
   title: Parser FSM Timing Closure
   phase: Verification
@@ -196,8 +175,17 @@ events:
   - type: DELETE
     dst: reports/synthesis/utilization_report.txt
   - type: CREATE
-    src: blob_store/0b751de46e10b4be9ffac7567342d87b_Final_Takeaway_Report.md
-    dst: docs/Engineering_History/20_Final/Final_Takeaway_Report.md
+    src: blob_store/4a1c6ce454b584cbef9bc842b24e4e83_REQ-v003.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v003.md
+  - type: CREATE
+    src: blob_store/2fa80e463eb8bc9ed8f1a79d1e01acf4_ADR-011_Data_Delay_Line.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-011_Data_Delay_Line.md
+  - type: CREATE
+    src: blob_store/24975dcfe2fe95583e5d38f763ea2ed9_commit003.md
+    dst: docs/Engineering_History/14_Commits/commit003.md
+  - type: CREATE
+    src: blob_store/5a6fc0bb9cc852202da80e7ca03fa8cf_Pipeline_Design_Notes.md
+    dst: docs/Vol0_Foundations/Algorithms/Pipeline_Design_Notes.md
 - id: ev04
   title: Hash Unit Design
   phase: Design
@@ -247,14 +235,17 @@ events:
   - type: DELETE
     dst: reports/synthesis/utilization_report.txt
   - type: CREATE
-    src: blob_store/cd3a713b04ada1823088b7d9b653e12a_Engineering_Memory_v009.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v009.md
+    src: blob_store/57b7f78ecb3b0f96ad943ece957c45ea_Engineering_Memory_v011.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v011.md
   - type: CREATE
-    src: blob_store/6bb1b1448b84efd3ee14a61998e7cecf_REQ-v002.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v002.md
+    src: blob_store/a12c843867db96c5fc2826e330b58232_ADR-0004_Control_Plane_Separation.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0004_Control_Plane_Separation.md
   - type: CREATE
-    src: blob_store/4a6a6033e5f0ebed8353053b99a5ccde_commit006.md
-    dst: docs/Engineering_History/14_Commits/commit006.md
+    src: blob_store/363ff01b568c5bfb097bec5b5e619842_commit001.md
+    dst: docs/Engineering_History/14_Commits/commit001.md
+  - type: CREATE
+    src: blob_store/8af94b6f84b66c6e9788d9920f04fa33_Ethernet_IPv4_UDP_Notes.md
+    dst: docs/Vol0_Foundations/Networking/Ethernet_IPv4_UDP_Notes.md
 - id: ev05
   title: Cuckoo Hash Insertion Deadlock
   phase: Implementation
@@ -272,11 +263,23 @@ events:
       Decision: Implement eviction limit'
   instructions:
   - type: CREATE
-    src: blob_store/fd98ede6cdbd0cd1e9bcb826410cb5a1_bug005_dead_code_elimination.md
-    dst: docs/Engineering_History/10_Debug/bug005_dead_code_elimination.md
+    src: blob_store/cd3a713b04ada1823088b7d9b653e12a_Engineering_Memory_v009.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v009.md
   - type: CREATE
-    src: blob_store/b648c0ffe93c51dd9b7c47ddf513b85f_WAVE011.md
-    dst: docs/Engineering_History/11_Verification/Waveform_Analysis/WAVE011.md
+    src: blob_store/2e3026a127937527de6cab431e0b198f_ADR-0001_Pivot_to_Firewall.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0001_Pivot_to_Firewall.md
+  - type: CREATE
+    src: blob_store/97520a88652c6b7614345539e7068176_ADR-0003_Cuckoo_Hash_Table.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0003_Cuckoo_Hash_Table.md
+  - type: CREATE
+    src: blob_store/7fb47d4ade34e222c074eaf8231a24f2_ADR-0005_Matcher_Pipelining.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0005_Matcher_Pipelining.md
+  - type: CREATE
+    src: blob_store/094ecb0579f7bf9d1d71d802ece0322a_commit007.md
+    dst: docs/Engineering_History/14_Commits/commit007.md
+  - type: CREATE
+    src: blob_store/4dd96998246c15f22ef4c2168227d812_Cuckoo_Hashing_Notes.md
+    dst: docs/Vol0_Foundations/Algorithms/Cuckoo_Hashing_Notes.md
   issue:
     action: open
     title: Cuckoo Hash Insertion Deadlock
@@ -299,11 +302,14 @@ events:
       Decision: Replicate BRAM banks for parallel access'
   instructions:
   - type: CREATE
-    src: blob_store/801c34bdf1d7436f372f5124e33fc575_Engineering_Memory_v002.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v002.md
+    src: blob_store/84042cfad6c16040530e917135d61e2c_Engineering_Memory_v001.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v001.md
   - type: CREATE
-    src: blob_store/2e3026a127937527de6cab431e0b198f_ADR-0001_Pivot_to_Firewall.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0001_Pivot_to_Firewall.md
+    src: blob_store/69c8c3ada733ad7d078dda6b1735a3d6_Engineering_Memory_v006.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v006.md
+  - type: CREATE
+    src: blob_store/4a951d8fd427c1de06ec6a8f02ffd3dd_BUG-005_Dead_Code_Elimination.md
+    dst: docs/Engineering_History/02_Knowledge/BUG-005_Dead_Code_Elimination.md
   issue:
     action: close
     ref: ev05
@@ -415,29 +421,17 @@ events:
     src: blob_store/20f89f70dda39ad5b255aaa2dd70101a_vivado_4632.backup.log
     dst: reports/synthesis/vivado_4632.backup.log
   - type: CREATE
-    src: blob_store/f3658c8748456bf4502665f70104d983_Engineering_Memory_v004.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v004.md
+    src: blob_store/8a0c649e7d68951824e1b4f5eafb2a4d_ADR-004_Memory_Primitive.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-004_Memory_Primitive.md
   - type: CREATE
-    src: blob_store/bf916bc42e6c4c129c30faa0ecb5e752_Engineering_Memory_v005.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v005.md
+    src: blob_store/0cccf8d644b74d6f29737396f804f97c_ADR-009_Feature_Encoding.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-009_Feature_Encoding.md
   - type: CREATE
-    src: blob_store/2e4417d35e602540a7f428bd9723145e_Engineering_Memory_v013.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v013.md
+    src: blob_store/aa849efbdd4353b4c14c99c44e3165b9_2026-03-14.md
+    dst: docs/Engineering_History/11_Lab_Notebook/2026-03-14.md
   - type: CREATE
-    src: blob_store/5e61383411b8a2ec611e1acf26bf0a80_Assumptions_Register.md
-    dst: docs/Engineering_History/02_Knowledge/Assumptions_Register.md
-  - type: CREATE
-    src: blob_store/054a0dc66beee5787cb15eba8262c68f_002_Hardware_Cuckoo_Hashing.md
-    dst: docs/Engineering_History/02_Literature/002_Hardware_Cuckoo_Hashing.md
-  - type: CREATE
-    src: blob_store/fe9d5d377bc9a583588a1ef92df41cb5_LIF_Neuron_Formulation.md
-    dst: docs/Engineering_History/03_Math/LIF_Neuron_Formulation.md
-  - type: CREATE
-    src: blob_store/2fa80e463eb8bc9ed8f1a79d1e01acf4_ADR-011_Data_Delay_Line.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-011_Data_Delay_Line.md
-  - type: CREATE
-    src: blob_store/6de1becdb9349981917e7bc7501b31c5_commit011.md
-    dst: docs/Engineering_History/14_Commits/commit011.md
+    src: blob_store/53b13aacdb9da8d618447af7af84e58b_commit008.md
+    dst: docs/Engineering_History/14_Commits/commit008.md
 - id: ev08
   title: Matcher Pipeline Stalls
   phase: Verification
@@ -453,10 +447,7 @@ events:
       Problem: Matcher logic stalls the entire pipeline
 
       Decision: Fully pipeline the matcher with delay lines'
-  instructions:
-  - type: CREATE
-    src: blob_store/57b7f78ecb3b0f96ad943ece957c45ea_Engineering_Memory_v011.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v011.md
+  instructions: []
 - id: ev09
   title: Control Plane Interface
   phase: Implementation
@@ -557,26 +548,17 @@ events:
     src: blob_store/01481a77c4062d39db0d645de05acba4_vivado.log
     dst: reports/synthesis/vivado.log
   - type: CREATE
-    src: blob_store/5095c36d5d28daa55a3063108f2e3147_Skills_Evolution.md
-    dst: docs/Skills_Evolution.md
+    src: blob_store/62aee9e6c786c3863e274ae8e70a6975_reason_for_rejection.md
+    dst: docs/Engineering_History/05_RTL/Discarded/historical/matcher_unpipelined_v001/reason_for_rejection.md
   - type: CREATE
-    src: blob_store/9b4afad00b624805ef5b92d009c6a279_ADR-002_Bus_Width.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-002_Bus_Width.md
+    src: blob_store/dd16ce22fd4f2feb372a8157054fccf7_ADR-006_Firewall_Pivot.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-006_Firewall_Pivot.md
   - type: CREATE
-    src: blob_store/5854f25b6b96957686c3d2be1d268148_ADR-010_Combinatorial_Merge.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-010_Combinatorial_Merge.md
+    src: blob_store/a9e933a6318dc68c20fa9a9cbf21843b_Engineering_Dashboard.md
+    dst: docs/Engineering_History/12_Performance/Engineering_Dashboard.md
   - type: CREATE
-    src: blob_store/53b13aacdb9da8d618447af7af84e58b_commit008.md
-    dst: docs/Engineering_History/14_Commits/commit008.md
-  - type: CREATE
-    src: blob_store/c7715614f8570fd65ec4d1ccfc63f0bf_commit012.md
-    dst: docs/Engineering_History/14_Commits/commit012.md
-  - type: CREATE
-    src: blob_store/5bf792f5d714c3a58d94fc47e03375e0_Debt_v001.md
-    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v001.md
-  - type: CREATE
-    src: blob_store/5a6fc0bb9cc852202da80e7ca03fa8cf_Pipeline_Design_Notes.md
-    dst: docs/Vol0_Foundations/Algorithms/Pipeline_Design_Notes.md
+    src: blob_store/1c66d37e23b9d3ecbb464ce92b7c488e_Debt_v010.md
+    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v010.md
 - id: ev10
   title: SNN Topology Exploration
   phase: Research
@@ -594,6 +576,15 @@ events:
       Decision: Use Leaky Integrate and Fire neurons'
   instructions:
   - type: CREATE
+    src: blob_store/5095c36d5d28daa55a3063108f2e3147_Skills_Evolution.md
+    dst: docs/Skills_Evolution.md
+  - type: CREATE
+    src: blob_store/601f9db38c55021043a6a8f15ccbf1b6_Engineering_Memory_v007.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v007.md
+  - type: CREATE
+    src: blob_store/61ce90c36913875faa6d2face7561ae6_Q004.md
+    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q004.md
+  - type: CREATE
     src: blob_store/088b70a7c0e15d85089aa0b11681340b_ENG-0006_SNN_for_NIDS.md
     dst: docs/Engineering_History/02_Literature/ENG-0006_SNN_for_NIDS.md
   - type: CREATE
@@ -608,6 +599,9 @@ events:
   - type: CREATE
     src: blob_store/fab2a0cc36c48a795231b1a382ab4d63_ADR-012_SNN_Pipelining.md
     dst: docs/Engineering_History/10_Design_Reviews/ADR-012_SNN_Pipelining.md
+  - type: CREATE
+    src: blob_store/0c1e7baef435d6a01f9412d1c728d84c_Coverage_Report_v012.md
+    dst: docs/Engineering_History/11_Verification/Coverage_Report_v012.md
   issue:
     action: open
     title: SNN Topology Exploration
@@ -628,7 +622,13 @@ events:
       Problem: Converting packet lengths to spike trains
 
       Decision: Implement time-based threshold encoding'
-  instructions: []
+  instructions:
+  - type: CREATE
+    src: blob_store/7878f0dc40ffb548fc322e2e02adea7d_REQ-v006.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v006.md
+  - type: CREATE
+    src: blob_store/a7a19cf86687d87c97adf15fa4877da3_commit009.md
+    dst: docs/Engineering_History/14_Commits/commit009.md
   issue:
     action: close
     ref: ev10
@@ -752,17 +752,17 @@ events:
     src: blob_store/7d3f7df592812fcf73c6a8467850020e_vivado.log
     dst: reports/synthesis/vivado.log
   - type: CREATE
-    src: blob_store/c42347ed8461afd054ff29f399a6fb67_Engineering_Memory_v008.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v008.md
+    src: blob_store/4915caae988f142c1878ce5f0da9fc55_2026-01-01_Origin.md
+    dst: docs/Engineering_History/00_Project_Journal/2026-01-01_Origin.md
   - type: CREATE
-    src: blob_store/f066ca92d861928abb7ed99a9b221ea4_bug003_snn_leak_fail.md
-    dst: docs/Engineering_History/10_Debug/bug003_snn_leak_fail.md
+    src: blob_store/5d4cdd61dad9cb6a20da59f7b2900477_REQ-v005.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v005.md
   - type: CREATE
-    src: blob_store/dd16ce22fd4f2feb372a8157054fccf7_ADR-006_Firewall_Pivot.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-006_Firewall_Pivot.md
+    src: blob_store/6de1becdb9349981917e7bc7501b31c5_commit011.md
+    dst: docs/Engineering_History/14_Commits/commit011.md
   - type: CREATE
-    src: blob_store/0cccf8d644b74d6f29737396f804f97c_ADR-009_Feature_Encoding.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-009_Feature_Encoding.md
+    src: blob_store/5bf792f5d714c3a58d94fc47e03375e0_Debt_v001.md
+    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v001.md
 - id: ev13
   title: SNN Layer Integration
   phase: Integration
@@ -887,8 +887,11 @@ events:
   - type: DELETE
     dst: reports/synthesis/snn_tff_layer_synth.dcp
   - type: CREATE
-    src: blob_store/833d9d7232d8a15eb4cf889046dca775_2026-01-08.md
-    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-08.md
+    src: blob_store/baa663d8499666b5fbe6209abb53f086_Engineering_Question_Register.md
+    dst: docs/Engineering_Question_Register.md
+  - type: CREATE
+    src: blob_store/ca62e292154e3b4bcee1a3319e55daa6_Project_Evolution.md
+    dst: docs/Project_Evolution.md
   - type: CREATE
     src: blob_store/89d46f3fe7c06e18eb79f4defcd70c3d_performance_history.csv
     dst: docs/Engineering_History/18_Performance/performance_history.csv
@@ -1026,17 +1029,8 @@ events:
   - type: DELETE
     dst: reports/synthesis/snn_tff_layer_synth.dcp
   - type: CREATE
-    src: blob_store/69c8c3ada733ad7d078dda6b1735a3d6_Engineering_Memory_v006.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v006.md
-  - type: CREATE
-    src: blob_store/97520a88652c6b7614345539e7068176_ADR-0003_Cuckoo_Hash_Table.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0003_Cuckoo_Hash_Table.md
-  - type: CREATE
-    src: blob_store/a9e933a6318dc68c20fa9a9cbf21843b_Engineering_Dashboard.md
-    dst: docs/Engineering_History/12_Performance/Engineering_Dashboard.md
-  - type: CREATE
-    src: blob_store/2bdaa5c4ade7420b7876aeeb9b91aca0_todo_v005.md
-    dst: docs/Engineering_History/19_TODO/todo_v005.md
+    src: blob_store/fd98ede6cdbd0cd1e9bcb826410cb5a1_bug005_dead_code_elimination.md
+    dst: docs/Engineering_History/10_Debug/bug005_dead_code_elimination.md
 - id: ev15
   title: System Top Integration
   phase: Integration
@@ -1190,14 +1184,41 @@ events:
     src: blob_store/ba1fc86b86830d523923c847353d0942_vivado.log
     dst: reports/synthesis/vivado.log
   - type: CREATE
-    src: blob_store/ca62e292154e3b4bcee1a3319e55daa6_Project_Evolution.md
-    dst: docs/Project_Evolution.md
+    src: blob_store/74b3f5162d56984f5768f3aee8dfff80_BUG-004_Unsigned_Threshold.md
+    dst: docs/Engineering_History/02_Knowledge/BUG-004_Unsigned_Threshold.md
   - type: CREATE
-    src: blob_store/4a951d8fd427c1de06ec6a8f02ffd3dd_BUG-005_Dead_Code_Elimination.md
-    dst: docs/Engineering_History/02_Knowledge/BUG-005_Dead_Code_Elimination.md
+    src: blob_store/d7175c42ce5b8a0d16d5ad339975ef10_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v001/architecture.md
   - type: CREATE
-    src: blob_store/0c1e7baef435d6a01f9412d1c728d84c_Coverage_Report_v012.md
-    dst: docs/Engineering_History/11_Verification/Coverage_Report_v012.md
+    src: blob_store/bbb56ba8acb1154e75830c0115f14a81_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v002/architecture.md
+  - type: CREATE
+    src: blob_store/3e9bbec26d8cacccf38636e483e382ea_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v003/architecture.md
+  - type: CREATE
+    src: blob_store/b2cad2addb43959781428dea3d7b212f_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v004/architecture.md
+  - type: CREATE
+    src: blob_store/33921598268044adda47b07857d315b2_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v005/architecture.md
+  - type: CREATE
+    src: blob_store/bcf41f77b2116363bee7ce6aadb5dc0e_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v006/architecture.md
+  - type: CREATE
+    src: blob_store/6ca445ab6300e934fe0c56b3ee8db2a1_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v007/architecture.md
+  - type: CREATE
+    src: blob_store/3a850bce46f52fbe6be0c849109dac9e_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v009/architecture.md
+  - type: CREATE
+    src: blob_store/d93b1f517802c3fee36353759647c943_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v010/architecture.md
+  - type: CREATE
+    src: blob_store/4cfcb09fd91876e94b4c683edd4fb3fa_architecture.md
+    dst: docs/Engineering_History/04_Architecture/ARCH-v012/architecture.md
+  - type: CREATE
+    src: blob_store/1004f8102c2fb98c99614c40d0b443af_commit005.md
+    dst: docs/Engineering_History/14_Commits/commit005.md
   issue:
     action: open
     title: System Top Integration
@@ -1357,6 +1378,18 @@ events:
   - type: MODIFY
     src: blob_store/da1ce3153e4cd9cfd44b471adaa1b884_vivado.log
     dst: reports/synthesis/vivado.log
+  - type: CREATE
+    src: blob_store/5dc6cdffd7f1f55efef3be20e43b6022_bug004_unsigned_threshold.md
+    dst: docs/Engineering_History/10_Debug/bug004_unsigned_threshold.md
+  - type: CREATE
+    src: blob_store/73d1c11aaf28feb82a05539c78f333fa_commit010.md
+    dst: docs/Engineering_History/14_Commits/commit010.md
+  - type: CREATE
+    src: blob_store/0b751de46e10b4be9ffac7567342d87b_Final_Takeaway_Report.md
+    dst: docs/Engineering_History/20_Final/Final_Takeaway_Report.md
+  - type: CREATE
+    src: blob_store/3e45428438ccb666b806e5bddfe549b8_AXI_Stream_Notes.md
+    dst: docs/Vol0_Foundations/Hardware/AXI_Stream_Notes.md
   issue:
     action: close
     ref: ev15
@@ -1537,17 +1570,14 @@ events:
     src: blob_store/9a99e4e16d11ec392ac8ba71fe146c7e_Decision_Graph.md
     dst: docs/Decision_Graph.md
   - type: CREATE
-    src: blob_store/601f9db38c55021043a6a8f15ccbf1b6_Engineering_Memory_v007.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v007.md
+    src: blob_store/523f50e0d4ce70834961b46617dcf605_001_Cuckoo_Collision_Model.md
+    dst: docs/Engineering_History/03_Math/001_Cuckoo_Collision_Model.md
   - type: CREATE
-    src: blob_store/17aae059dffeac863d9d4435dc9b4bf1_REQ-v001.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v001.md
+    src: blob_store/812082c60741d64692396f0d25698e5d_ADR-005_Matcher_Pipelining.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-005_Matcher_Pipelining.md
   - type: CREATE
-    src: blob_store/24975dcfe2fe95583e5d38f763ea2ed9_commit003.md
-    dst: docs/Engineering_History/14_Commits/commit003.md
-  - type: CREATE
-    src: blob_store/094ecb0579f7bf9d1d71d802ece0322a_commit007.md
-    dst: docs/Engineering_History/14_Commits/commit007.md
+    src: blob_store/aec390e36390d752ed9baa70373f4556_commit004.md
+    dst: docs/Engineering_History/14_Commits/commit004.md
 - id: ev18
   title: VLAN Alignment Bug
   phase: Verification
@@ -1737,6 +1767,12 @@ events:
   - type: MODIFY
     src: blob_store/ae9fb99c0c80c49923f449d68933372b_vivado.log
     dst: reports/synthesis/vivado.log
+  - type: CREATE
+    src: blob_store/5fc37ae9180d29f9969542ca42ee19b0_2026-01-29.md
+    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-29.md
+  - type: CREATE
+    src: blob_store/9f9c13b07265004aac3d21bd8b0350ef_performance.md
+    dst: docs/Engineering_History/18_Performance/performance.md
 - id: ev19
   title: Final Timing Validation
   phase: Verification
@@ -1931,26 +1967,14 @@ events:
   - type: DELETE
     dst: reports/synthesis/synth_sys_v004.tcl
   - type: CREATE
-    src: blob_store/84042cfad6c16040530e917135d61e2c_Engineering_Memory_v001.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v001.md
+    src: blob_store/a1399320e568849157a9285010ac8b8d_Engineering_Memory_v010.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v010.md
   - type: CREATE
-    src: blob_store/13894ad1037db789131aae2fbcb0203b_BUG-001_Tuple_Valid_Timeout.md
-    dst: docs/Engineering_History/10_Debug/BUG-001_Tuple_Valid_Timeout.md
+    src: blob_store/7f312aa98898829623994062eb9a4b94_ADR-003_Hashing_Algorithm.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-003_Hashing_Algorithm.md
   - type: CREATE
-    src: blob_store/5dc6cdffd7f1f55efef3be20e43b6022_bug004_unsigned_threshold.md
-    dst: docs/Engineering_History/10_Debug/bug004_unsigned_threshold.md
-  - type: CREATE
-    src: blob_store/7fb47d4ade34e222c074eaf8231a24f2_ADR-0005_Matcher_Pipelining.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0005_Matcher_Pipelining.md
-  - type: CREATE
-    src: blob_store/8a0c649e7d68951824e1b4f5eafb2a4d_ADR-004_Memory_Primitive.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-004_Memory_Primitive.md
-  - type: CREATE
-    src: blob_store/363ff01b568c5bfb097bec5b5e619842_commit001.md
-    dst: docs/Engineering_History/14_Commits/commit001.md
-  - type: CREATE
-    src: blob_store/672cb39873d10007e8b5239caf30132a_commit002.md
-    dst: docs/Engineering_History/14_Commits/commit002.md
+    src: blob_store/4a6a6033e5f0ebed8353053b99a5ccde_commit006.md
+    dst: docs/Engineering_History/14_Commits/commit006.md
 - id: ev20
   title: Engineering Refinement 20
   phase: Refinement
@@ -1968,11 +1992,14 @@ events:
       Decision: N/A'
   instructions:
   - type: CREATE
-    src: blob_store/08c2673903fe4529534e83944833f939_Engineering_Memory_v012.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v012.md
+    src: blob_store/2e4417d35e602540a7f428bd9723145e_Engineering_Memory_v013.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v013.md
   - type: CREATE
-    src: blob_store/a92849da6bd0edc5b16b7328a09f8233_Linux_Network_Stack.md
-    dst: docs/Vol0_Foundations/Networking/Linux_Network_Stack.md
+    src: blob_store/13894ad1037db789131aae2fbcb0203b_BUG-001_Tuple_Valid_Timeout.md
+    dst: docs/Engineering_History/10_Debug/BUG-001_Tuple_Valid_Timeout.md
+  - type: CREATE
+    src: blob_store/833d9d7232d8a15eb4cf889046dca775_2026-01-08.md
+    dst: docs/Engineering_History/11_Lab_Notebook/2026-01-08.md
   issue:
     action: open
     title: Engineering Refinement 20
@@ -1995,17 +2022,17 @@ events:
       Decision: N/A'
   instructions:
   - type: CREATE
-    src: blob_store/a1399320e568849157a9285010ac8b8d_Engineering_Memory_v010.md
-    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v010.md
+    src: blob_store/801c34bdf1d7436f372f5124e33fc575_Engineering_Memory_v002.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v002.md
   - type: CREATE
-    src: blob_store/4a1c6ce454b584cbef9bc842b24e4e83_REQ-v003.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v003.md
+    src: blob_store/5c371348e2a5e9091ef5aa0c1d3e20b9_BUG-003_Leak_Gating.md
+    dst: docs/Engineering_History/02_Knowledge/BUG-003_Leak_Gating.md
   - type: CREATE
-    src: blob_store/74b3f5162d56984f5768f3aee8dfff80_BUG-004_Unsigned_Threshold.md
-    dst: docs/Engineering_History/02_Knowledge/BUG-004_Unsigned_Threshold.md
+    src: blob_store/054a0dc66beee5787cb15eba8262c68f_002_Hardware_Cuckoo_Hashing.md
+    dst: docs/Engineering_History/02_Literature/002_Hardware_Cuckoo_Hashing.md
   - type: CREATE
-    src: blob_store/4d43e3b3af38ba8c23411a0b006a5782_ADR-0002_64bit_Datapath.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-0002_64bit_Datapath.md
+    src: blob_store/2bdaa5c4ade7420b7876aeeb9b91aca0_todo_v005.md
+    dst: docs/Engineering_History/19_TODO/todo_v005.md
   issue:
     action: close
     ref: ev20
@@ -2025,52 +2052,7 @@ events:
       Problem: Ongoing integration tasks
 
       Decision: N/A'
-  instructions:
-  - type: CREATE
-    src: blob_store/baa663d8499666b5fbe6209abb53f086_Engineering_Question_Register.md
-    dst: docs/Engineering_Question_Register.md
-  - type: CREATE
-    src: blob_store/7878f0dc40ffb548fc322e2e02adea7d_REQ-v006.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v006.md
-  - type: CREATE
-    src: blob_store/d7175c42ce5b8a0d16d5ad339975ef10_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v001/architecture.md
-  - type: CREATE
-    src: blob_store/bbb56ba8acb1154e75830c0115f14a81_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v002/architecture.md
-  - type: CREATE
-    src: blob_store/3e9bbec26d8cacccf38636e483e382ea_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v003/architecture.md
-  - type: CREATE
-    src: blob_store/b2cad2addb43959781428dea3d7b212f_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v004/architecture.md
-  - type: CREATE
-    src: blob_store/33921598268044adda47b07857d315b2_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v005/architecture.md
-  - type: CREATE
-    src: blob_store/bcf41f77b2116363bee7ce6aadb5dc0e_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v006/architecture.md
-  - type: CREATE
-    src: blob_store/6ca445ab6300e934fe0c56b3ee8db2a1_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v007/architecture.md
-  - type: CREATE
-    src: blob_store/3a850bce46f52fbe6be0c849109dac9e_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v009/architecture.md
-  - type: CREATE
-    src: blob_store/d93b1f517802c3fee36353759647c943_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v010/architecture.md
-  - type: CREATE
-    src: blob_store/4cfcb09fd91876e94b4c683edd4fb3fa_architecture.md
-    dst: docs/Engineering_History/04_Architecture/ARCH-v012/architecture.md
-  - type: CREATE
-    src: blob_store/812082c60741d64692396f0d25698e5d_ADR-005_Matcher_Pipelining.md
-    dst: docs/Engineering_History/10_Design_Reviews/ADR-005_Matcher_Pipelining.md
-  - type: CREATE
-    src: blob_store/aec390e36390d752ed9baa70373f4556_commit004.md
-    dst: docs/Engineering_History/14_Commits/commit004.md
-  - type: CREATE
-    src: blob_store/1c66d37e23b9d3ecbb464ce92b7c488e_Debt_v010.md
-    dst: docs/Engineering_History/15_Engineering_Debt/Debt_v010.md
+  instructions: []
 - id: ev23
   title: Engineering Refinement 23
   phase: Refinement
@@ -2088,8 +2070,26 @@ events:
       Decision: N/A'
   instructions:
   - type: CREATE
-    src: blob_store/9f9c13b07265004aac3d21bd8b0350ef_performance.md
-    dst: docs/Engineering_History/18_Performance/performance.md
+    src: blob_store/c6ad2201c821e0efff832b41816a163e_Timeline.md
+    dst: docs/Timeline.md
+  - type: CREATE
+    src: blob_store/6ec0a8f25df12975eed1e7216ae22f42_Timeline.md
+    dst: docs/Engineering_History/Timeline.md
+  - type: CREATE
+    src: blob_store/c42347ed8461afd054ff29f399a6fb67_Engineering_Memory_v008.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v008.md
+  - type: CREATE
+    src: blob_store/17aae059dffeac863d9d4435dc9b4bf1_REQ-v001.md
+    dst: docs/Engineering_History/01_Requirements/REQ-v001.md
+  - type: CREATE
+    src: blob_store/4d43e3b3af38ba8c23411a0b006a5782_ADR-0002_64bit_Datapath.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-0002_64bit_Datapath.md
+  - type: CREATE
+    src: blob_store/9b4afad00b624805ef5b92d009c6a279_ADR-002_Bus_Width.md
+    dst: docs/Engineering_History/10_Design_Reviews/ADR-002_Bus_Width.md
+  - type: CREATE
+    src: blob_store/c7715614f8570fd65ec4d1ccfc63f0bf_commit012.md
+    dst: docs/Engineering_History/14_Commits/commit012.md
 - id: ev24
   title: Engineering Refinement 24
   phase: Refinement
@@ -2107,17 +2107,17 @@ events:
       Decision: N/A'
   instructions:
   - type: CREATE
-    src: blob_store/5d4cdd61dad9cb6a20da59f7b2900477_REQ-v005.md
-    dst: docs/Engineering_History/01_Requirements/REQ-v005.md
+    src: blob_store/2854df9a58ca44817ddcc70099496585_Engineering_Memory_v003.md
+    dst: docs/Engineering_History/00_Project_Journal/Engineering_Memory_v003.md
   - type: CREATE
-    src: blob_store/5c371348e2a5e9091ef5aa0c1d3e20b9_BUG-003_Leak_Gating.md
-    dst: docs/Engineering_History/02_Knowledge/BUG-003_Leak_Gating.md
+    src: blob_store/5e61383411b8a2ec611e1acf26bf0a80_Assumptions_Register.md
+    dst: docs/Engineering_History/02_Knowledge/Assumptions_Register.md
   - type: CREATE
-    src: blob_store/1004f8102c2fb98c99614c40d0b443af_commit005.md
-    dst: docs/Engineering_History/14_Commits/commit005.md
+    src: blob_store/ddff42675e615e8befe5a12065fc7da3_Q001.md
+    dst: docs/Engineering_History/02_Knowledge/Open_Questions/Q001.md
   - type: CREATE
-    src: blob_store/73d1c11aaf28feb82a05539c78f333fa_commit010.md
-    dst: docs/Engineering_History/14_Commits/commit010.md
+    src: blob_store/a92849da6bd0edc5b16b7328a09f8233_Linux_Network_Stack.md
+    dst: docs/Vol0_Foundations/Networking/Linux_Network_Stack.md
 - id: ev25
   title: Engineering Refinement 25
   phase: Refinement
@@ -2150,10 +2150,6 @@ events:
 
       Decision: N/A'
   instructions: []
-  issue:
-    action: close
-    ref: ev25
-  merge: develop
 - id: ev27
   title: Engineering Refinement 27
   phase: Refinement

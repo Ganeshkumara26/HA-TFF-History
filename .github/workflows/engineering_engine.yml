@@ -1,7 +1,7 @@
 name: HA-TFF Autonomous Engineering Engine
 on:
   schedule:
-    - cron: '0 0 */2 * *' # Runs every 14 days
+    - cron: '0 0 */2 * *' # Runs every 2 days
   workflow_dispatch: # Allows manual trigger for testing
 
 jobs:
@@ -11,10 +11,11 @@ jobs:
       contents: write
       issues: write
     steps:
-      - name: Checkout Repository
+      - name: Checkout Repository (full history for state recovery)
         uses: actions/checkout@v3
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
       
       - name: Setup Python
         uses: actions/setup-python@v4
@@ -23,12 +24,12 @@ jobs:
           
       - name: Install dependencies
         run: pip install pyyaml
-        
+      
       - name: Configure Git
         run: |
           git config --global user.name "Ganeshkumara26"
           git config --global user.email "hosakotaganeshkumara.me@gmail.com"
-        
+      
       - name: Run Orchestrator
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

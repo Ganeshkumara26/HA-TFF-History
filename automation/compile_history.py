@@ -48,6 +48,8 @@ while len(narratives) < 30:
         "problem": "Ongoing integration tasks"
     })
 
+issued_events = set()
+
 for i in range(30):
     ev_date = start_date + timedelta(days=i*4)
     event = {
@@ -64,13 +66,15 @@ for i in range(30):
         },
         'instructions': []
     }
-    
-    # 20% chance to open an issue
+
     if i % 5 == 0 and i < 25:
         event['issue'] = {'action': 'open', 'title': narratives[i]['title'], 'labels': ['bug']}
+        issued_events.add(f'ev{i:02d}')
     elif i % 5 == 1 and i <= 26:
-        event['issue'] = {'action': 'close', 'ref': f'ev{i-1:02d}'}
-        event['merge'] = narratives[i-1]['branch']
+        ref = f'ev{i-1:02d}'
+        if ref in issued_events:
+            event['issue'] = {'action': 'close', 'ref': ref}
+            event['merge'] = narratives[i-1]['branch']
 
     events.append(event)
 
