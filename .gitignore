@@ -1,5 +1,7 @@
-# Hide local automation artifacts and runtime state
-# The .py scripts remain tracked so CI / gh Actions can execute them.
-automation/state.json
-automation/*.log
+# Hide automation folder and its runtime artifacts.
+# The actual orchestrator scripts are in .scripts/ (dot-folders are hidden
+# by the GitHub web UI), and must be tracked so CI can execute them.
+automation/
+.scripts/*.log
+.scripts/state.json
 *.vvp
